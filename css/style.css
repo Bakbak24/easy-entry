@@ -171,7 +171,7 @@ a {
     border: none;
     border-radius: var(--input-border-radius);
     font-family: var(--subheadline-font);
-    font-size: var(--subheadline-size);
+    font-size: 18px;
     background-image: url('../images/search-icon.svg');
     background-repeat: no-repeat;
     background-size: 5%;
