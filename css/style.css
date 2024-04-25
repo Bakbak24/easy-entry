@@ -444,3 +444,53 @@ footer p {
   text-align: center;
   padding: 20px;
 }
+
+#content-register {
+  margin: 40px auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 450px;
+}
+
+#content-register-form {
+  width: 100%;
+}
+
+#register-form-label-user-wrapped::after {
+}
+
+#register-form-label-user-wrapped {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#register-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#register-form-label input {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px;
+  padding: 10px 25px;
+  border-radius: 6px;
+  background-image: url("../images/profile.svg");
+  background-position: right 10px top 10px;
+  background-repeat: no-repeat;
+}
+
+#register-form-label input::after {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin-right: 0.5%;
+  background-image: url("../images/profile.svg");
+}
