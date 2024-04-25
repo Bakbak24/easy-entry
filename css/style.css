@@ -12,7 +12,7 @@
     --input-border-radius: 8px;
     --headline-font: 'Montserrat';
     /* Bold */
-    --headline-weight: 'bold';
+    --headline-weight: '700';
     --subheadline-font: 'Lato';
     /* Semibold */
     --subheadline-weight: '550';
@@ -189,15 +189,58 @@ main {
 
 #simulation-content {
     display: flex;
+    border: 2px solid;
     justify-content: flex-start;
     align-items: center;
+    height: 206px;
     background: rgb(0, 155, 244, 25%);
     border-radius: var(--input-border-radius);
     color: var(--blue-color);
     margin-top: 53px;
 }
 #simulation-content #content {
-    border: 1px solid;
-    width: 60%;
-   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2%;
+    width: 100%;
+    height: 161px;
 }
+#simulation-content #content #content-image{
+    width: 4.3%;
+    height: 80px;
+    background-image: url('../images/simu-icon.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 2%;
+}
+#simulation-content #content #content-details {
+    width: 80%;
+    height: 100%;   
+}
+#simulation-content #content #content-details h2 {
+    font-size: var(--headline-size);
+    font-family: var(--headline-font);
+    font-weight: var(--headline-weight);
+    margin:0;
+}
+#simulation-content #content #content-details p {
+    font-size: 18px;
+    font-family: var(--subheadline-font);
+    font-weight: var(--subheadline-weight);
+    color: var(--dark-color);
+}
+#simulation-content #content #content-details #simulation-btn {
+    border: none;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
+    font-size: var(--body-size);
+    font-family: var(--body-font);
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
