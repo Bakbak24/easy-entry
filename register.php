@@ -17,7 +17,7 @@
             <div id="menu">
                 <ul>
                     <li><a href="#my-tracker">My Tracker</a></li>
-                    <li><a href="#themes-section">Themes</a></li>
+                    <li><a href="#themes-section">Theme's</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -44,6 +44,21 @@
                         <label for="surName">Surname</label>
                         <input type="text" name="surName" id="surName">
                     </div>
+                </div>
+                <div id="register-form-label">
+                    <label for="e-mail">Email</label>
+                    <input type="email" name="e-mail" id="e-mail">
+                </div>
+                <div id="register-form-label">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div id="register-form-label">
+                    <button>Sign Up</button>
+                </div>
+                <hr class="hr-text" data-content="Or log in with google">
+                <div id="register-form-label">
+                    <button id="signup-google"> <img src="./images/google.svg" alt=""> Sign Up with Google</button>
                 </div>
             </form>
         </div>

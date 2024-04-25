@@ -29,6 +29,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 #container {
@@ -446,7 +447,7 @@ footer p {
 }
 
 #content-register {
-  margin: 40px auto;
+  margin: 60px auto;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -476,21 +477,75 @@ footer p {
 #register-form-label input {
   border: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px;
-  padding: 10px 25px;
+  padding: 15px 10px;
   border-radius: 6px;
-  background-image: url("../images/profile.svg");
-  background-position: right 10px top 10px;
+  margin-bottom: 20px;
+  background-position: right 10px top 15px;
   background-repeat: no-repeat;
 }
 
-#register-form-label input::after {
-  content: "";
-  display: inline-block;
-  width: 27px;
-  height: 30px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  margin-right: 0.5%;
+#register-form-label #e-mail {
+  background-image: url("../images/envelop.svg");
+}
+
+#register-form-label #password {
+  background-image: url("../images/eye.svg");
+}
+
+#register-form-label-user-wrapped input {
   background-image: url("../images/profile.svg");
+}
+
+#content-register-form button {
+  width: 100%;
+  padding: 15px 10px;
+  margin: 10px 0px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 6px;
+  font-size: var(--body-size);
+  cursor: pointer;
+}
+
+#content-register-form #signup-google {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px;
+}
+
+#content-register h2 {
+  font-family: var(--headline-font);
+}
+
+.hr-text {
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  &:before {
+    content: "";
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+
+    padding: 0 1em;
+    line-height: 1.5em;
+    color: black;
+    background-color: var(--smoke-color);
+  }
 }
