@@ -31,20 +31,10 @@
             </a>
         </div>
     </nav>
-    <div class="content-register">
-        <h2>Create Account</h2>
+    <div class="content-register" id="content-login">
+        <h2>Login</h2>
         <div class="content-register-form">
             <form action="#" method="POST">
-                <div class="register-form-label-user-wrapped">
-                    <div class="register-form-label">
-                        <label for="firstName">Firstname</label>
-                        <input type="text" name="firstName" id="firstName">
-                    </div>
-                    <div class="register-form-label">
-                        <label for="surName">Surname</label>
-                        <input type="text" name="surName" id="surName">
-                    </div>
-                </div>
                 <div class="register-form-label">
                     <label for="e-mail">Email</label>
                     <input type="email" name="e-mail" id="e-mail">
@@ -54,11 +44,11 @@
                     <input type="password" name="password" id="password">
                 </div>
                 <div class="register-form-label">
-                    <button>Sign Up</button>
+                    <button>Login</button>
                 </div>
-                <hr class="hr-text" data-content="Or Sign Up with google">
+                <hr class="hr-text" data-content="Or log in with google">
                 <div class="register-form-label">
-                    <button id="signup-google"> <img src="./images/google.svg" alt=""> Sign Up with Google</button>
+                    <button id="signup-google"> <img src="./images/google.svg" alt=""> Login with Google</button>
                 </div>
             </form>
         </div>

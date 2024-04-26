@@ -446,7 +446,7 @@ footer p {
   padding: 20px;
 }
 
-#content-register {
+.content-register {
   margin: 60px auto;
   display: flex;
   align-items: flex-start;
@@ -454,27 +454,31 @@ footer p {
   width: 450px;
 }
 
-#content-register-form {
+#content-login {
+  margin: 100px auto;
+}
+
+.content-register-form {
   width: 100%;
 }
 
-#register-form-label-user-wrapped::after {
+.register-form-label-user-wrapped::after {
 }
 
-#register-form-label-user-wrapped {
+.register-form-label-user-wrapped {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
 
-#register-form-label {
+.register-form-label {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-#register-form-label input {
+.register-form-label input {
   border: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px;
   padding: 15px 10px;
@@ -484,19 +488,19 @@ footer p {
   background-repeat: no-repeat;
 }
 
-#register-form-label #e-mail {
+.register-form-label #e-mail {
   background-image: url("../images/envelop.svg");
 }
 
-#register-form-label #password {
+.register-form-label #password {
   background-image: url("../images/eye.svg");
 }
 
-#register-form-label-user-wrapped input {
+.register-form-label-user-wrapped input {
   background-image: url("../images/profile.svg");
 }
 
-#content-register-form button {
+.content-register-form button {
   width: 100%;
   padding: 15px 10px;
   margin: 10px 0px;
@@ -508,7 +512,7 @@ footer p {
   cursor: pointer;
 }
 
-#content-register-form #signup-google {
+.content-register-form #signup-google {
   background-color: white;
   color: black;
   display: flex;
@@ -517,7 +521,7 @@ footer p {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px;
 }
 
-#content-register h2 {
+.content-register h2 {
   font-family: var(--headline-font);
 }
 
