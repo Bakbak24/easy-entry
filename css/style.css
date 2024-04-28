@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 :root {
+<<<<<<< HEAD
     --white-color: white;
     --blue-color: #0084B6;
     --smoke-color: #F4F4F4;
@@ -24,6 +25,28 @@
     /* Regular */
     --body-font: 'Open Sans';
     --body-weight: '400';
+=======
+  --white-color: white;
+  --blue-color: #0084b6;
+  --smoke-color: #f4f4f4;
+  --dark-color: #1d1d1b;
+  --yellow-color: #fdda25;
+  --headline-size: 32px;
+  --subheadline-size: 24px;
+  --body-size: 16px;
+  --button-padding: 8px 16px;
+  --button-border-radius: 35px;
+  --input-border-radius: 8px;
+  --headline-font: "Montserrat";
+  /* Bold */
+  --headline-weight: "700";
+  --subheadline-font: "Lato";
+  /* Semibold */
+  --subheadline-weight: "550";
+  --body-font: "Open Sans";
+  /* Regular */
+  --body-weight: "400";
+>>>>>>> 1ea0d901b15d297eee25a1acb141edfecd3a84bb
 }
 
 body {
@@ -34,8 +57,14 @@ body {
 }
 
 #container {
+<<<<<<< HEAD
     margin-left: 4%;
     margin-right: 4%;
+=======
+  margin-left: 4%;
+  margin-right: 4%;
+  height: 1000px;
+>>>>>>> 1ea0d901b15d297eee25a1acb141edfecd3a84bb
 }
 
 nav {
@@ -172,6 +201,7 @@ a {
 }
 
 #welcoming-content #content #search {
+<<<<<<< HEAD
     border: none;
     outline: none;
     border-radius: var(--input-border-radius);
@@ -184,6 +214,19 @@ a {
     width: 65%;
     padding: 18px;
     padding-left: 6%;
+=======
+  border: none;
+  border-radius: var(--input-border-radius);
+  font-family: var(--subheadline-font);
+  font-size: 18px;
+  background-image: url("../images/search-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 5%;
+  background-position: 10px;
+  width: 65%;
+  padding: 18px;
+  padding-left: 6%;
+>>>>>>> 1ea0d901b15d297eee25a1acb141edfecd3a84bb
 }
 
 @media only screen and (max-width: 500px) {
@@ -388,6 +431,7 @@ main {
 }
 
 .theme-content {
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -402,6 +446,21 @@ main {
     padding: 20px;
     padding-top: 0;
     cursor: pointer;
+=======
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  max-width: 228px;
+  width: 100%;
+  height: 228px;
+  background-color: var(--white-color);
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  padding-top: 0;
+>>>>>>> 1ea0d901b15d297eee25a1acb141edfecd3a84bb
 }
 
 @media only screen and (max-width: 600px) {
@@ -438,12 +497,21 @@ footer p {
 }
 
 #footer-content {
+<<<<<<< HEAD
     margin-left: 4%;
     margin-right: 4%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+=======
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+>>>>>>> 1ea0d901b15d297eee25a1acb141edfecd3a84bb
 }
 
 #about-us {
@@ -545,6 +613,7 @@ footer p {
   margin-top: 20px;
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width:1304px) {
     #footer-content {
         justify-content: space-around;
@@ -853,4 +922,169 @@ footer p {
     font-family: var(--body-font);
     font-weight: 600;
     cursor: pointer;
+=======
+@media only screen and (max-width: 1304px) {
+  #footer-content {
+    justify-content: space-around;
+  }
+  #newsletter {
+    margin-bottom: 40px;
+  }
+}
+
+#copyright {
+  text-align: center;
+  padding: 20px;
+}
+
+.content-register {
+  margin: 60px auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 450px;
+}
+
+#content-login {
+  margin: 100px auto;
+}
+
+.content-register-form {
+  width: 100%;
+}
+
+.register-form-label-user-wrapped {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.register-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.register-form-label input {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px;
+  padding: 15px 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  background-position: right 10px top 15px;
+  background-repeat: no-repeat;
+}
+
+.register-form-label #e-mail {
+  background-image: url("../images/envelop.svg");
+}
+
+.register-form-label #password {
+  background-image: url("../images/eye.svg");
+}
+
+.register-form-label-user-wrapped input {
+  background-image: url("../images/profile.svg");
+}
+
+.content-register-form button {
+  width: 100%;
+  padding: 15px 10px;
+  margin: 10px 0px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 6px;
+  font-size: var(--body-size);
+  cursor: pointer;
+}
+
+.content-register-form #signup-google {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px;
+}
+
+.content-register h2 {
+  font-family: var(--headline-font);
+}
+
+.hr-text {
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  &:before {
+    content: "";
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+
+    padding: 0 1em;
+    line-height: 1.5em;
+    color: black;
+    background-color: var(--smoke-color);
+  }
+}
+
+.steps {
+  display: flex;
+}
+
+.step-left {
+  grid-column: 1;
+}
+
+.step-right {
+  grid-column: 2;
+}
+.steps-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.step-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.step button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.step h2 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.step p {
+  margin-top: 10px;
+  font-size: 1rem;
+>>>>>>> 1ea0d901b15d297eee25a1acb141edfecd3a84bb
 }
