@@ -14,9 +14,7 @@
   <header>
     <nav>
       <div id="nav-left">
-        <a href="index.php">
-          <div id="logo"></div>
-        </a>
+        <div id="logo"></div>
         <div id="menu">
           <ul>
             <li><a href="#my-tracker">My Tracker</a></li>
@@ -29,7 +27,7 @@
         <a href="register.php">
           <button type="button" id="register-btn">SIGN UP</button>
         </a>
-        <a href="login.php">
+        <a href="#login">
           <button type="button" id="login-btn">LOGIN</button>
         </a>
       </div>
@@ -70,40 +68,29 @@
       <div id="stay">
         <h2 class="theme-categorie-h2" id="sta">Stay</h2>
         <div class="all-themes">
-          <a href="registration-municipality.php">
-            <div class="theme-content" data-page="registration-municipality.php">
-              <h3>
-                Registration <br />
-                Municipality
-              </h3>
-              <img src="images/Registration Municipality.svg" alt="Registration" />
-            </div>
-          </a>
-          <a href="accommodation.php">
-            <div class="theme-content" data-page="accommodation.php">
-              <h3>Accommodation</h3>
-              <img src="images/Accommodation.svg" alt="Accommodation" />
-            </div>
-          </a>
-          <a href="family-unification.php">
-            <div class="theme-content" data-page="family-unification.php">
-              <h3>Family Unification</h3>
-              <img src="images/Family Unification.svg" alt="Family Unification" />
-            </div>
-          </a>
-          <a href="social-security.php">
-            <div class="theme-content" data-page="social-security.php">
-              <h3>Social Security</h3>
-              <img src="images/Social Security.svg" alt="Social Security" />
-            </div>
-          </a>
-          <a href="civic-integration.php">
-            <div class="theme-content" data-page="civic-integration.php">
-              <h3>Civic Integration</h3>
-              <img src="images/Civic Integration.svg" alt="Civic Integration" />
-            </div>
-          </a>
-
+          <div class="theme-content" data-page="registration-municipality.php">
+            <h3>
+              Registration <br />
+              Municipality
+            </h3>
+            <img src="images/Registration Municipality.svg" alt="Registration" />
+          </div>
+          <div class="theme-content" data-page="accommodation.php">
+            <h3>Accommodation</h3>
+            <img src="images/Accommodation.svg" alt="Accommodation" />
+          </div>
+          <div class="theme-content" data-page="family-unification.php">
+            <h3>Family Unification</h3>
+            <img src="images/Family Unification.svg" alt="Family Unification" />
+          </div>
+          <div class="theme-content" data-page="social-security.php">
+            <h3>Social Security</h3>
+            <img src="images/Social Security.svg" alt="Social Security" />
+          </div>
+          <div class="theme-content" data-page="civic-integration.php">
+            <h3>Civic Integration</h3>
+            <img src="images/Civic Integration.svg" alt="Civic Integration" />
+          </div>
         </div>
       </div>
       <div id="money">
