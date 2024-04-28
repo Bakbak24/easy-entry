@@ -98,20 +98,22 @@ endforeach;
     <div class="step-plan">
       <h1>Step-By-Step Plan</h1>
       <div class="steps">
-        <div class="steps-left" id="step1">
-          <div class="step-image">
-            <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
+        <div class="steps-left">
+          <div id="step1" class="step">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
+            </div>
+            <button><?php echo $current_theme["step1"]["button"]; ?></button>
+            <h2>
+              <?php echo $current_theme["step1"]["title"]; ?>
+            </h2>
+            <p>
+              <?php echo $current_theme["step1"]["description"]; ?>
+            </p>
           </div>
-          <button><?php echo $current_theme["step1"]["button"]; ?></button>
-          <h2>
-            <?php echo $current_theme["step1"]["title"]; ?>
-          </h2>
-          <p>
-            <?php echo $current_theme["step1"]["description"]; ?>
-          </p>
         </div>
         <div class="steps-right">
-          <div class="step-tw" id="step2">
+          <div class="step-tw step" id="step2">
             <div class="steps-image">
               <img src="<?php echo $current_theme["step2"]["image"]; ?>" alt="Step 2" />
             </div>
@@ -120,7 +122,7 @@ endforeach;
               <p><?php echo $current_theme["step2"]["title"]; ?></p>
             </div>
           </div>
-          <div class="step-th" id="step3">
+          <div class="step-th step" id="step3">
             <div class="steps-image">
               <img src="<?php echo $current_theme["step3"]["image"]; ?>" alt="Step 3" />
             </div>
@@ -130,67 +132,51 @@ endforeach;
             </div>
           </div>
         </div>
+
       </div>
-    </div>
-    <script>
-      // document.getElementById('step1').addEventListener('click', function() {
-      //   updateStepData('step1');
-      // });
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const steps = document.querySelectorAll(".step");
 
-      document.getElementById('step2').addEventListener('click', function() {
-        updateStepData('step2');
-      });
+          steps.forEach((step) => {
+            step.addEventListener("click", () => {
+              const stepsParent = step.parentNode;
+              if (stepsParent.classList.contains('steps-right')) {
+                const leftColumn = document.querySelector('.steps-left');
+                const rightColumn = document.querySelector('.steps-right');
+                if (leftColumn.children.length > 0) {
+                  // Move the step from the left column back to the right column
+                  rightColumn.appendChild(leftColumn.children[0]);
+                }
+                // Move the clicked step to the left column
+                leftColumn.appendChild(step);
+              } else {
+                // Move the clicked step after the first child in the right column
+                stepsParent.insertBefore(step, stepsParent.childNodes[1]);
+              }
+            });
+          });
+        });
+      </script>
 
-      document.getElementById('step3').addEventListener('click', function() {
-        updateStepData('step3');
-      });
-
-      function updateStepData(step) {
-        var stepData = <?php echo json_encode($current_theme); ?>[step];
-        document.querySelector('.steps-left .step-image img').src = stepData.image;
-        document.querySelector('.steps-left button').textContent = stepData.button;
-        document.querySelector('.steps-left h2').textContent = stepData.title;
-        document.querySelector('.steps-left p').textContent = stepData.description;
-        document.getElementById('step1').id = step;
-
-        if (step === 'step2') {
-          stepData = <?php echo json_encode($current_theme); ?>['step1'];
-          document.querySelector('.steps-right .step-tw .steps-image img').src = stepData.image;
-          document.querySelector('.steps-right .step-tw .steps-info button').textContent = stepData.button;
-          document.querySelector('.steps-right .step-tw .steps-info p').textContent = stepData.title;
-          document.querySelector('.steps-right .step-tw').id = 'step1';
-        } 
-        else if (step === 'step3') {
-          stepData = <?php echo json_encode($current_theme); ?>['step1'];
-          document.querySelector('.steps-right .step-th .steps-image img').src = stepData.image;
-          document.querySelector('.steps-right .step-th .steps-info button').textContent = stepData.button;
-          document.querySelector('.steps-right .step-th .steps-info p').textContent = stepData.title;
-          document.querySelector('.steps-right .step-th').id = 'step1';
-        }
-      //   else if (document.querySelector('.steps-left button').textContent.includes(stepData.button))
-
-      // }
-      }
-    </script>
-
-    <section id="contact-section">
-      <div id="contact-details">
-        <h2>Did you miss anything?</h2>
-        <p>Please let us know! Your feedback is invaluable and helps us make RefugeeHelp even better. Please use this
-          form to share suggestions about our website. Please note that this form is for suggestions related to the
-          website only and not for personal questions or requests. We unfortunately cannot respond to each suggestion
-          individually, but we greatly appreciate all your input.</p>
-      </div>
-      <div id="contact-form">
-        <form id="ctct-form">
-          <label for="text">Reason</label>
-          <input type="text" name="name" id="name" placeholder="Your type suggestion" />
-          <label for="message">Can you explain more about this</label>
-          <textarea name="message" id="message" placeholder="Your explanation" maxlength="264"></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </section>
+      <section id="contact-section">
+        <div id="contact-details">
+          <h2>Did you miss anything?</h2>
+          <p>Please let us know! Your feedback is invaluable and helps us make RefugeeHelp even better. Please use this
+            form to share suggestions about our website. Please note that this form is for suggestions related to the
+            website only and not for personal questions or requests. We unfortunately cannot respond to each suggestion
+            individually, but we greatly appreciate all your input.</p>
+        </div>
+        <div id="contact-form">
+          <form id="ctct-form">
+            <label for="text">Reason</label>
+            <input type="text" name="name" id="name" placeholder="Your type suggestion" />
+            <label for="message">Can you explain more about this</label>
+            <textarea name="message" id="message" placeholder="Your explanation" maxlength="264"></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
   </main>
   <footer>
     <div id="footer-content">
