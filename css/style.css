@@ -57,7 +57,7 @@ nav {
 }
 
 #logo {
-  width: 100%;
+  width: 250px;
   height: 100px;
   background-image: url("../images/logo.svg");
   background-repeat: no-repeat;
@@ -571,9 +571,6 @@ footer p {
 
 .content-register-form {
   width: 100%;
-}
-
-.register-form-label-user-wrapped::after {
 }
 
 .register-form-label-user-wrapped {

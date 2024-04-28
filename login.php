@@ -11,8 +11,10 @@
 <body>
     <nav>
         <div id="nav-left">
-            <a href="">
-                <div id="logo"></div>
+            <a href="index.html">
+                <div id="logo">
+
+                </div>
             </a>
             <div id="menu">
                 <ul>
