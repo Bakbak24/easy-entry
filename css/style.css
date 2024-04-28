@@ -393,7 +393,7 @@ main {
   align-items: flex-start;
   flex: 0 0 auto;
   max-width: 228px;
-  width: 100%;
+  width: 228px;
   height: 228px;
   background-color: var(--white-color);
   border-radius: 25px;
