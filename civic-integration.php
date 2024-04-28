@@ -57,7 +57,7 @@ endforeach;
                 To get started on your integration journey, you can learn more and schedule appointments through the official government website. Visit [website link] for appointments and additional information.
             </p>
         </div>
-        <div class="step-plan">
+        <div class="step-plan" id="civic-plan">
             <h1>What to Expect</h1>
             <div class="steps">
                 <div class="steps-left">
@@ -89,6 +89,24 @@ endforeach;
                         <div class="steps-info">
                             <button><?php echo $current_theme["step3"]["button"]; ?></button>
                             <p><?php echo $current_theme["step3"]["title"]; ?></p>
+                        </div>
+                    </div>
+                    <div class="step-th">
+                        <div class="steps-image">
+                            <img src="<?php echo $current_theme["step4"]["image"]; ?>" alt="Step 3" />
+                        </div>
+                        <div class="steps-info">
+                            <button><?php echo $current_theme["step4"]["button"]; ?></button>
+                            <p><?php echo $current_theme["step4"]["title"]; ?></p>
+                        </div>
+                    </div>
+                    <div class="step-th">
+                        <div class="steps-image">
+                            <img src="<?php echo $current_theme["step5"]["image"]; ?>" alt="Step 3" />
+                        </div>
+                        <div class="steps-info">
+                            <button><?php echo $current_theme["step5"]["button"]; ?></button>
+                            <p><?php echo $current_theme["step5"]["title"]; ?></p>
                         </div>
                     </div>
                 </div>
