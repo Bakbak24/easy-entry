@@ -11,7 +11,7 @@
 <body>
     <nav>
         <div id="nav-left">
-            <a href="index.html">
+            <a href="index.php">
                 <div id="logo"></div>
             </a>
             <div id="menu">

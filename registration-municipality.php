@@ -69,7 +69,9 @@ endforeach;
   <header>
     <nav>
       <div id="nav-left">
-        <div id="logo"></div>
+        <a href="index.php">
+          <div id="logo"></div>
+        </a>
         <div id="menu">
           <ul>
             <li><a href="#my-tracker">My Tracker</a></li>

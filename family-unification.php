@@ -29,7 +29,9 @@ endforeach;
     <header>
         <nav>
             <div id="nav-left">
-                <div id="logo"></div>
+                <a href="index.php">
+                    <div id="logo"></div>
+                </a>
                 <div id="menu">
                     <ul>
                         <li><a href="#my-tracker">My Tracker</a></li>
@@ -52,11 +54,11 @@ endforeach;
         <div class="theme-info">
             <h1>Family Unification</h1>
             <p>
-            Simplify the Family Unification Process
-            Bringing your family together in Belgium is a significant milestone, and we're here to support you every step of the way.
-            Our team understands the importance of family, and we're committed to helping you navigate the family unification process smoothly and efficiently. From gathering the necessary documents to scheduling appointments, we'll provide you with personalized guidance and assistance.
-            Let us help you reunite with your loved ones and create new memories together in Belgium. Contact us today to learn more about our family unification services.
-            Your family's journey to unity starts here.
+                Simplify the Family Unification Process
+                Bringing your family together in Belgium is a significant milestone, and we're here to support you every step of the way.
+                Our team understands the importance of family, and we're committed to helping you navigate the family unification process smoothly and efficiently. From gathering the necessary documents to scheduling appointments, we'll provide you with personalized guidance and assistance.
+                Let us help you reunite with your loved ones and create new memories together in Belgium. Contact us today to learn more about our family unification services.
+                Your family's journey to unity starts here.
             </p>
         </div>
         <div class="step-plan">
