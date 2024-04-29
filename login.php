@@ -1,10 +1,27 @@
+<?php
+include_once(__DIR__ . '/classes/User.php');
+
+if (!empty($_POST)) {
+    try {
+        $user = new User();
+        $user->setEmail($_POST['e-mail']);
+        $user->setPassword($_POST['password']);
+        $user->login();
+        session_start();
+        $_SESSION['user'] = $user;
+        header('Location: index.php');
+    } catch (Throwable $ex) {
+        $error = $ex->getMessage();
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -56,7 +73,12 @@
     <div class="content-register" id="content-login">
         <h2>Login</h2>
         <div class="content-register-form">
-            <form action="#" method="POST">
+            <form action="" method="post">
+                <?php
+                if (isset($error)) {
+                    echo "<div class='alert alert-danger'>$error</div>";
+                }
+                ?>
                 <div class="register-form-label">
                     <label for="e-mail">Email</label>
                     <input type="email" name="e-mail" id="e-mail">

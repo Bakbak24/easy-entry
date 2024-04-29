@@ -12,48 +12,7 @@
 
 <body>
   <header>
-    <nav>
-      <div id="nav-left">
-        <div id="logo"></div>
-        <div id="menu">
-          <ul id="menu-list">
-            <li><a href="#my-tracker">My Tracker</a></li>
-            <li><a href="#themes-section">Themes</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="nav-right">
-        <a href="register.php">
-          <button type="button" id="register-btn">SIGN UP</button>
-        </a>
-        <a href="login.php">
-          <button type="button" id="login-btn">LOGIN</button>
-        </a>
-      </div>
-      <div id="hamburger">
-        <a href="javascript:void(0);" onclick="navigator()">
-          <img src="images/burger.svg" alt="">
-        </a>
-      </div>
-    </nav>
-    <div id="side-menu" class="hide-nav">
-      <div id="side-menu-links">
-        <ul id="menu-list">
-          <li><a href="#my-tracker">My Tracker</a></li>
-          <li><a href="#themes-section">Themes</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div id="side-menu-register">
-        <a href="register.php">
-          <button type="button" id="register-btn">SIGN UP</button>
-        </a>
-        <a href="login.php">
-          <button type="button" id="login-btn">LOGIN</button>
-        </a>
-      </div>
-    </div>
+    <?php include_once 'nav.php'; ?>
     <div id="welcoming-content">
       <div id="content">
         <h1>Welcome in Belgium</h1>

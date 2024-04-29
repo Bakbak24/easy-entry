@@ -1,3 +1,31 @@
+<?php
+include_once(__DIR__ . "/classes/User.php");
+
+if (!empty($_POST)) {
+    try {
+        if (empty($_POST['firstName']) || empty($_POST['surName']) || empty($_POST['e-mail']) || empty($_POST['password'])) {
+            throw new Exception("Please fill in all fields.");
+        } else {
+            $user = new User();
+            $options = [
+                'cost' => 12,
+            ];
+            $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT, $options);
+            $user->setFirstname($_POST['firstName']);
+            $user->setLastname($_POST['surName']);
+            $user->setEmail($_POST['e-mail']);
+            $user->setPassword($hashedPassword);
+            $user->setStatus('onbekend');
+            $user->save();
+            session_start();
+            $_SESSION['user'] = $user;
+            header('Location: index.php');
+        }
+    } catch (Throwable $ex) {
+        $error = $ex->getMessage();
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,54 +37,16 @@
 </head>
 
 <body>
-    <nav>
-        <div id="nav-left">
-            <a href="index.php">
-                <div id="logo"></div>
-            </a>
-            <div id="menu">
-                <ul id="menu-list">
-                    <li><a href="#my-tracker">My Tracker</a></li>
-                    <li><a href="#themes-section">Themes</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="nav-right">
-            <a href="register.php">
-                <button type="button" id="register-btn">SIGN UP</button>
-            </a>
-            <a href="login.php">
-                <button type="button" id="login-btn">LOGIN</button>
-            </a>
-        </div>
-        <div id="hamburger">
-            <a href="javascript:void(0);" onclick="navigator()">
-                <img src="images/burger.svg" alt="">
-            </a>
-        </div>
-    </nav>
-    <div id="side-menu" class="hide-nav">
-        <div id="side-menu-links">
-            <ul id="menu-list">
-                <li><a href="#my-tracker">My Tracker</a></li>
-                <li><a href="#themes-section">Themes</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div id="side-menu-register">
-            <a href="register.php">
-                <button type="button" id="register-btn">SIGN UP</button>
-            </a>
-            <a href="login.php">
-                <button type="button" id="login-btn">LOGIN</button>
-            </a>
-        </div>
-    </div>
+    <?php include_once 'nav.php'; ?>
     <div class="content-register">
         <h2>Create Account</h2>
         <div class="content-register-form">
-            <form action="#" method="POST">
+            <form action="" method="post">
+                <?php
+                if (isset($error)) {
+                    echo "<div class='alert alert-danger' role='alert'>$error</div>";
+                }
+                ?>
                 <div class="register-form-label-user-wrapped">
                     <div class="register-form-label">
                         <label for="firstName">Firstname</label>
