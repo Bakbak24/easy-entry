@@ -1,48 +1,7 @@
 <?php
 $current_page = basename($_SERVER['PHP_SELF']);
 
-$themes = [
-  "registration-municipality.php" => [
-    "step1" => [
-      "button" => "Step 1",
-      "title" => "Prepare your documents",
-      "description" => "Make sure you have all the necessary documents ready for your immigration. Here you will find information on what documents are needed and where to obtain them. Check your municipality's website for specific requirements. Good preparation will make your immigration process smoother.",
-      "image" => "images/registration-step-1.png"
-    ],
-    "step2" => [
-      "button" => "Step 2",
-      "title" => "Make an appointment at the municipality",
-      "description" => "You need to make an appointment at the municipality to register your address. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
-      "image" => "images/registration-step-2.png"
-    ],
-    "step3" => [
-      "button" => "Step 3",
-      "title" => "Within 2 weeks, the neighborhood agent visits",
-      "description" => "After you have registered your address at the municipality, a neighborhood agent will visit you within 2 weeks. The neighborhood agent will check your address and ask you some questions about your living situation. This is a standard procedure and is done to ensure that you are living at the address you have registered.",
-      "image" => "images/registration-step-3.png"
-    ],
-  ],
-  "accommodation.php" => [
-    "step1" => [
-      "button" => "Step 1",
-      "title" => "Find a place to live",
-      "description" => "You need to find a place to live before you can register your address at the municipality. You can rent or buy a house or apartment. Make sure you have all the necessary documents ready for.",
-      "image" => "images/accommodation-step-1.png"
-    ],
-    "step2" => [
-      "button" => "Step 2",
-      "title" => "Sign a rental agreement",
-      "description" => "Once you have found a place to live, you need to sign a rental agreement with the landlord. Make sure you read the rental agreement carefully and understand all the terms and conditions. You will need to provide a copy of the rental agreement when you register your address at the municipality.",
-      "image" => "images/accommodation-step-2.png"
-    ],
-    "step3" => [
-      "button" => "Step 3",
-      "title" => "Register your address at the municipality",
-      "description" => "You need to register your address at the municipality within 5 days of moving in. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
-      "image" => "images/accommodation-step-3.png"
-    ],
-  ],
-];
+include_once(__DIR__ . "/includes/themes.inc.php");
 $current_theme = null;
 
 foreach ($themes as $theme_key => $theme) :
@@ -62,7 +21,7 @@ endforeach;
   <title>Easy Entry</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
-  <!-- <script src="js/data-switching.js" defer></script> -->
+  <script src="js/switching-steps.js" defer></script>
 </head>
 
 <body>
@@ -132,33 +91,7 @@ endforeach;
             </div>
           </div>
         </div>
-
       </div>
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const steps = document.querySelectorAll(".step");
-
-          steps.forEach((step) => {
-            step.addEventListener("click", () => {
-              const stepsParent = step.parentNode;
-              if (stepsParent.classList.contains('steps-right')) {
-                const leftColumn = document.querySelector('.steps-left');
-                const rightColumn = document.querySelector('.steps-right');
-                if (leftColumn.children.length > 0) {
-                  // Move the step from the left column back to the right column
-                  rightColumn.appendChild(leftColumn.children[0]);
-                }
-                // Move the clicked step to the left column
-                leftColumn.appendChild(step);
-              } else {
-                // Move the clicked step after the first child in the right column
-                stepsParent.insertBefore(step, stepsParent.childNodes[1]);
-              }
-            });
-          });
-        });
-      </script>
-
       <section id="contact-section">
         <div id="contact-details">
           <h2>Did you miss anything?</h2>

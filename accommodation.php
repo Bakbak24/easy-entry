@@ -22,7 +22,7 @@ endforeach;
   <title>Easy Entry</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
-  <script src="js/data-switching.js" defer></script>
+  <script src="js/switching-steps.js" defer></script>
 </head>
 
 <body data-page="accommodation">

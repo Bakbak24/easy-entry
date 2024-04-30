@@ -22,7 +22,7 @@ endforeach;
     <title>Easy Entry</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
-    <script src="js/data-switching.js" defer></script>
+    <script src="js/switching-steps.js" defer></script>
 </head>
 
 <body>
@@ -112,6 +112,7 @@ endforeach;
                 </div>
             </div>
         </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=vp9y25RSX04" frameborder="2" allowfullscreen></iframe>
         <section id="contact-section">
             <div id="contact-details">
                 <h2>Did you miss anything?</h2>
