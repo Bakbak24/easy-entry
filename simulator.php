@@ -205,7 +205,7 @@ if (!empty($_POST)) {
                                 Equity
                             </label><br>
                             <label>
-                                <input type="radio" id="noMoney" name="financial" value="noMoney" onclick="showNoMoney()">
+                                <input type="radio" id="noMoney" name="financial" value="money" onclick="showNoMoney()">
                                 Job Seeker
                             </label><br>
                         </div>
@@ -232,7 +232,7 @@ if (!empty($_POST)) {
                 </div>
             </div>
 
-            <div id="Gemeente" style="display:flex;" class="form-label-group">
+            <div id="Gemeente" style="display:none;" class="form-label-group">
                 <div class="circle">5</div>
                 <div id="question">
                     <div id="content">
@@ -250,8 +250,6 @@ if (!empty($_POST)) {
                     </div>
                 </div>
             </div>
-
-
 
             <div id="GemeenteM" style="display:none;" class="simulator-message">
                 <div class="circle"><img src="images/checked.svg" alt=""></div>
@@ -307,25 +305,18 @@ if (!empty($_POST)) {
                 </div>
             </div>
 
-            <div id="noMoney" style="display:none;" class="form-label-group">
-                <div class="circle">4</div>
+
+
+
+            <div id="jobSearch" style="display:none;" class="simulator-message">
+                <div class="circle"><img src="images/checked.svg" alt=""></div>
                 <div id="question">
                     <div id="content">
-                        <div id="multiple-radio">
-                            <label for="financial">Werk Zoeken</label><br>
-                            <label>
-                                <input type="radio" id="moneyEmployed" name="financial" value="money" onclick="showMoney()">
-                                Employed
-                            </label><br>
-                            <label>
-                                <input type="radio" id="moneyEquity" name="financial" value="money" onclick="showMoney()">
-                                Equity
-                            </label><br>
-                            <label>
-                                <input type="radio" id="noMoney" name="financial" value="noMoney" onclick="showNoMoney()">
-                                Job Seeker
-                            </label><br>
-                        </div>
+                        <h2>Proof of Job Search Required</h2>
+                        <p> As a job seeker, it's essential to demonstrate active efforts in seeking employment opportunities. Providing evidence of your job search activities can enhance your prospects and eligibility for various benefits and opportunities. Please click the button below to learn more about the requirements and resources available for job seekers in Belgium.</p>
+                        <a href="https://employment.belgium.be/en/themes/international/foreign-workers">
+                            <button type="button" id="sim-btn">Foreign workers</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -356,6 +347,7 @@ if (!empty($_POST)) {
 
 
 
+
             var workR = document.getElementById("work");
             var studyingR = document.getElementById("studying");
 
@@ -364,6 +356,7 @@ if (!empty($_POST)) {
             var studyM = document.getElementById("StudyM");
             var studyM2 = document.getElementById("StudyM2");
             var studyM3 = document.getElementById("StudyM3");
+
 
 
             var question1 = document.getElementById("Question1");
@@ -379,6 +372,7 @@ if (!empty($_POST)) {
             var socialeZekerheid = document.getElementById("socialeZekerheid");
             var sociaalFinish = document.getElementById("SociaalFinish");
             var noSociaal = document.getElementById("noSociaal");
+            var jobSearch = document.getElementById("jobSearch");
 
 
             function showQuestion() {
@@ -595,6 +589,11 @@ if (!empty($_POST)) {
                     Money.style.display = "none";
                     gemeente.style.display = "none";
                     gemeenteM.style.display = "none";
+                    socialeZekerheid.style.display = "none";
+                    sociaalFinish.style.display = "none";
+                    noSociaal.style.display = "none";
+                    jobSearch.style.display = "none";
+
                 } else {
                     house.style.display = "none";
                 }
@@ -650,6 +649,34 @@ if (!empty($_POST)) {
 
                 } else {
                     sociaalFinish.style.display = "none";
+                }
+            }
+
+            function showNoMoney() {
+                if (noMoney.checked) {
+                    jobSearch.style.display = "flex";
+                    house.style.display = "none";
+                    Money.style.display = "none";
+                    gemeente.style.display = "none";
+                    gemeenteM.style.display = "none";
+                    socialeZekerheid.style.display = "none";
+                    sociaalFinish.style.display = "none";
+                    noSociaal.style.display = "none";
+
+                    noStudy.checked = false;
+                    yesStudy.checked = false;
+                    noStudy2.checked = false;
+                    yesStudy2.checked = false;
+                    noStudy3.checked = false;
+                    yesStudy3.checked = false;
+                    yesSocialeZekerheid.checked = false;
+                    noSocialeZekerheid.checked = false;
+                    yesGemeente.checked = false;
+                    noGemeente.checked = false;
+                    yesHouse.checked = false;
+                    noHouse.checked = false;
+                    moneyEmployed.checked = false;
+                    moneyEquity.checked = false;
                 }
             }
         </script>

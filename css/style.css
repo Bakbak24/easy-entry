@@ -1059,6 +1059,7 @@ footer p {
 #content-simulator {
   padding-left: 5%;
   padding-right: 5%;
+  min-height: 550px;
 }
 
 #yt-frame,
