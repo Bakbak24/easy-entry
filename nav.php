@@ -11,7 +11,7 @@
                <ul id="menu-list">
                    <li><a href="#my-tracker">My Tracker</a></li>
                    <li><a href="#themes-section">Themes</a></li>
-                   <li><a href="#contact">Contact</a></li>
+                   <li><a href="contact.php">Contact</a></li>
                </ul>
            </div>
        </div>
@@ -41,7 +41,7 @@
            <ul id="menu-list">
                <li><a href="#my-tracker">My Tracker</a></li>
                <li><a href="#themes-section">Themes</a></li>
-               <li><a href="#contact">Contact</a></li>
+               <li><a href="contact.php">Contact</a></li>
            </ul>
        </div>
        <div id="side-menu-register">

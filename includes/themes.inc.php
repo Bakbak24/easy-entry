@@ -43,41 +43,41 @@ $themes = [
   "family-unification.php" => [
     "step1" => [
       "button" => "Step 1",
-      "title" => "Prepare your documents",
-      "description" => "Make sure you have all the necessary documents ready for your family unification. Here you will find information on what documents are needed and where to obtain them. Check your municipality's website for specific requirements. Good preparation will make your family unification process smoother.",
+      "title" => "Confirm eligibility",
+      "description" => "Ensure you meet the eligibility criteria for family unification. Prove your relationship with the family member you wish to join and fulfill any other requirements set by immigration authorities.",
       "image" => "images/family-unification-step-1.png"
     ],
     "step2" => [
       "button" => "Step 2",
-      "title" => "Submit your application",
-      "description" => "You need to submit your family unification application to the municipality. Make sure you have all the necessary documents ready for your application. You can do this online or by phone. You will need to bring these documents with you to the appointment.",
-      "image" => "images/family-unification-step-2.png"
+      "title" => "Gather documents",
+      "description" => "Collect all necessary documents to support your family unification application. This includes proof of relationship, financial stability, accommodation arrangements, and other relevant paperwork.",
+      "image" => "images/registration-step-1.png"
     ],
     "step3" => [
       "button" => "Step 3",
-      "title" => "Wait for the decision",
-      "description" => "After you have submitted your family unification application, you will need to wait for the decision. The decision will be sent to you by mail. If your application is approved, you will receive a residence permit for your family member. If your application is denied, you will receive a letter explaining the reasons for the denial.",
-      "image" => "images/family-unification-step-3.png"
+      "title" => "Submit application",
+      "description" => "Submit your family unification application to the appropriate immigration authority. Follow their guidelines for submission and ensure all required documents are included.",
+      "image" => "images/family-unification-step-2.png"
     ],
   ],
   "social-security.php" => [
     "step1" => [
       "button" => "Step 1",
-      "title" => "Prepare your documents",
-      "description" => "Make sure you have all the necessary documents ready for your social security application. Here you will find information on what documents are needed and where to obtain them. Check your municipality's website for specific requirements. Good preparation will make your social security application process smoother.",
-      "image" => "images/social-security-step-1.png"
+      "title" => "Gather your documents",
+      "description" => "Collect all the necessary documents required for your social security registration. Ensure you have all the required identification and supporting paperwork. Refer to the social security office's website for specific document requirements.",
+      "image" => "images/registration-step-1.png"
     ],
     "step2" => [
       "button" => "Step 2",
-      "title" => "Submit your application",
-      "description" => "You need to submit your social security application to the municipality. Make sure you have all the necessary documents ready for your application. You can do this online or by phone. You will need to bring these documents with you to the appointment.",
-      "image" => "images/social-security-step-2.png"
+      "title" => "Schedule an appointment with the social security office",
+      "description" => "You must schedule an appointment with the social security office to register. This can typically be done online or by phone. Make sure to have all your documents ready for your appointment.",
+      "image" => "images/social-security-step2.png"
     ],
     "step3" => [
       "button" => "Step 3",
-      "title" => "Wait for the decision",
-      "description" => "After you have submitted your social security application, you will need to wait for the decision. The decision will be sent to you by mail. If your application is approved, you will receive a social security number. If your application is denied, you will receive a letter explaining the reasons for the denial.",
-      "image" => "images/social-security-step-3.png"
+      "title" => "Complete the registration process",
+      "description" => "Once you've attended your appointment, you'll complete the registration process with the social security office. They may verify your information and may ask you some questions. Afterward, you'll receive your social security number.",
+      "image" => "images/social-security-step3.png"
     ],
   ],
   "civic-integration.php" => [
@@ -92,25 +92,33 @@ $themes = [
     "step2" => [
       "button" => "Step 2",
       "title" => "Learning Dutch",
-      "description" => "You need to submit your social security application to the municipality. Make sure you have all the necessary documents ready for your application. You can do this online or by phone. You will need to bring these documents with you to the appointment.",
+      "description" => "Ready to embark on the journey of learning Dutch in Flanders or Brussels? Mastering the Dutch language opens doors to employment opportunities, educational advancement, and seamless integration into society. Whether you're a newcomer or seeking to improve your existing Dutch skills, finding the right language course is essential.
+
+      For Dutch language courses in Flanders, find more information on our learning Dutch page.
+      
+      For Dutch language courses in Brussels, please visit the Dutch Language House - Huis van het Nederlands.",
       "image" => "images/civic-integration-step-2.png"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Pathway to employment",
-      "description" => "After you have submitted your social security application, you will need to wait for the decision. The decision will be sent to you by mail. If your application is approved, you will receive a social security number. If your application is denied, you will receive a letter explaining the reasons for the denial.",
+      "description" => "Are you currently seeking employment and aged between 18 and 65? Discover how we can assist you in your job search journey. By connecting with us, we'll guide you towards valuable resources, such as the Public Employment Service of Flanders - VDAB or Actiris in Brussels, where dedicated professionals are ready to support you in finding suitable job opportunities tailored to your skills and preferences. Let's work together to kickstart your career!",
       "image" => "images/civic-integration-step-3.png"
     ],
     "step4" => [
       "button" => "Step 4",
       "title" => "Participation programme",
-      "description" => "After you have submitted your social security application, you will need to wait for the decision. The decision will be sent to you by mail. If your application is approved, you will receive a social security number. If your application is denied, you will receive a letter explaining the reasons for the denial.",
+      "description" => "Looking to expand your social network and engage in meaningful activities? Choose from a variety of initiatives offered through our program, each designed to enrich your experience and contribute positively to your community. Whether it's participating in a buddy project, gaining work experience through a placement, volunteering, or exploring alternative options, you'll find opportunities to connect and grow.
+
+      Seeking inspiration? Visit www.ikdoemee.be to explore available activities and get started on your journey towards personal and social enrichment.
+      ",
       "image" => "images/civic-integration-step-4.png"
     ],
     "step5" => [
       "button" => "Step 5",
       "title" => "Explore Integration Online",
-      "description" => "After you have submitted your social security application, you will need to wait for the decision. The decision will be sent to you by mail. If your application is approved, you will receive a social security number. If your application is denied, you will receive a letter explaining the reasons for the denial.",
+      "description" => "Explore further information and resources on integration and civic integration courses by visiting the website of AGENTSCHAP INTEGRATIE & INBURGERING. 
+      Here, you can find comprehensive details about the integration process, including courses, support services, and contact information. Delve deeper into the available programs and services to ensure a smooth transition and successful integration into Belgian society. Reach out for assistance or inquiries in English directly through the website.",
       "image" => "images/civic-integration-step-5.png"
     ],
   ],
@@ -119,7 +127,7 @@ $themes = [
       "button" => "Step 1",
       "title" => "Gather necessary documents",
       "description" => "Collect all relevant financial documents, including income statements, expense receipts, investment statements, and any other documentation related to your financial activities for the tax year. You may need to retrieve these documents from your employer, financial institutions, or other sources.",
-      "image" => "images/tax-declaration-step-1.png"
+      "image" => "images/registration-step-1.png"
     ],
     "step2" => [
       "button" => "Step 2",
@@ -131,7 +139,7 @@ $themes = [
       "button" => "Step 3",
       "title" => "Submit your tax return",
       "description" => "Once you've completed your tax return, submit it through the MyMinfin website or by mail, depending on your preference and the available options. Be sure to review your submission for accuracy before finalizing it. After submission, you'll receive a confirmation and further instructions.",
-      "image" => "images/tax-declaration-step-3.png"
+      "image" => "images/family-unification-step-2.png"
     ],
   ],
   "child-support.php" => [
@@ -148,7 +156,7 @@ $themes = [
       "image" => "images/child-support-step-2.png"
     ],
     "step3" => [
-      "button" => "Apply Now",
+      "button" => "Step 3",
       "title" => "Apply for child benefits",
       "description" => "Once you understand your rights and entitlements, you can apply for child benefits through a recognized child benefit fund such as KidsLife. They simplify the application process into three easy steps and ensure that you receive the maximum entitlement you are eligible for.",
       "image" => "images/child-support-step-3.png"
@@ -174,7 +182,7 @@ $themes = [
       "image" => "images/pension-step-2.png"
     ],
     "step3" => [
-      "button" => "Visit Mypension.be",
+      "button" => "Step 3",
       "title" => "Access Personalized Pension Information",
       "description" => "For precise calculations and personalized pension information, visit Mypension.be. This online portal provides comprehensive details about both statutory and supplementary pensions.",
       "image" => "images/pension-step-3.png"
@@ -211,13 +219,13 @@ $themes = [
       "button" => "Step 2",
       "title" => "Submit your application",
       "description" => "Once you've confirmed your eligibility, proceed to submit your application for a study grant. The application process may differ between Flanders and Wallonia. In Flanders, you can apply online or by mail, while in Wallonia, applications can typically be submitted electronically or via registered mail. Be sure to adhere to the specific instructions provided for your region.",
-      "image" => "images/scholarship-step-2.png"
+      "image" => "images/family-unification-step-2.png"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Await decision and follow up",
       "description" => "After submitting your application, await the decision on your study grant. Decisions are typically based on various criteria, including financial, educational, and procedural requirements. It's important to monitor the status of your application and any communication from the authorities regarding the outcome. Keep in mind that the amount of the study grant may vary depending on individual circumstances and current legislation.",
-      "image" => "images/scholarship-step-3.png",
+      "image" => "images/family-unification-step-3.png",
     ],
   ],
 
