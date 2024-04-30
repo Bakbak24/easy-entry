@@ -9,7 +9,7 @@
            </a>
            <div id="menu">
                <ul id="menu-list">
-                   <li><a href="#my-tracker">My Tracker</a></li>
+                   <li><a href="tracker.php">My Tracker</a></li>
                    <li><a href="#themes-section">Themes</a></li>
                    <li><a href="contact.php">Contact</a></li>
                </ul>
@@ -39,7 +39,7 @@
    <div id="side-menu" class="hide-nav">
        <div id="side-menu-links">
            <ul id="menu-list">
-               <li><a href="#my-tracker">My Tracker</a></li>
+               <li><a href="tracker.php">My Tracker</a></li>
                <li><a href="#themes-section">Themes</a></li>
                <li><a href="contact.php">Contact</a></li>
            </ul>

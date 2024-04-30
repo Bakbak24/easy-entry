@@ -1,6 +1,7 @@
 <?php
 include_once(__DIR__ . "/classes/User.php");
 
+
 if (!empty($_POST)) {
     try {
         if (empty($_POST['firstName']) || empty($_POST['surName']) || empty($_POST['e-mail']) || empty($_POST['password'])) {
@@ -38,6 +39,12 @@ if (!empty($_POST)) {
 
 <body>
     <?php include_once 'nav.php'; ?>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <p><?php echo $_GET['message']; ?></p>
+            <button onclick="closePopup()">Oke</button>
+        </div>
+    </div>
     <div class="content-register">
         <h2>Create Account</h2>
         <div class="content-register-form">
@@ -75,6 +82,11 @@ if (!empty($_POST)) {
             </form>
         </div>
     </div>
+    <script>
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
 </body>
 <script src="javascript/script.js">
 </script>
