@@ -6,9 +6,14 @@ function toggleNavigator() {
 function closeNavigator() {
   let screenWidth = window.innerWidth;
   let nav = document.getElementById("side-menu");
+  let logout = document.getElementById("login-btn-responsive");
 
   if (screenWidth > 768 && nav.classList.contains("show-nav")) {
     nav.classList.remove("show-nav");
+  } else if (screenWidth > 768) {
+    logout.style.display = "none";
+  } else {
+    logout.style.display = "block";
   }
 }
 

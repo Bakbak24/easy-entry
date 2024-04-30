@@ -29,11 +29,19 @@
                </a>
            <?php } ?>
        </div>
-       <div id="hamburger">
-           <a href="javascript:void(0);" onclick="toggleNavigator()">
-               <img src="images/burger.svg" alt="">
+       <?php
+        if (!isset($_SESSION['user'])) { ?>
+           <div id="hamburger">
+               <a href="javascript:void(0);" onclick="toggleNavigator()">
+                   <img src="images/burger.svg" alt="">
+               </a>
+           </div>
+       <?php } else { ?>
+           <a href="logout.php">
+               <button type="button" id="login-btn-responsive">LOGOUT</button>
            </a>
-       </div>
+       <?php } ?>
+
    </nav>
    <div id="side-menu" class="hide-nav">
        <div id="side-menu-links">
