@@ -21,6 +21,7 @@ endforeach;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Easy Entry</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/registration.scss" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
     <script src="js/switching-steps.js" defer></script>
 </head>
@@ -37,42 +38,49 @@ endforeach;
             </p>
         </div>
         <div class="step-plan">
-            <h1>Step-By-Step Plan</h1>
-            <div class="steps">
-                <div class="steps-left">
-                    <div class="step-image">
-                        <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
-                    </div>
-                    <button><?php echo $current_theme["step1"]["button"]; ?></button>
-                    <h2>
-                        <?php echo $current_theme["step1"]["title"]; ?>
-                    </h2>
-                    <p>
-                        <?php echo $current_theme["step1"]["description"]; ?>
-                    </p>
-                </div>
-                <div class="steps-right">
-                    <div class="step-tw">
-                        <div class="steps-image">
-                            <img src="<?php echo $current_theme["step2"]["image"]; ?>" alt="Step 2" />
-                        </div>
-                        <div class="steps-info">
-                            <button><?php echo $current_theme["step2"]["button"]; ?></button>
-                            <p><?php echo $current_theme["step2"]["title"]; ?></p>
-                        </div>
-                    </div>
-                    <div class="step-th">
-                        <div class="steps-image">
-                            <img src="<?php echo $current_theme["step3"]["image"]; ?>" alt="Step 3" />
-                        </div>
-                        <div class="steps-info">
-                            <button><?php echo $current_theme["step3"]["button"]; ?></button>
-                            <p><?php echo $current_theme["step3"]["title"]; ?></p>
-                        </div>
-                    </div>
-                </div>
+      <h1>Step-By-Step Plan</h1>
+      <div class="steps">
+        <div class="steps-left">
+          <div id="step1" class="step">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
             </div>
+            <div class="step-info">
+              <button><?php echo $current_theme["step1"]["button"]; ?></button>
+              <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
+              <p>
+                <?php echo $current_theme["step1"]["description"]; ?>
+              </p>
+            </div>
+          </div>
         </div>
+        <div class="steps-right">
+          <div class="step-tw step" id="step2">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step2"]["image"]; ?>" alt="Step 2" />
+            </div>
+            <div class="step-info">
+              <button><?php echo $current_theme["step2"]["button"]; ?></button>
+              <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
+              <p>
+                <?php echo $current_theme["step2"]["description"]; ?>
+              </p>
+            </div>
+          </div>
+          <div class="step-th step" id="step3">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step3"]["image"]; ?>" alt="Step 3" />
+            </div>
+            <div class="step-info">
+              <button><?php echo $current_theme["step3"]["button"]; ?></button>
+              <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
+              <p>
+                <?php echo $current_theme["step3"]["description"]; ?>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
         <section id="contact-section">
             <div id="contact-details">
                 <h2>Did you miss anything?</h2>

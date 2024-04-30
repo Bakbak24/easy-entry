@@ -21,6 +21,7 @@ endforeach;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Easy Entry</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/registration.scss" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
     <script src="js/switching-steps.js" defer></script>
 </head>
@@ -38,80 +39,93 @@ endforeach;
                 To get started on your integration journey, you can learn more and schedule appointments through the official government website. Visit [website link] for appointments and additional information.
             </p>
         </div>
-        <div class="step-plan" id="civic-plan">
-            <h1>What to Expect</h1>
+        <div class="step-plan">
+            <h1>Step-By-Step Plan</h1>
             <div class="steps">
                 <div class="steps-left">
-                    <div class="step-image">
-                        <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
+                    <div id="step1" class="step">
+                        <div class="step-image">
+                            <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
+                        </div>
+                        <div class="step-info">
+                            <button><?php echo $current_theme["step1"]["button"]; ?></button>
+                            <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
+                            <p>
+                                <?php echo $current_theme["step1"]["description"]; ?>
+                            </p>
+                        </div>
                     </div>
-                    <button><?php echo $current_theme["step1"]["button"]; ?></button>
-                    <h2>
-                        <?php echo $current_theme["step1"]["title"]; ?>
-                    </h2>
-                    <p>
-                        <?php echo $current_theme["step1"]["description"]; ?>
-                    </p>
                 </div>
                 <div class="steps-right">
-                    <div class="step-tw">
-                        <div class="steps-image">
+                    <div class="step-tw step" id="step2">
+                        <div class="step-image">
                             <img src="<?php echo $current_theme["step2"]["image"]; ?>" alt="Step 2" />
                         </div>
-                        <div class="steps-info">
+                        <div class="step-info">
                             <button><?php echo $current_theme["step2"]["button"]; ?></button>
-                            <p><?php echo $current_theme["step2"]["title"]; ?></p>
+                            <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
+                            <p>
+                                <?php echo $current_theme["step2"]["description"]; ?>
+                            </p>
                         </div>
                     </div>
-                    <div class="step-th">
-                        <div class="steps-image">
+                    <div class="step-th step" id="step3">
+                        <div class="step-image">
                             <img src="<?php echo $current_theme["step3"]["image"]; ?>" alt="Step 3" />
                         </div>
-                        <div class="steps-info">
+                        <div class="step-info">
                             <button><?php echo $current_theme["step3"]["button"]; ?></button>
-                            <p><?php echo $current_theme["step3"]["title"]; ?></p>
+                            <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
+                            <p>
+                                <?php echo $current_theme["step3"]["description"]; ?>
+                            </p>
                         </div>
                     </div>
-                    <div class="step-th">
-                        <div class="steps-image">
+                    <div class="step-fo step" id="step4">
+                        <div class="step-image">
                             <img src="<?php echo $current_theme["step4"]["image"]; ?>" alt="Step 3" />
                         </div>
-                        <div class="steps-info">
+                        <div class="step-info">
                             <button><?php echo $current_theme["step4"]["button"]; ?></button>
-                            <p><?php echo $current_theme["step4"]["title"]; ?></p>
+                            <h2><?php echo $current_theme["step4"]["title"]; ?></h2>
+                            <p>
+                                <?php echo $current_theme["step4"]["description"]; ?>
+                            </p>
                         </div>
                     </div>
-                    <div class="step-th">
-                        <div class="steps-image">
+                    <div class="step-fi step" id="step5">
+                        <div class="step-image">
                             <img src="<?php echo $current_theme["step5"]["image"]; ?>" alt="Step 3" />
                         </div>
-                        <div class="steps-info">
+                        <div class="step-info">
                             <button><?php echo $current_theme["step5"]["button"]; ?></button>
-                            <p><?php echo $current_theme["step5"]["title"]; ?></p>
+                            <h2><?php echo $current_theme["step5"]["title"]; ?></h2>
+                            <p>
+                                <?php echo $current_theme["step5"]["description"]; ?>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=vp9y25RSX04" frameborder="2" allowfullscreen></iframe>
-        <section id="contact-section">
-            <div id="contact-details">
-                <h2>Did you miss anything?</h2>
-                <p>Please let us know! Your feedback is invaluable and helps us make RefugeeHelp even better. Please use this
-                    form to share suggestions about our website. Please note that this form is for suggestions related to the
-                    website only and not for personal questions or requests. We unfortunately cannot respond to each suggestion
-                    individually, but we greatly appreciate all your input.</p>
-            </div>
-            <div id="contact-form">
-                <form id="ctct-form">
-                    <label for="text">Reason</label>
-                    <input type="text" name="name" id="name" placeholder="Your type suggestion" />
-                    <label for="message">Can you explain more about this</label>
-                    <textarea name="message" id="message" placeholder="Your explanation" maxlength="264"></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </section>
+            <iframe id="yt-frame-cv" src="https://www.youtube.com/embed/vp9y25RSX04" frameborder="2" allowfullscreen></iframe>
+            <section id="contact-section">
+                <div id="contact-details">
+                    <h2>Did you miss anything?</h2>
+                    <p>Please let us know! Your feedback is invaluable and helps us make RefugeeHelp even better. Please use this
+                        form to share suggestions about our website. Please note that this form is for suggestions related to the
+                        website only and not for personal questions or requests. We unfortunately cannot respond to each suggestion
+                        individually, but we greatly appreciate all your input.</p>
+                </div>
+                <div id="contact-form">
+                    <form id="ctct-form">
+                        <label for="text">Reason</label>
+                        <input type="text" name="name" id="name" placeholder="Your type suggestion" />
+                        <label for="message">Can you explain more about this</label>
+                        <textarea name="message" id="message" placeholder="Your explanation" maxlength="264"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </section>
     </main>
     <footer>
         <div id="footer-content">
