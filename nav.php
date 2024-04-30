@@ -31,7 +31,7 @@
            <?php } ?>
        </div>
        <div id="hamburger">
-           <a href="javascript:void(0);" onclick="navigator()">
+           <a href="javascript:void(0);" onclick="toggleNavigator()">
                <img src="images/burger.svg" alt="">
            </a>
        </div>

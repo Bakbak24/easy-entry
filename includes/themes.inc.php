@@ -151,7 +151,7 @@ $themes = [
       "button" => "Apply Now",
       "title" => "Apply for child benefits",
       "description" => "Once you understand your rights and entitlements, you can apply for child benefits through a recognized child benefit fund such as KidsLife. They simplify the application process into three easy steps and ensure that you receive the maximum entitlement you are eligible for.",
-      "image" => "images/child-support-step-3.png"
+      "image" => "images/child-support-step-3.png",
     ],
   ],
   "pension.php" => [
