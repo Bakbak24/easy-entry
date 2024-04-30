@@ -1010,3 +1010,11 @@ footer p {
     background-color: var(--smoke-color);
   }
 }
+
+.pensioen {
+  display: inline;
+  margin-bottom: 18px;
+  font-size: var(--subheadline-size-s);
+  font-family: var(--subheadline-font);
+  font-weight: 400;
+}
