@@ -29,18 +29,11 @@
                </a>
            <?php } ?>
        </div>
-       <?php
-        if (!isset($_SESSION['user'])) { ?>
-           <div id="hamburger">
-               <a href="javascript:void(0);" onclick="toggleNavigator()">
-                   <img src="images/burger.svg" alt="">
-               </a>
-           </div>
-       <?php } else { ?>
-           <a href="logout.php">
-               <button type="button" id="login-btn-responsive">LOGOUT</button>
+       <div id="hamburger">
+           <a href="javascript:void(0);" onclick="closeNavigator()">
+               <img src="images/burger.svg" alt="">
            </a>
-       <?php } ?>
+       </div>
 
    </nav>
    <div id="side-menu" class="hide-nav">
@@ -51,11 +44,18 @@
            </ul>
        </div>
        <div id="side-menu-register">
-           <a href="register.php">
-               <button type="button" id="register-btn">SIGN UP</button>
-           </a>
-           <a href="login.php">
-               <button type="button" id="login-btn">LOGIN</button>
-           </a>
+           <?php
+            if (!isset($_SESSION['user'])) { ?>
+               <a href="register.php">
+                   <button type="button" id="register-btn">SIGN UP</button>
+               </a>
+               <a href="login.php">
+                   <button type="button" id="login-btn">LOGIN</button>
+               </a>
+           <?php } else { ?>
+               <a href="logout.php">
+                   <button type="button" id="login-btn">LOGOUT</button>
+               </a>
+           <?php } ?>
        </div>
    </div>
