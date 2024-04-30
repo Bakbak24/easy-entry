@@ -1018,3 +1018,12 @@ footer p {
   font-family: var(--subheadline-font);
   font-weight: 400;
 }
+
+#content-simulator {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#simulator-info {
+  width: 70%;
+}

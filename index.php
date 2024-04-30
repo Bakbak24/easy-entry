@@ -36,7 +36,7 @@
               Answer a few simple questions and let us guide you to the right
               steps for your situation.
             </p>
-            <a href="#simulation">
+            <a href="simulator.php">
               <button type="button" id="simulation-btn">Start here</button>
             </a>
           </div>
