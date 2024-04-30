@@ -22,7 +22,7 @@ endforeach;
     <title>Easy Entry</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
-    <script src="js/switching-steps.js" defer></script>
+    <script src="js/data-switching.js" defer></script>
 </head>
 
 <body>
@@ -31,13 +31,10 @@ endforeach;
     </header>
     <main>
         <div class="theme-info">
-            <h1>Family Unification</h1>
+            <h1>Tax Declaration</h1>
             <p>
-                Simplify the Family Unification Process
-                Bringing your family together in Belgium is a significant milestone, and we're here to support you every step of the way.
-                Our team understands the importance of family, and we're committed to helping you navigate the family unification process smoothly and efficiently. From gathering the necessary documents to scheduling appointments, we'll provide you with personalized guidance and assistance.
-                Let us help you reunite with your loved ones and create new memories together in Belgium. Contact us today to learn more about our family unification services.
-                Your family's journey to unity starts here.
+
+                Tax declaration is a vital procedure in Belgium, where individuals and businesses disclose income and expenses for tax assessment. It's essential for complying with tax laws and regulations, minimizing the risk of penalties and legal complications. Seeking assistance from tax authorities or professionals can streamline the process and optimize potential benefits, ensuring accurate and efficient tax reporting.
             </p>
         </div>
         <div class="step-plan">

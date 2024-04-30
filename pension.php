@@ -22,7 +22,7 @@ endforeach;
     <title>Easy Entry</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
-    <script src="js/switching-steps.js" defer></script>
+    <script src="js/data-switching.js" defer></script>
 </head>
 
 <body>
@@ -31,14 +31,10 @@ endforeach;
     </header>
     <main>
         <div class="theme-info">
-            <h1>Family Unification</h1>
+            <h1>Pension</h1>
             <p>
-                Simplify the Family Unification Process
-                Bringing your family together in Belgium is a significant milestone, and we're here to support you every step of the way.
-                Our team understands the importance of family, and we're committed to helping you navigate the family unification process smoothly and efficiently. From gathering the necessary documents to scheduling appointments, we'll provide you with personalized guidance and assistance.
-                Let us help you reunite with your loved ones and create new memories together in Belgium. Contact us today to learn more about our family unification services.
-                Your family's journey to unity starts here.
-            </p>
+
+                Planning for retirement is a crucial step towards securing financial stability and peace of mind in your later years. Pension schemes play a central role in providing income during retirement, offering a safety net for individuals as they transition out of the workforce. In this section, we delve into the intricacies of pensions, covering topics such as retirement age, pension schemes, contribution requirements, and effective retirement planning strategies. </p>
         </div>
         <div class="step-plan">
             <h1>Step-By-Step Plan</h1>

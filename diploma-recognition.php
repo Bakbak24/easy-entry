@@ -22,7 +22,7 @@ endforeach;
     <title>Easy Entry</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
-    <script src="js/switching-steps.js" defer></script>
+    <script src="js/data-switching.js" defer></script>
 </head>
 
 <body>
@@ -31,14 +31,9 @@ endforeach;
     </header>
     <main>
         <div class="theme-info">
-            <h1>Family Unification</h1>
+            <h1>Diploma Recognition</h1>
             <p>
-                Simplify the Family Unification Process
-                Bringing your family together in Belgium is a significant milestone, and we're here to support you every step of the way.
-                Our team understands the importance of family, and we're committed to helping you navigate the family unification process smoothly and efficiently. From gathering the necessary documents to scheduling appointments, we'll provide you with personalized guidance and assistance.
-                Let us help you reunite with your loved ones and create new memories together in Belgium. Contact us today to learn more about our family unification services.
-                Your family's journey to unity starts here.
-            </p>
+                Looking to work in Flanders or Brussels with a foreign diploma? You may need to have your diploma recognized for equivalence. Here, we provide essential information about diploma recognition, including eligibility criteria, the recognition process, associated costs, exceptions, frequently asked questions, and how to get in touch for further assistance. Explore the requirements and steps involved to ensure your foreign diploma is recognized for employment opportunities in Flanders or Brussels.
         </div>
         <div class="step-plan">
             <h1>Step-By-Step Plan</h1>

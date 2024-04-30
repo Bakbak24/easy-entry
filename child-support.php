@@ -22,7 +22,7 @@ endforeach;
     <title>Easy Entry</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
-    <script src="js/switching-steps.js" defer></script>
+    <script src="js/data-switching.js" defer></script>
 </head>
 
 <body>
@@ -31,14 +31,9 @@ endforeach;
     </header>
     <main>
         <div class="theme-info">
-            <h1>Family Unification</h1>
+            <h1>Child Support</h1>
             <p>
-                Simplify the Family Unification Process
-                Bringing your family together in Belgium is a significant milestone, and we're here to support you every step of the way.
-                Our team understands the importance of family, and we're committed to helping you navigate the family unification process smoothly and efficiently. From gathering the necessary documents to scheduling appointments, we'll provide you with personalized guidance and assistance.
-                Let us help you reunite with your loved ones and create new memories together in Belgium. Contact us today to learn more about our family unification services.
-                Your family's journey to unity starts here.
-            </p>
+                Child support is a crusial component of ensuring the well-being of children whose parents are separated or divorced. In Belgium, child support is governed by specific laws and regulations designed to protect the rights and interests of children. This system ensures that both parents contribute financially to the upbringing of their children, covering essential needs such as food, clothing, education, and healthcare. Understanding how child support works and navigating the legal process can be complex, but it's crucial for ensuring the best possible outcomes for children. This page provides valuable information and resources to help parents understand their rights and obligations regarding child support in Belgium. </p>
         </div>
         <div class="step-plan">
             <h1>Step-By-Step Plan</h1>

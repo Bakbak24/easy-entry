@@ -27,26 +27,7 @@ endforeach;
 
 <body>
     <header>
-        <nav>
-            <div id="nav-left">
-                <div id="logo"></div>
-                <div id="menu">
-                    <ul>
-                        <li><a href="#my-tracker">My Tracker</a></li>
-                        <li><a href="#themes-section">Theme's</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="nav-right">
-                <a href="register.php">
-                    <button type="button" id="register-btn">SIGN UP</button>
-                </a>
-                <a href="#login">
-                    <button type="button" id="login-btn">LOGIN</button>
-                </a>
-            </div>
-        </nav>
+        <?php include_once 'nav.php'; ?>
     </header>
     <main>
         <div class="theme-info">
@@ -149,5 +130,7 @@ endforeach;
         <div id="copyright">© 2024 Easy Entry. All rights reserved.</div>
     </footer>
 </body>
+<script src="javascript/script.js">
+</script>
 
 </html>

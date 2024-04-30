@@ -12,26 +12,7 @@
 
 <body>
   <header>
-    <nav>
-      <div id="nav-left">
-        <div id="logo"></div>
-        <div id="menu">
-          <ul>
-            <li><a href="#my-tracker">My Tracker</a></li>
-            <li><a href="#themes-section">Theme's</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="nav-right">
-        <a href="register.php">
-          <button type="button" id="register-btn">SIGN UP</button>
-        </a>
-        <a href="#login">
-          <button type="button" id="login-btn">LOGIN</button>
-        </a>
-      </div>
-    </nav>
+    <?php include_once 'nav.php'; ?>
     <div id="welcoming-content">
       <div id="content">
         <h1>Welcome in Belgium</h1>
@@ -96,15 +77,15 @@
       <div id="money">
         <h2 class="theme-categorie-h2" id="mon">Money</h2>
         <div class="all-themes">
-          <div class="theme-content">
+          <div class="theme-content" data-page="tax-declaration.php">
             <h3>Tax Declarations</h3>
             <img src="images/Tax Declarations.svg" alt="Tax Declarations" />
           </div>
-          <div class="theme-content">
+          <div class="theme-content" data-page="child-support.php">
             <h3>Child Support</h3>
             <img src="images/Child Support.svg" alt="Child Support" />
           </div>
-          <div class="theme-content">
+          <div class="theme-content" data-page="pension.php">
             <h3>Pension</h3>
             <img src="images/Pension.svg" alt="Pension" />
           </div>
@@ -113,11 +94,11 @@
       <div id="education">
         <h2 class="theme-categorie-h2" id="edu">Education</h2>
         <div class="all-themes">
-          <div class="theme-content">
+          <div class="theme-content" data-page="diploma-recognition.php">
             <h3>Diploma Recognition</h3>
             <img src="images/Diploma Recognition.svg" alt="Diploma Recognition" />
           </div>
-          <div class="theme-content">
+          <div class="theme-content" data-page="scholarship.php">
             <h3>Scholarship</h3>
             <img src="images/Scholarship.svg" alt="Scholarship" />
           </div>
@@ -163,5 +144,8 @@
     <div id="copyright">© 2024 Easy Entry. All rights reserved.</div>
   </footer>
 </body>
+
+<script src="javascript/script.js">
+</script>
 
 </html>
