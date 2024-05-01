@@ -39,6 +39,17 @@ class User
         }
     }
 
+    public function statusUpdate()
+    {
+        $conn = Db::getConnection();
+        $sql = "UPDATE users SET status = :status WHERE email = :email";
+        $statement = $conn->prepare($sql);
+        $statement->bindValue(':status', $this->status);
+        $statement->bindValue(':email', $this->email);
+        $result = $statement->execute();
+        return $result;
+    }
+
 
 
     /**

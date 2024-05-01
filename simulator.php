@@ -232,6 +232,18 @@ if (!empty($_POST)) {
                 </div>
             </div>
 
+            <div id="Accommodation" style="display:none;" class="simulator-message">
+                <div class="circle"><img src="images/checked.svg" alt=""></div>
+                <div id="question">
+                    <div id="content">
+                        <h2>No Fixed Address</h2>
+                        <a href="registration-municipality.php">
+                            <button type="button" id="sim-btn">Accommodation</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <div id="Gemeente" style="display:none;" class="form-label-group">
                 <div class="circle">5</div>
                 <div id="question">
@@ -373,6 +385,8 @@ if (!empty($_POST)) {
             var sociaalFinish = document.getElementById("SociaalFinish");
             var noSociaal = document.getElementById("noSociaal");
             var jobSearch = document.getElementById("jobSearch");
+            var Accommodation = document.getElementById("Accommodation");
+
 
 
             function showQuestion() {
@@ -391,6 +405,13 @@ if (!empty($_POST)) {
             function showMessage() {
 
                 if (noButton.checked) {
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        $user = $_SESSION['user'];
+                        $user->setStatus("Not EEA");
+                        $user->statusUpdate();
+                    }
+                    ?>
                     message.style.display = "flex";
                     question1.style.display = "none";
                     financialQ.style.display = "none";
@@ -407,6 +428,8 @@ if (!empty($_POST)) {
                     socialeZekerheid.style.display = "none";
                     sociaalFinish.style.display = "none";
                     noSociaal.style.display = "none";
+                    jobSearch.style.display = "none";
+                    Accommodation.style.display = "none";
                     yesSocialeZekerheid.checked = false;
                     noSocialeZekerheid.checked = false;
                     yesGemeente.checked = false;
@@ -432,6 +455,13 @@ if (!empty($_POST)) {
 
             function showStudyM1() {
                 if (noStudy.checked) {
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        $user = $_SESSION['user'];
+                        $user->setStatus("Student not enrolled");
+                        $user->statusUpdate();
+                    }
+                    ?>
                     studyM.style.display = "flex";
                     studyQ2.style.display = "none";
                     studyM2.style.display = "none";
@@ -461,12 +491,6 @@ if (!empty($_POST)) {
                     studyQ3.style.display = "none";
                     studyM3.style.display = "none";
                     studyFinish.style.display = "none";
-                    house.style.display = "none";
-                    Money.style.display = "none";
-                    gemeente.style.display = "none";
-                    sociaalFinish.style.display = "none";
-                    socialeZekerheid.style.display = "none";
-                    noSociaal.style.display = "none";
                     noStudy.checked = false;
                     yesStudy.checked = false;
                     noStudy2.checked = false;
@@ -483,18 +507,14 @@ if (!empty($_POST)) {
                 if (studyingR.checked) {
                     studyQ1.style.display = "flex";
                     financialQ.style.display = "none";
-                    studyM.style.display = "none";
-                    studyQ2.style.display = "none";
-                    studyM2.style.display = "none";
-                    studyQ3.style.display = "none";
-                    studyM3.style.display = "none";
-                    studyFinish.style.display = "none";
+                    jobSearch.style.display = "none";
+                    Accommodation.style.display = "none";
                     house.style.display = "none";
                     Money.style.display = "none";
                     gemeente.style.display = "none";
-                    sociaalFinish.style.display = "none";
+                    gemeenteM.style.display = "none";
                     socialeZekerheid.style.display = "none";
-                    noSociaal.style.display = "none";
+                    sociaalFinish.style.display = "none";
                     noStudy.checked = false;
                     yesStudy.checked = false;
                     noStudy2.checked = false;
@@ -538,6 +558,13 @@ if (!empty($_POST)) {
 
             function showStudyM2() {
                 if (noStudy2.checked) {
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        $user = $_SESSION['user'];
+                        $user->setStatus("Student not applied for scholarship");
+                        $user->statusUpdate();
+                    }
+                    ?>
                     studyM2.style.display = "flex";
                     studyQ3.style.display = "none";
                     studyM3.style.display = "none";
@@ -566,6 +593,13 @@ if (!empty($_POST)) {
 
             function showStudyM3() {
                 if (noStudy3.checked) {
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        $user = $_SESSION['user'];
+                        $user->setStatus("Student-municipality");
+                        $user->statusUpdate();
+                    }
+                    ?>
                     studyM3.style.display = "flex";
                     studyFinish.style.display = "none";
 
@@ -576,6 +610,13 @@ if (!empty($_POST)) {
 
             function showStudyFinish() {
                 if (yesStudy3.checked) {
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        $user = $_SESSION['user'];
+                        $user->setStatus("Finished");
+                        $user->statusUpdate();
+                    }
+                    ?>
                     studyFinish.style.display = "flex";
                     studyM3.style.display = "none";
                 } else {
@@ -586,16 +627,37 @@ if (!empty($_POST)) {
             function showMoney1() {
                 if (moneyEmployed.checked || moneyEquity.checked) {
                     house.style.display = "flex";
-                    Money.style.display = "none";
+                    gemeente.style.display = "none";
+                    gemeenteM.style.display = "none";
+                    socialeZekerheid.style.display = "none";
+                    sociaalFinish.style.display = "none";
+                    jobSearch.style.display = "none";
+                } else {
+                    house.style.display = "none";
+                }
+            }
+
+            function showNoHouse() {
+                if (noHouse.checked) {
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        $user = $_SESSION['user'];
+                        $user->setStatus("No House");
+                        $user->statusUpdate();
+                    }
+                    ?>
+                    Accommodation.style.display = "flex";
                     gemeente.style.display = "none";
                     gemeenteM.style.display = "none";
                     socialeZekerheid.style.display = "none";
                     sociaalFinish.style.display = "none";
                     noSociaal.style.display = "none";
+                    sociaalFinish.style.display = "none";
+                    noSociaal.style.display = "none";
+                    sociaalFinish.style.display = "none";
                     jobSearch.style.display = "none";
-
                 } else {
-                    house.style.display = "none";
+                    noHouse.style.display = "none";
                 }
             }
 
@@ -613,6 +675,13 @@ if (!empty($_POST)) {
 
             function showGemeenteM() {
                 if (noGemeente.checked) {
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        $user = $_SESSION['user'];
+                        $user->setStatus("Municipality");
+                        $user->statusUpdate();
+                    }
+                    ?>
                     gemeenteM.style.display = "flex";
                     sociaalFinish.style.display = "none";
                     socialeZekerheid.style.display = "none";
@@ -643,6 +712,13 @@ if (!empty($_POST)) {
 
             function showSociaalFinish() {
                 if (yesSocialeZekerheid.checked) {
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        $user = $_SESSION['user'];
+                        $user->setStatus("Finished");
+                        $user->statusUpdate();
+                    }
+                    ?>
                     sociaalFinish.style.display = "flex";
                     gemeenteM.style.display = "none";
                     noSociaal.style.display = "none";
@@ -654,15 +730,20 @@ if (!empty($_POST)) {
 
             function showNoMoney() {
                 if (noMoney.checked) {
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        $user = $_SESSION['user'];
+                        $user->setStatus("Job Seeker");
+                        $user->statusUpdate();
+                    }
+                    ?>
                     jobSearch.style.display = "flex";
                     house.style.display = "none";
-                    Money.style.display = "none";
+                    Accommodation.style.display = "none";
                     gemeente.style.display = "none";
                     gemeenteM.style.display = "none";
                     socialeZekerheid.style.display = "none";
                     sociaalFinish.style.display = "none";
-                    noSociaal.style.display = "none";
-
                     noStudy.checked = false;
                     yesStudy.checked = false;
                     noStudy2.checked = false;
