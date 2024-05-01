@@ -1181,3 +1181,17 @@ footer p {
   flex-direction: column;
   gap: 3px;
 }
+
+#tracker-content {
+  min-height: 600px;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+#tracker-content h2 {
+  font-size: var(--subheadline-size);
+  font-family: var(--headline-font);
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+}

@@ -22,6 +22,9 @@ if (isset($_SESSION['user'])) {
 
 <body>
     <?php include_once 'nav.php'; ?>
+    <div id="tracker-content">
+        <h2>My Tracker</h2>
+    </div>
     <footer>
         <div id="footer-content">
             <div id="about-us">
