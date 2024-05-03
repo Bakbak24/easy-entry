@@ -561,7 +561,7 @@ if (!empty($_POST)) {
                     <?php
                     if (isset($_SESSION['user'])) {
                         $user = $_SESSION['user'];
-                        $user->setStatus("Student not applied for scholarship");
+                        $user->setStatus("Student no scholarship");
                         $user->statusUpdate();
                     }
                     ?>
