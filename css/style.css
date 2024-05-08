@@ -389,7 +389,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   #simulation-content {
     flex-direction: column;
     height: auto;
@@ -1182,10 +1182,21 @@ footer p {
   gap: 3px;
 }
 
-#tracker-content {
-  min-height: 600px;
+#wrapper-tracker {
   padding-left: 4%;
   padding-right: 4%;
+  width: 90%;
+}
+
+#tracker-content {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#simulation-section-tracker #simulation-content {
+  margin-top: -2%;
 }
 
 #tracker-content h2 {
@@ -1194,4 +1205,8 @@ footer p {
   font-weight: 700;
   color: var(--dark-color);
   margin-bottom: 20px;
+}
+
+#wrapper-tracker h1 {
+  margin-bottom: 0;
 }

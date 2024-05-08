@@ -4,7 +4,14 @@ include_once(__DIR__ . '/classes/User.php');
 
 session_start();
 if (isset($_SESSION['user'])) {
-    $user = $_SESSION['user'];
+    $users = User::getAllData();
+    $user_session = $_SESSION['user'];
+    foreach ($users as $user) {
+        if ($user['email'] == $_SESSION['user']->getEmail()) {
+            $status = $user['status'];
+            echo $status;
+        }
+    }
 } else {
     header("Location: register.php?message=<h3>You need to create an account before accessing the My Tracker page. <br>Please register to continue.</h3>");
 }
@@ -22,8 +29,36 @@ if (isset($_SESSION['user'])) {
 
 <body>
     <?php include_once 'nav.php'; ?>
-    <div id="tracker-content">
-        <h2>My Tracker</h2>
+    <div id="wrapper-tracker">
+
+
+        <h1>My Tracker</h1>
+        <div id="tracker-content">
+
+            <?php
+            if ($status == 'onbekend') { ?>
+                <section id="simulation-section-tracker">
+                    <div id="simulation-content">
+                        <div id="content">
+                            <div id="content-image"></div>
+                            <div id="content-details">
+                                <h2>Unlock Your Tracker with Our Immigration Simulator</h2>
+                                <p>
+                                    Take the first step towards your immigration journey! Use our handy simulator
+                                    to discover the best path for your situation. Answer a few questions and get
+                                    personalized guidance.
+                                </p>
+                                <a href="simulator.php">
+                                    <button type="button" id="simulation-btn">Start Now</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <?php } else if ($status == "Not EEA") { ?>
+                ok
+            <?php } ?>
+        </div>
     </div>
     <footer>
         <div id="footer-content">

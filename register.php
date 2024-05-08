@@ -34,17 +34,20 @@ if (!empty($_POST)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <?php include_once 'nav.php'; ?>
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <p><?php echo $_GET['message']; ?></p>
-            <button onclick="closePopup()">Oke</button>
+    <?php include_once 'nav.php';
+    if (isset($_GET['message'])) { ?>
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <p><?php echo $_GET['message']; ?></p>
+                <button onclick="closePopup()">Oke</button>
+            </div>
         </div>
-    </div>
+    <?php } ?>
     <div class="content-register">
         <h2>Create Account</h2>
         <div class="content-register-form">
