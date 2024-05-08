@@ -9,7 +9,6 @@ if (isset($_SESSION['user'])) {
     foreach ($users as $user) {
         if ($user['email'] == $_SESSION['user']->getEmail()) {
             $status = $user['status'];
-            echo $status;
         }
     }
 } else {
@@ -56,7 +55,21 @@ if (isset($_SESSION['user'])) {
                     </div>
                 </section>
             <?php } else if ($status == "Not EEA") { ?>
-                ok
+                <section id="simulation-section-tracker">
+                    <div id="simulation-content">
+                        <div id="content">
+                            <div id="content-details">
+                                <h2>My Tracker Not Available</h2>
+                                <p>
+                                    Sorry, but this tracker is only intended for citizens of the European Economic Area (EEA). Since you indicated that you are not an EEA citizen, this tool is not suitable for your situation. Thank you for your interest.
+                                </p>
+                                <a href="index.php">
+                                    <button type="button" id="simulation-btn">Home</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             <?php } ?>
         </div>
     </div>
