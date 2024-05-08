@@ -39,14 +39,24 @@ class User
         }
     }
 
-    public function statusUpdate()
+    public function statusUpdate($status)
     {
         $conn = Db::getConnection();
         $sql = "UPDATE users SET status = :status WHERE email = :email";
         $statement = $conn->prepare($sql);
-        $statement->bindValue(':status', $this->status);
+        $statement->bindValue(':status', $status);
         $statement->bindValue(':email', $this->email);
         $result = $statement->execute();
+        return $result;
+    }
+
+    public static function getAllData()
+    {
+        $conn = Db::getConnection();
+        $sql = "SELECT * FROM users";
+        $statement = $conn->query($sql);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
 
