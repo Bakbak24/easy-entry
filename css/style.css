@@ -572,7 +572,7 @@ main {
   }
 }
 
-@media only screen and (max-width:360px){
+@media only screen and (max-width:402px){
   .theme-content {
     max-width: 110px;
     width: 100%;
@@ -1354,9 +1354,6 @@ footer p {
 
 #wrapper-tracker h1 {
   margin-bottom: 0;
-<<<<<<< HEAD
-}
-=======
 }
 
 @media only screen and (min-height: 1000px) {
@@ -1372,4 +1369,3 @@ footer p {
     transform: translateY(50%);
   }
 }
->>>>>>> ca93d20f565689ae4312ce85747631c8ca2c2d69
