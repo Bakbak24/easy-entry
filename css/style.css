@@ -1237,6 +1237,8 @@ footer p {
   #content-details
   button {
   margin-top: 0px;
+  font-size: 1.5rem;
+  padding: 10px 30px;
 }
 
 #tracker-content h2 {

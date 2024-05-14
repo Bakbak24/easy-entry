@@ -603,6 +603,7 @@ if (!empty($_POST)) {
             function showStudyFinish() {
                 if (yesStudy3.checked) {
                     updateStatus("Finished");
+                    alert("Thank you for completing the simulation");
                     studyFinish.style.display = "flex";
                     studyM3.style.display = "none";
                 } else {

@@ -9,6 +9,7 @@ if (isset($_SESSION['user'])) {
     foreach ($users as $user) {
         if ($user['email'] == $_SESSION['user']->getEmail()) {
             $status = $user['status'];
+            $name = $user['firstname'];
         }
     }
 } else {
@@ -24,6 +25,231 @@ if (isset($_SESSION['user'])) {
     <title>Easy Entry</title>
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .container {
+            width: 70%;
+            height: auto;
+            margin: 50px auto;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .container h3 {
+            margin: 0 0 5px 0;
+        }
+
+        .container ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            display: block;
+        }
+
+        .container ul::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: calc(580px);
+            /* Voeg de hoogte van de padding toe aan de hoogte van de lijn */
+            left: 50%;
+            top: 0px;
+            /* Zorg ervoor dat de lijn de bovenste padding overlapt */
+            transform: translateX(-50%);
+            background-color: #F0F0F0;
+            box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+        }
+
+        .container ul li {
+            width: 50%;
+            height: auto;
+            padding: 15px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.218);
+            position: relative;
+            margin-bottom: 30px;
+            z-index: 99;
+            box-sizing: border-box;
+            /* Voeg dit toe om ervoor te zorgen dat padding binnen de breedte van het element valt */
+        }
+
+        .container ul li:nth-child(4) {
+            margin-bottom: 0;
+        }
+
+        .container ul li .circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #F0F0F0;
+            top: 0;
+            display: grid;
+            place-items: center;
+            box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+
+        }
+
+        .circle::after {
+            content: attr(data-number);
+            color: var(--dark-color);
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            border: 3px solid #009BD6;
+        }
+
+
+        ul li:nth-child(odd) .circle {
+            transform: translate(50%, -50%);
+            right: -30px;
+        }
+
+        ul li:nth-child(even) .circle {
+            transform: translate(-50%, -50%);
+            left: -30px;
+        }
+
+        .container ul li:nth-child(odd) {
+            float: left;
+            clear: right;
+            text-align: right;
+            transform: translateX(-30px);
+        }
+
+        .container ul li:nth-child(even) {
+            float: right;
+            clear: left;
+            transform: translateX(30px);
+        }
+
+        .container ul li .heading {
+            font-size: 17px;
+            color: var(--dark-color);
+        }
+
+        .container ul li p {
+            font-size: 13px;
+            color: var(--dark-color);
+            line-height: 18px;
+            margin: 6px 0 10px 0;
+        }
+
+        .container ul li a {
+            font-size: 13px;
+            text-decoration: none;
+            color: var(--dark-color);
+            background-color: var(--white-color);
+            border: 3px solid #009BD6;
+            border-radius: 50px;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        .container ul li .completed::after {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+            color: var(--white-color);
+        }
+
+        .container button {
+            font-size: 13px;
+            text-decoration: none;
+            color: var(--white-color);
+            background-color: #0084B6;
+            border-radius: 50px;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            border: none;
+            font-family: var(--body-font);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .container .button-wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container ul li:nth-child(even) .button-wrapper {
+            flex-direction: row;
+        }
+
+        @media only screen and (min-width: 798px) and (max-width: 1100px) {
+            .container {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (max-width: 798px) {
+            .container {
+                width: 70%;
+                transform: translateX(20px);
+            }
+
+            .container ul::after {
+                left: -40px;
+                height: calc(600px);
+            }
+
+            .container ul li {
+                width: 100%;
+                float: none;
+                clear: none;
+                margin-bottom: 80px;
+            }
+
+            .container ul li .circle {
+                left: -40px;
+                transform: translate(-50%, -50%);
+            }
+
+            .container ul li .date {
+                left: 20px;
+            }
+
+            .container ul li:nth-child(odd) {
+                transform: translateX(0px);
+                text-align: left;
+            }
+
+            .container ul li:nth-child(even) {
+                transform: translateX(0px);
+            }
+        }
+
+        @media only screen and (max-width: 550px) {
+            .container {
+                width: 80%;
+            }
+
+            .container ul::after {
+                left: -30px;
+            }
+
+            .container ul li .circle {
+                left: -30px;
+            }
+
+
+
+            #wrapper-tracker {
+                padding: 0;
+                width: 100%;
+            }
+
+            #wrapper-tracker h1 {
+                padding: 0 20px;
+
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -34,8 +260,7 @@ if (isset($_SESSION['user'])) {
         <h1>My Tracker</h1>
         <div id="tracker-content">
 
-            <?php
-            if ($status == 'onbekend') { ?>
+            <?php if ($status == 'onbekend') { ?>
                 <section id="simulation-section-tracker">
                     <div id="simulation-content">
                         <div id="content">
@@ -70,6 +295,66 @@ if (isset($_SESSION['user'])) {
                         </div>
                     </div>
                 </section>
+            <?php } else if ($status == "Finished") { ?>
+                <section id="simulation-section-tracker">
+                    <div id="simulation-content">
+                        <div id="content">
+                            <div id="content-details">
+                                <h2>Immigration Process Completed</h2>
+                                <p>
+                                    Congratulations! You've completed your immigration process. For further information on migration in Belgium, browse our website.
+                                </p>
+                                <a href="index.php">
+                                    <button type="button" id="simulation-btn">Home</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <?php } else if (str_contains($status, "Student not enrolled")) { ?>
+                <div class="container">
+                    <ul>
+                        <li>
+                            <h3 class="heading">Study Flanders</h3>
+                            <p>Ontdek hoe je je kunt inschrijven bij een school in België met behulp van Study Flanders. Deze website biedt waardevolle ondersteuning en begeleiding bij het inschrijvingsproces. Neem een kijkje op de Study Flanders-website voor meer informatie over hoe je je kunt aanmelden voor onderwijs in België. Zodra je klaar bent met deze stap, ga je verder naar de volgende stap in My Tracker.</p>
+                            <div class="button-wrapper">
+                                <button type="button" onclick="goToStep2()" id="step1">Next Step</button>
+                                <a href="https://www.studyinflanders.be/">Study Flanders</a>
+                            </div>
+                            <span class="circle completed" data-number="1"></span>
+                        </li>
+                        <li>
+                            <h3 class="heading">Scholarship</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit excepturi accusamus minus
+                                totam </p>
+                            <div class="button-wrapper">
+                                <button type="button" onclick="goToStep3()" id="step2">Next Step</button>
+                                <a href="https://www.studyinflanders.be/">Study Flanders</a>
+                            </div>
+                            <span class="circle" data-number="2"></span>
+                        </li>
+                        <li class="stap3">
+                            <h3 class="heading">Full Stack Developer</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit excepturi accusamus minus
+                                totam </p>
+                            <div class="button-wrapper">
+                                <button type="button" onclick="goToStep4()" id="step3">Next Step</button>
+                                <a href="https://www.studyinflanders.be/">Study Flanders</a>
+                            </div>
+                            <span class="circle" data-number="3"></span>
+                        </li>
+                        <li class="stap4">
+                            <h3 class="heading">App Developer</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit excepturi accusamus minus
+                                totam </p>
+                            <div class="button-wrapper">
+                                <a href="https://www.studyinflanders.be/">Study Flanders</a>
+                            </div>
+                            <span class="circle" data-number="4"></span>
+                        </li>
+                    </ul>
+                </div>
+
             <?php } ?>
         </div>
     </div>
@@ -112,6 +397,16 @@ if (isset($_SESSION['user'])) {
     </footer>
 </body>
 <script src="javascript/script.js">
+</script>
+<script>
+    var step1 = document.getElementById('step1');
+    var step2 = document.querySelector('.stap2');
+
+
+    function goToStep2() {
+        step1.style.display = 'none';
+        step2.style.display = 'none';
+    }
 </script>
 
 </html>
