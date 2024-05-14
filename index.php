@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Easy Entry</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/8ead13f8af.js" crossorigin="anonymous"></script>
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <script src="js/theme.js" defer></script>
 </head>
@@ -16,11 +17,6 @@
     <div id="welcoming-content">
       <div id="content">
         <h1>Welcome in Belgium</h1>
-        <p>
-          Are you on your way to immigrate to Belgium and would like to ease
-          this process you can do so through our platform
-        </p>
-        <input type="search" name="search" id="search" placeholder="Search" />
       </div>
     </div>
   </header>
@@ -30,12 +26,7 @@
         <div id="content">
           <div id="content-image"></div>
           <div id="content-details">
-            <h2>Want to get a smooth start on your immigration process?</h2>
-            <p>
-              Discover your immigration options with our handy simulator!
-              Answer a few simple questions and let us guide you to the right
-              steps for your situation.
-            </p>
+            <h2>Start your immigration process</h2>
             <a href="simulator.php">
               <button type="button" id="simulation-btn">Start here</button>
             </a>
@@ -44,61 +35,66 @@
       </div>
     </section>
     <br />
+    <h1>Theme's</h1>
+    <div id="sub-themes">
+      <h2 class="theme-categorie-h2" id="sta"><i class="fa fa-home" aria-hidden="true" style="color:var(--white-color);"></i>Stay</h2>
+      <h2 class="theme-categorie-h2" id="mon"><i class="fa fa-eur" aria-hidden="true" style="color:var(--blue-color);"></i>Money</h2>
+      <h2 class="theme-categorie-h2" id="edu"><i class="fa-solid fa-graduation-cap" aria-hidden="true" style="color:var(--blue-color);"></i>Education</h2>
+    </div>
     <section id="themes-section">
-      <h1>Theme's</h1>
-      <div id="stay">
-        <h2 class="theme-categorie-h2" id="sta">Stay</h2>
+
+      <div id="stay" class="themes" data-theme="stay">
+
         <div class="all-themes">
-          <div class="theme-content" data-page="registration-municipality.php">
+          <div class="theme-content" data-page="registration-municipality.php" data-theme="stay">
             <h3>
               Registration <br />
               Municipality
             </h3>
             <img src="images/Registration Municipality.svg" alt="Registration" />
           </div>
-          <div class="theme-content" data-page="accommodation.php">
+          <div class="theme-content" data-page="accommodation.php" data-theme="stay">
             <h3>Accommodation</h3>
             <img src="images/Accommodation.svg" alt="Accommodation" />
           </div>
-          <div class="theme-content" data-page="family-unification.php">
+          <div class="theme-content" data-page="family-unification.php" data-theme="stay">
             <h3>Family Unification</h3>
             <img src="images/Family Unification.svg" alt="Family Unification" />
           </div>
-          <div class="theme-content" data-page="social-security.php">
+          <div class="theme-content" data-page="social-security.php" data-theme="stay">
             <h3>Social Security</h3>
             <img src="images/Social Security.svg" alt="Social Security" />
           </div>
-          <div class="theme-content" data-page="civic-integration.php">
+          <div class="theme-content" data-page="civic-integration.php" data-theme="stay">
             <h3>Civic Integration</h3>
             <img src="images/Civic Integration.svg" alt="Civic Integration" />
           </div>
         </div>
       </div>
-      <div id="money">
-        <h2 class="theme-categorie-h2" id="mon">Money</h2>
-        <div class="all-themes">
-          <div class="theme-content" data-page="tax-declaration.php">
+      <div id="money" class="themes" data-theme="money">
+
+        <div class="all-themes" data-theme="money">
+          <div class="theme-content" data-page="tax-declaration.php" data-theme="money">
             <h3>Tax Declarations</h3>
             <img src="images/Tax Declarations.svg" alt="Tax Declarations" />
           </div>
-          <div class="theme-content" data-page="child-support.php">
+          <div class="theme-content" data-page="child-support.php" data-theme="money">
             <h3>Child Support</h3>
             <img src="images/Child Support.svg" alt="Child Support" />
           </div>
-          <div class="theme-content" data-page="pension.php">
+          <div class="theme-content" data-page="pension.php" data-theme="money">
             <h3>Pension</h3>
             <img src="images/Pension.svg" alt="Pension" />
           </div>
         </div>
       </div>
-      <div id="education">
-        <h2 class="theme-categorie-h2" id="edu">Education</h2>
-        <div class="all-themes">
-          <div class="theme-content" data-page="diploma-recognition.php">
+      <div id="education" class="themes" data-theme="education">
+        <div class="all-themes" data-theme="education">
+          <div class="theme-content" data-page="diploma-recognition.php" data-theme="education">
             <h3>Diploma Recognition</h3>
             <img src="images/Diploma Recognition.svg" alt="Diploma Recognition" />
           </div>
-          <div class="theme-content" data-page="scholarship.php">
+          <div class="theme-content" data-page="scholarship.php" data-theme="education">
             <h3>Scholarship</h3>
             <img src="images/Scholarship.svg" alt="Scholarship" />
           </div>
@@ -107,6 +103,74 @@
     </section>
   </main>
   <footer>
+    <script>
+      let sta = document.getElementById("sta");
+      let mon = document.getElementById("mon");
+      let edu = document.getElementById("edu");
+      let allThemes = document.querySelectorAll(".theme-content");
+      let divmoney = document.getElementById("money");
+      let divstay = document.getElementById("stay");
+      let divedu = document.getElementById("education");
+      let stayicon = document.querySelector(".fa-home");
+      let monicon = document.querySelector(".fa-eur");
+      let eduicon = document.querySelector(".fa-graduation-cap");
+
+      divmoney.style.display = "none";
+      divedu.style.display = "none";
+
+      sta.style.backgroundColor = "var(--blue-color)";
+      sta.style.color = "var(--white-color)";
+      stayicon.style.color = "var(--white-color)";
+
+      sta.addEventListener("click", (event) => {
+        divstay.style.display = "block";
+        divmoney.style.display = "none";
+        divedu.style.display = "none";
+        sta.style.backgroundColor = "var(--blue-color)";
+        sta.style.color = "var(--white-color)";
+        stayicon.style.color = "var(--white-color)";
+
+        mon.style.backgroundColor = "var(--white-color)";
+        mon.style.color = "var(--blue-color)";
+        edu.style.backgroundColor = "var(--white-color)";
+        edu.style.color = "var(--blue-color)";
+
+        monicon.style.color = "var(--blue-color)";
+        eduicon.style.color = "var(--blue-color)";
+
+      });
+
+      mon.addEventListener("click", (event) => {
+        divmoney.style.display = "block";
+        divstay.style.display = "none";
+        divedu.style.display = "none";
+        mon.style.backgroundColor = "var(--blue-color)";
+        mon.style.color = "var(--white-color)";
+        sta.style.backgroundColor = "var(--white-color)";
+        sta.style.color = "var(--blue-color)";
+        edu.style.backgroundColor = "var(--white-color)";
+        edu.style.color = "var(--blue-color)";
+        stayicon.style.color = "var(--blue-color)";
+        monicon.style.color = "var(--white-color)";
+        eduicon.style.color = "var(--blue-color)";
+      });
+
+      edu.addEventListener("click", (event) => {
+        divedu.style.display = "block";
+        divstay.style.display = "none";
+        divmoney.style.display = "none";
+        edu.style.backgroundColor = "var(--blue-color)";
+        edu.style.color = "var(--white-color)";
+        sta.style.backgroundColor = "var(--white-color)";
+        sta.style.color = "var(--blue-color)";
+        mon.style.backgroundColor = "var(--white-color)";
+        mon.style.color = "var(--blue-color)";
+        stayicon.style.color = "var(--blue-color)";
+        monicon.style.color = "var(--blue-color)";
+        eduicon.style.color = "var(--white-color)";
+
+      });
+    </script>
     <div id="footer-content">
       <div id="about-us">
         <h2>About Us</h2>
