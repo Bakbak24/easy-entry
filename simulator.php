@@ -32,9 +32,6 @@ if (!empty($_POST)) {
         <div class="theme-info" id="simulator-info">
             <h1>Start your immigration process with our simulator</h1>
             <p>
-                With our simulator, you can explore your migration process to Belgium step by step. Answer questions on various aspects, such as your financial situation and housing, to better understand the requirements and possibilities for your immigration.
-            </p>
-            <p>
                 <strong>
                     This simulator serves as the first step in the process and helps us to follow and guide your immigration progress together with you. Please note that the results of the simulation are informational and do not constitute legal evidence. Ultimate decisions are made by immigration experts who take your individual situation into account.
                 </strong>
@@ -390,6 +387,21 @@ if (!empty($_POST)) {
             var jobSearch = document.getElementById("jobSearch");
             var Accommodation = document.getElementById("Accommodation");
 
+            var status = "ok";
+
+            function updateStatus(newStatus) {
+                status = newStatus;
+                // Stuur de status naar de server via AJAX
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "update_status.php");
+                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                xhr.send(JSON.stringify({
+                    status: status
+                }));
+            }
+
+
+
 
 
             function showQuestion() {
@@ -408,12 +420,7 @@ if (!empty($_POST)) {
             function showMessage() {
 
                 if (noButton.checked) {
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                        $user = $_SESSION['user'];
-                        $user->statusUpdate("Not EEA");
-                    }
-                    ?>
+                    updateStatus("Not EEA");
                     message.style.display = "flex";
                     question1.style.display = "none";
                     financialQ.style.display = "none";
@@ -425,7 +432,7 @@ if (!empty($_POST)) {
                     studyM3.style.display = "none";
                     studyFinish.style.display = "none";
                     house.style.display = "none";
-                    Money.style.display = "none";
+
                     gemeente.style.display = "none";
                     socialeZekerheid.style.display = "none";
                     sociaalFinish.style.display = "none";
@@ -458,12 +465,7 @@ if (!empty($_POST)) {
 
             function showStudyM1() {
                 if (noStudy.checked) {
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                        $user = $_SESSION['user'];
-                        $user->statusUpdate("Student not enrolled");
-                    }
-                    ?>
+                    updateStatus("Student not enrolled");
                     studyM.style.display = "flex";
                     studyQ2.style.display = "none";
                     studyM2.style.display = "none";
@@ -560,12 +562,7 @@ if (!empty($_POST)) {
 
             function showStudyM2() {
                 if (noStudy2.checked) {
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                        $user = $_SESSION['user'];
-                        $user->statusUpdate("Student no scholarship");
-                    }
-                    ?>
+                    updateStatus("Student no scholarship");
                     studyM2.style.display = "flex";
                     studyQ3.style.display = "none";
                     studyM3.style.display = "none";
@@ -594,12 +591,7 @@ if (!empty($_POST)) {
 
             function showStudyM3() {
                 if (noStudy3.checked) {
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                        $user = $_SESSION['user'];
-                        $user->statusUpdate("Student-municipality");
-                    }
-                    ?>
+                    updateStatus("Student-municipality");
                     studyM3.style.display = "flex";
                     studyFinish.style.display = "none";
 
@@ -610,12 +602,7 @@ if (!empty($_POST)) {
 
             function showStudyFinish() {
                 if (yesStudy3.checked) {
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                        $user = $_SESSION['user'];
-                        $user->statusUpdate("Finished");
-                    }
-                    ?>
+                    updateStatus("Finished");
                     studyFinish.style.display = "flex";
                     studyM3.style.display = "none";
                 } else {
@@ -638,12 +625,7 @@ if (!empty($_POST)) {
 
             function showNoHouse() {
                 if (noHouse.checked) {
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                        $user = $_SESSION['user'];
-                        $user->statusUpdate("No House");
-                    }
-                    ?>
+                    updateStatus("No House");
                     Accommodation.style.display = "flex";
                     gemeente.style.display = "none";
                     gemeenteM.style.display = "none";
@@ -673,12 +655,7 @@ if (!empty($_POST)) {
 
             function showGemeenteM() {
                 if (noGemeente.checked) {
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                        $user = $_SESSION['user'];
-                        $user->statusUpdate("Municipality");
-                    }
-                    ?>
+                    updateStatus("Municipality");
                     gemeenteM.style.display = "flex";
                     sociaalFinish.style.display = "none";
                     socialeZekerheid.style.display = "none";
@@ -709,12 +686,7 @@ if (!empty($_POST)) {
 
             function showSociaalFinish() {
                 if (yesSocialeZekerheid.checked) {
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                        $user = $_SESSION['user'];
-                        $user->statusUpdate("Finished");
-                    }
-                    ?>
+                    updateStatus("Finished");
                     sociaalFinish.style.display = "flex";
                     gemeenteM.style.display = "none";
                     noSociaal.style.display = "none";
@@ -726,12 +698,7 @@ if (!empty($_POST)) {
 
             function showNoMoney() {
                 if (noMoney.checked) {
-                    <?php
-                    if (isset($_SESSION['user'])) {
-                        $user = $_SESSION['user'];
-                        $user->statusUpdate("Job Seeker");
-                    }
-                    ?>
+                    updateStatus("Job Seeker");
                     jobSearch.style.display = "flex";
                     house.style.display = "none";
                     Accommodation.style.display = "none";
@@ -756,7 +723,6 @@ if (!empty($_POST)) {
                 }
             }
         </script>
-
 
     </div>
     <footer>
