@@ -50,11 +50,9 @@ if (isset($_SESSION['user'])) {
             content: "";
             position: absolute;
             width: 10px;
-            height: calc(580px);
-            /* Voeg de hoogte van de padding toe aan de hoogte van de lijn */
+            height: calc(480px);
             left: 50%;
-            top: 0px;
-            /* Zorg ervoor dat de lijn de bovenste padding overlapt */
+            top: 50px;
             transform: translateX(-50%);
             background-color: #F0F0F0;
             box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
@@ -84,7 +82,7 @@ if (isset($_SESSION['user'])) {
             height: 20px;
             border-radius: 50%;
             background-color: #F0F0F0;
-            top: 0;
+            top: 50px;
             display: grid;
             place-items: center;
             box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
@@ -178,6 +176,30 @@ if (isset($_SESSION['user'])) {
 
         .container ul li:nth-child(even) .button-wrapper {
             flex-direction: row;
+        }
+
+        .container ul .hide-step2 {
+            background-color: var(--light-color);
+            box-shadow: none
+        }
+
+        .container ul .hide-step3 {
+            background-color: var(--light-color);
+            box-shadow: none
+        }
+
+        .hide-step2 .step2-gone {
+            visibility: hidden;
+        }
+
+        .hide-step3 .step3-gone {
+            visibility: hidden;
+        }
+
+        #simulation-section-tracker {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         @media only screen and (min-width: 798px) and (max-width: 1100px) {
@@ -323,34 +345,26 @@ if (isset($_SESSION['user'])) {
                             </div>
                             <span class="circle completed" data-number="1"></span>
                         </li>
-                        <li>
-                            <h3 class="heading">Scholarship</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit excepturi accusamus minus
-                                totam </p>
-                            <div class="button-wrapper">
-                                <button type="button" onclick="goToStep3()" id="step2">Next Step</button>
-                                <a href="https://www.studyinflanders.be/">Study Flanders</a>
+                        <li class="hide-step2">
+                            <div class="step2-gone">
+                                <h3 class="heading">Scholarship</h3>
+                                <p>Unlock opportunities for scholarships to support your education journey in Belgium. Explore various scholarship options and learn how they can assist you in achieving your academic goals. Find more information on available scholarships on our website. Once you've explored your scholarship options, proceed to the next step in My Tracker. </p>
+                                <div class="button-wrapper">
+                                    <button type="button" onclick="goToStep3()" id="step2">Next Step</button>
+                                    <a href="scholarship.php">Scholarship</a>
+                                </div>
                             </div>
                             <span class="circle" data-number="2"></span>
                         </li>
-                        <li class="stap3">
-                            <h3 class="heading">Full Stack Developer</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit excepturi accusamus minus
-                                totam </p>
-                            <div class="button-wrapper">
-                                <button type="button" onclick="goToStep4()" id="step3">Next Step</button>
-                                <a href="https://www.studyinflanders.be/">Study Flanders</a>
+                        <li class="hide-step3">
+                            <div class="step3-gone">
+                                <h3 class="heading">Registration Municipality</h3>
+                                <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
+                                <div class="button-wrapper">
+                                    <a href="registration-municipality.php">Registration Municipality</a>
+                                </div>
                             </div>
                             <span class="circle" data-number="3"></span>
-                        </li>
-                        <li class="stap4">
-                            <h3 class="heading">App Developer</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit excepturi accusamus minus
-                                totam </p>
-                            <div class="button-wrapper">
-                                <a href="https://www.studyinflanders.be/">Study Flanders</a>
-                            </div>
-                            <span class="circle" data-number="4"></span>
                         </li>
                     </ul>
                 </div>
@@ -399,14 +413,44 @@ if (isset($_SESSION['user'])) {
 <script src="javascript/script.js">
 </script>
 <script>
-    var step1 = document.getElementById('step1');
-    var step2 = document.querySelector('.stap2');
+    var step1Button = document.getElementById('step1');
+    var step2Button = document.getElementById('step2');
+    var step2gone = document.querySelector('.step2-gone'); // Selecteer de tweede stap
+    var step3gone = document.querySelector('.step3-gone'); // Selecteer de derde stap
+    var step2 = document.querySelector('.hide-step2'); // Selecteer de tweede stap
+    var step3 = document.querySelector('.hide-step3'); // Selecteer de derde stap
+
+
 
 
     function goToStep2() {
-        step1.style.display = 'none';
-        step2.style.display = 'none';
+        step1Button.style.display = 'none'; // Verberg de knop van stap 1
+        step2gone.style.visibility = 'visible'; // Toon de tweede stap
+        step2.style.backgroundColor = '#fff'; // Toon de tweede stap
+        step2.style.boxShadow = '1px 1px 15px rgba(0, 0, 0, 0.218)'; // Toon de tweede stap
+        document.querySelector('.circle[data-number="2"]').classList.add('completed');
+    }
+
+    function goToStep3() {
+        step2Button.style.display = 'none'; // Verberg de knop van stap 2
+        step3gone.style.visibility = 'visible'; // Toon de derde stap
+        step3.style.backgroundColor = '#fff'; // Toon de derde stap
+        step3.style.boxShadow = '1px 1px 15px rgba(0, 0, 0, 0.218)'; // Toon de derde stap
+        document.querySelector('.circle[data-number="3"]').classList.add('completed');
+        updateStatus("Finished");
+    }
+
+    function updateStatus(newStatus) {
+        status = newStatus;
+        // Stuur de status naar de server via AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "update_status.php");
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send(JSON.stringify({
+            status: status
+        }));
     }
 </script>
+
 
 </html>
