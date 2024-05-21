@@ -23,6 +23,7 @@ endforeach;
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/registration.scss" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="js/switching-steps.js" defer></script>
 </head>
 
@@ -32,7 +33,7 @@ endforeach;
     </header>
     <main>
         <div class="theme-info">
-            <h1>Scholarship</h1>
+            <h1>Scholarship<i class="fa-solid fa-circle-question"></i></h1>
             <p>
                 A study grant, commonly known as a scholarship, provides financial assistance to less privileged students during their secondary and higher education. It can be applied for in both secondary and higher education. To qualify, students must attend full-time education at a recognized institution, maintain regular attendance, and not repeat or attend a lower level than the previous year, except in exceptional cases. Additionally, their income should not exceed the specified maximum. A study grant serves as crucial support for students in need, helping them pursue their educational goals. </p>
         </div>

@@ -22,6 +22,7 @@ endforeach;
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/registration.scss" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
 </head>
 
@@ -31,12 +32,14 @@ endforeach;
   </header>
   <main>
     <div class="theme-info">
-    <h1>Accommodation</h1>
-      <p>
-        Finding a place to live in Belgium is an important step in settling into your new life. Let us help you find the perfect accommodation tailored to your needs.
-        Our team provides personalized assistance to make your search for housing easy and stress-free. Whether you prefer a cozy apartment or a spacious house, we've got you covered.
-        Contact us today and start your journey to finding your new home in Belgium.
-      </p>
+      <h1>Accommodation<i class="fa-solid fa-circle-question"></i></h1>
+      <div class="popups-question-mark">
+        <p>
+          Finding a place to live in Belgium is an important step in settling into your new life. Let us help you find the perfect accommodation tailored to your needs.
+          Our team provides personalized assistance to make your search for housing easy and stress-free. Whether you prefer a cozy apartment or a spacious house, we've got you covered.
+          Contact us today and start your journey to finding your new home in Belgium.
+        </p>
+      </div>
     </div>
     <div class="step-plan">
       <h1>Step-By-Step Plan</h1>
@@ -50,8 +53,8 @@ endforeach;
               <button><?php echo $current_theme["step1"]["button"]; ?></button>
               <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
               <p>
-              <?php echo $current_theme["step1"]["description"]; ?>
-            </p>
+                <?php echo $current_theme["step1"]["description"]; ?>
+              </p>
             </div>
           </div>
         </div>
@@ -64,8 +67,8 @@ endforeach;
               <button><?php echo $current_theme["step2"]["button"]; ?></button>
               <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
               <p>
-              <?php echo $current_theme["step2"]["description"]; ?>
-            </p>
+                <?php echo $current_theme["step2"]["description"]; ?>
+              </p>
             </div>
           </div>
           <div class="step-th step" id="step3">
@@ -76,11 +79,11 @@ endforeach;
               <button><?php echo $current_theme["step3"]["button"]; ?></button>
               <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
               <p>
-              <?php echo $current_theme["step3"]["description"]; ?>
-            </p>
+                <?php echo $current_theme["step3"]["description"]; ?>
+              </p>
             </div>
           </div>
-          
+
         </div>
       </div>
       <section id="contact-section">

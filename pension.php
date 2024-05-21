@@ -23,6 +23,7 @@ endforeach;
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/registration.scss" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="js/switching-steps.js" defer></script>
 </head>
 
@@ -32,9 +33,8 @@ endforeach;
     </header>
     <main>
         <div class="theme-info">
-            <h1>Pension</h1>
+            <h1>Pension<i class="fa-solid fa-circle-question"></i></h1>
             <p>
-
                 Planning for retirement is a crucial step towards securing financial stability and peace of mind in your later years. Pension schemes play a central role in providing income during retirement, offering a safety net for individuals as they transition out of the workforce. In this section, we delve into the intricacies of pensions, covering topics such as retirement age, pension schemes, contribution requirements, and effective retirement planning strategies. </p>
         </div>
         <div class="step-plan">

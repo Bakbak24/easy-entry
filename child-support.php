@@ -23,6 +23,7 @@ endforeach;
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/registration.scss" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="js/switching-steps.js" defer></script>
 </head>
 
@@ -32,10 +33,12 @@ endforeach;
     </header>
     <main>
         <div class="theme-info">
-            <h1>Child Support</h1>
+            <h1>Child Support<i class="fa-solid fa-circle-question"></i></h1>
+            <div class="popups-question-mark">
             <p>
                 Child support is a crusial component of ensuring the well-being of children whose parents are separated or divorced. In Belgium, child support is governed by specific laws and regulations designed to protect the rights and interests of children. This system ensures that both parents contribute financially to the upbringing of their children, covering essential needs such as food, clothing, education, and healthcare. Understanding how child support works and navigating the legal process can be complex, but it's crucial for ensuring the best possible outcomes for children. This page provides valuable information and resources to help parents understand their rights and obligations regarding child support in Belgium. </p>
-        </div>
+            </div>
+            </div>
         <div class="step-plan">
       <h1>Step-By-Step Plan</h1>
       <div class="steps">

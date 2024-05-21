@@ -23,6 +23,7 @@ endforeach;
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/registration.scss" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
 </head>
 
@@ -32,7 +33,7 @@ endforeach;
   </header>
   <main>
     <div class="theme-info">
-      <h1>Family Unification</h1>
+      <h1>Family Unification<i class="fa-solid fa-circle-question"></i></h1>
       <p>
         Simplify the Family Unification Process
         Bringing your family together in Belgium is a significant milestone, and we're here to support you every step of the way.

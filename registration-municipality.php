@@ -22,6 +22,7 @@ endforeach;
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/registration.scss" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
 </head>
 
@@ -31,7 +32,7 @@ endforeach;
   </header>
   <main>
     <div class="theme-info">
-      <h1>Registration Municipality</h1>
+      <h1>Registration Municipality<i class="fa-solid fa-circle-question"></i></h1>
       <p>Discover how easy it is to register at the municipality and take the first steps towards your new life in
         Belgium. Together we will work to make your integration go smoothly so that you can quickly and smoothly begin
         your new adventure in our country.</p>
