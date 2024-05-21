@@ -215,7 +215,8 @@ a {
   cursor: pointer;
 }
 
-#profile-content {}
+#profile-content {
+}
 
 #welcoming-content {
   width: 100%;
@@ -254,7 +255,7 @@ a {
   padding-left: 6%;
 }
 
-@media only screen and (max-width:810px) {
+@media only screen and (max-width: 810px) {
   #welcoming-content #content h1 {
     font-size: 58px;
   }
@@ -281,7 +282,6 @@ a {
     padding-left: 10%;
   }
 }
-
 
 main {
   margin-left: 4%;
@@ -396,7 +396,7 @@ main {
     padding: 20px;
   }
 
-  @media only screen and (max-width:518px) {
+  @media only screen and (max-width: 518px) {
     #simulation-content #content #content-details h2 {
       font-size: 25px;
     }
@@ -447,7 +447,6 @@ main {
   color: var(--blue-color);
   margin: 0;
   gap: 10px;
-
 }
 
 #money,
@@ -465,7 +464,8 @@ main {
   gap: 30px;
 }
 
-.theme-categorie-h2::before {}
+.theme-categorie-h2::before {
+}
 
 #sta,
 #edu,
@@ -480,9 +480,13 @@ main {
   align-items: center;
   cursor: pointer;
 }
+<<<<<<< HEAD
 
 @media only screen and (max-width:488px) {
 
+=======
+@media only screen and (max-width: 488px) {
+>>>>>>> edbebea465b41340712606f082887d1d28082645
   #sta,
   #edu,
   #mon {
@@ -492,7 +496,10 @@ main {
   .theme-categorie-h2 {
     font-size: 20px;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> edbebea465b41340712606f082887d1d28082645
 }
 
 #edu::before {
@@ -534,65 +541,98 @@ main {
   padding-top: 0;
   cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> edbebea465b41340712606f082887d1d28082645
 .theme-content h3 {
   font-family: var(--body-font);
   color: var(--dark-color);
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width: 640px) {
   .theme-content {
     max-width: 190px;
     width: 100%;
     height: 190px;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> edbebea465b41340712606f082887d1d28082645
   .all-themes {
     justify-content: center;
   }
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width:560px) {
+=======
+@media only screen and (max-width: 560px) {
+>>>>>>> edbebea465b41340712606f082887d1d28082645
   .theme-content {
     max-width: 150px;
     width: 100%;
     height: 150px;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> edbebea465b41340712606f082887d1d28082645
   .all-themes {
     gap: 40px;
   }
 }
+<<<<<<< HEAD
 
 @media only screen and (max-width:488px) {
+=======
+@media only screen and (max-width: 488px) {
+>>>>>>> edbebea465b41340712606f082887d1d28082645
   .theme-content {
     max-width: 130px;
     width: 100%;
     height: 130px;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> edbebea465b41340712606f082887d1d28082645
   .theme-content h3 {
     font-size: var(--body-size);
     font-family: var(--body-font);
     color: var(--dark-color);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> edbebea465b41340712606f082887d1d28082645
   .all-themes {
     gap: 30px;
   }
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width:402px) {
+=======
+@media only screen and (max-width: 402px) {
+>>>>>>> edbebea465b41340712606f082887d1d28082645
   .theme-content {
     max-width: 110px;
     width: 100%;
     height: 110px;
   }
+<<<<<<< HEAD
 
   .theme-content h3 {
     font-size: 14px;
   }
 
+=======
+  .theme-content h3 {
+    font-size: 14px;
+  }
+>>>>>>> edbebea465b41340712606f082887d1d28082645
   .all-themes {
     gap: 20px;
   }
@@ -969,7 +1009,6 @@ footer p {
 }
 
 @media only screen and (max-width: 768px) {
-
   #contact-section,
   #ctc-section {
     flex-direction: column;
@@ -1199,7 +1238,6 @@ footer p {
 }
 
 @media only screen and (max-width: 800px) {
-
   #yt-frame,
   #yt-frame-cv {
     height: 400px;
@@ -1207,7 +1245,6 @@ footer p {
 }
 
 @media only screen and (max-width: 360px) {
-
   #yt-frame,
   #yt-frame-cv {
     height: 300px;
@@ -1301,13 +1338,15 @@ footer p {
   /* ruimte maken voor de cirkel */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 100%;
-  clip-path: polygon(1.5% 0,
-      100% 0,
-      100% 100%,
-      1.5% 100%,
-      1.5% 30%,
-      0 20%,
-      1.5% 10%);
+  clip-path: polygon(
+    1.5% 0,
+    100% 0,
+    100% 100%,
+    1.5% 100%,
+    1.5% 30%,
+    0 20%,
+    1.5% 10%
+  );
 }
 
 .circle {
@@ -1365,6 +1404,8 @@ footer p {
 
 #simulation-section-tracker #simulation-content #content #content-details button {
   margin-top: 0px;
+  font-size: 1.5rem;
+  padding: 10px 30px;
 }
 
 #tracker-content h2 {
