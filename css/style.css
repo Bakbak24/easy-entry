@@ -1369,3 +1369,15 @@ footer p {
     transform: translateY(50%);
   }
 }
+
+@media only screen and (max-width: 568px) {
+  .content-register {
+    width: 90%;
+  }
+  .register-form-label-user-wrapped {
+    flex-wrap: wrap;
+  }
+  .register-form-label-user-wrapped .register-form-label {
+    width: 100%;
+  }
+}

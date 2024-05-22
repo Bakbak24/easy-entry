@@ -50,6 +50,42 @@ class User
         return $result;
     }
 
+    public function nextStep($currentStatus)
+    {
+        $conn = Db::getConnection();
+        $nextStatus = '';
+
+        // Determine the next step based on the current status
+        switch ($currentStatus) {
+            case '1':
+                $nextStatus = '2';
+                break;
+            case '2':
+                $nextStatus = '3';
+                break;
+            case '3':
+                $nextStatus = '4';
+                break;
+            default:
+                throw new Exception("Invalid status");
+        }
+
+        // Update status using the REPLACE function
+        $sql = "UPDATE users SET status = REPLACE(status, :currentStatus, :nextStatus) WHERE email = :email";
+        $statement = $conn->prepare($sql);
+        $statement->bindValue(':currentStatus', $currentStatus);
+        $statement->bindValue(':nextStatus', $nextStatus);
+        $statement->bindValue(':email', $this->email);
+
+        if ($statement->execute()) {
+            return true;
+        } else {
+            $errorInfo = $statement->errorInfo();
+            throw new Exception("Database error: " . $errorInfo[2]);
+        }
+    }
+
+
     public static function getAllData()
     {
         $conn = Db::getConnection();

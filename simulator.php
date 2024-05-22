@@ -1045,7 +1045,7 @@ if (!empty($_POST)) {
 
     function showStudyM1() {
         if (noStudy.checked) {
-            updateStatus("Student not enrolled");
+            updateStatus("Student not enrolled1");
             studyM.style.display = "flex";
             studyQ2.style.display = "none";
             studyM2.style.display = "none";
@@ -1142,7 +1142,7 @@ if (!empty($_POST)) {
 
     function showStudyM2() {
         if (noStudy2.checked) {
-            updateStatus("Student no scholarship");
+            updateStatus("Student no scholarship1");
             studyM2.style.display = "flex";
             studyQ3.style.display = "none";
             studyM3.style.display = "none";
@@ -1171,7 +1171,7 @@ if (!empty($_POST)) {
 
     function showStudyM3() {
         if (noStudy3.checked) {
-            updateStatus("Student-municipality");
+            updateStatus("Student-municipality1");
             studyM3.style.display = "flex";
             studyFinish.style.display = "none";
 
@@ -1205,7 +1205,7 @@ if (!empty($_POST)) {
 
     function showNoHouse() {
         if (noHouse.checked) {
-            updateStatus("No House");
+            updateStatus("No House1");
             Accommodation.style.display = "flex";
             gemeente.style.display = "none";
             gemeenteM.style.display = "none";
@@ -1228,6 +1228,7 @@ if (!empty($_POST)) {
             socialeZekerheid.style.display = "none";
             noSociaal.style.display = "none";
             sociaalFinish.style.display = "none";
+            Accommodation.style.display = "none";
         } else {
             gemeente.style.display = "none";
         }
@@ -1235,7 +1236,7 @@ if (!empty($_POST)) {
 
     function showGemeenteM() {
         if (noGemeente.checked) {
-            updateStatus("Municipality");
+            updateStatus("Municipality1");
             gemeenteM.style.display = "flex";
             sociaalFinish.style.display = "none";
             socialeZekerheid.style.display = "none";
@@ -1278,7 +1279,7 @@ if (!empty($_POST)) {
 
     function showNoMoney() {
         if (noMoney.checked) {
-            updateStatus("Job Seeker");
+            updateStatus("Job Seeker1");
             jobSearch.style.display = "flex";
             house.style.display = "none";
             Accommodation.style.display = "none";

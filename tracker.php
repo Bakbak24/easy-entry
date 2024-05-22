@@ -1,6 +1,8 @@
 <?php
 
 include_once(__DIR__ . '/classes/User.php');
+include_once(__DIR__ . '/classes/Progress.php');
+
 
 session_start();
 if (isset($_SESSION['user'])) {
@@ -15,6 +17,40 @@ if (isset($_SESSION['user'])) {
 } else {
     header("Location: register.php?message=<h3>You need to create an account before accessing the My Tracker page. <br>Please register to continue.</h3>");
 }
+
+
+
+
+
+
+
+$totalSteps = 0;
+$currentStep = 0;
+
+if ($status == 'onbekend') {
+    $totalSteps = 0;
+} else if ($status == "Not EEA") {
+    $totalSteps = 0;
+} else if ($status == "Finished") {
+    $totalSteps = 0;
+} else if (str_contains($status, "Student not enrolled") || str_contains($status, "Job Seeker") || str_contains($status, "Municipality")) {
+    $totalSteps = 3;
+} else if (str_contains($status, "Student no scholarship") || str_contains($status, "No House")) {
+    $totalSteps = 2;
+} else if (str_contains($status, "Student-municipality")) {
+    $totalSteps = 1;
+}
+
+if (str_contains($status, "1")) {
+    $currentStep = 1;
+} else if (str_contains($status, "2")) {
+    $currentStep = 2;
+} else if (str_contains($status, "3")) {
+    $currentStep = 3;
+} else if (str_contains($status, "4")) {
+    $currentStep = 4;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,8 +70,12 @@ if (isset($_SESSION['user'])) {
             box-sizing: border-box;
         }
 
+        .container h1 {
+            margin: 0px;
+        }
+
         .container h3 {
-            margin: 0 0 5px 0;
+            margin: 0px 0px 5px 0px;
         }
 
         .container ul {
@@ -50,12 +90,23 @@ if (isset($_SESSION['user'])) {
             content: "";
             position: absolute;
             width: 10px;
-            height: calc(480px);
             left: 50%;
             top: 50px;
             transform: translateX(-50%);
             background-color: #F0F0F0;
             box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+        }
+
+        .steps3 ul::after {
+            height: 480px;
+        }
+
+        .steps3-half ul::after {
+            height: 620px;
+        }
+
+        .steps2 ul::after {
+            height: 260px;
         }
 
         .container ul li {
@@ -145,6 +196,17 @@ if (isset($_SESSION['user'])) {
             border-radius: 50px;
             padding: 5px 10px;
             transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .Student-municipality a {
+            text-decoration: none;
+            color: var(--dark-color);
+            border: 3px solid #009BD6;
+            border-radius: 50px;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            text-align: center;
         }
 
         .container ul li .completed::after {
@@ -167,7 +229,28 @@ if (isset($_SESSION['user'])) {
             cursor: pointer;
         }
 
+        .Student-municipality button {
+            font-size: 13px;
+            text-decoration: none;
+            color: var(--white-color);
+            background-color: #0084B6;
+            border-radius: 50px;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            border: none;
+            font-family: var(--body-font);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
         .container .button-wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .Student-municipality .button-wrapper {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
@@ -200,6 +283,63 @@ if (isset($_SESSION['user'])) {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .tracker-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .tracker-info {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+        }
+
+        .qr-code {
+            /* Voeg hier stijlen toe voor de QR-code container */
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .qr-code img {
+            /* Voeg hier stijlen toe voor de QR-code afbeelding */
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .progress-container {
+            position: relative;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+        progress {
+            width: 90%;
+            height: 15px;
+            appearance: none;
+            -webkit-appearance: none;
+            border: none;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+
+        /* Stijl voor de voortgangsbalk met een aangepaste achtergrondkleur */
+        progress.green-progress::-webkit-progress-value {
+            background-color: green;
         }
 
         @media only screen and (min-width: 798px) and (max-width: 1100px) {
@@ -270,6 +410,48 @@ if (isset($_SESSION['user'])) {
 
             }
         }
+
+        @media only screen and (max-width: 1220px) {
+            .steps3 ul::after {
+                height: 560px;
+            }
+
+            .steps3-half ul::after {
+                height: 640px;
+            }
+
+            .steps2 ul::after {
+                height: 260px;
+            }
+        }
+
+        @media only screen and (max-width: 880px) {
+            .steps3 ul::after {
+                height: 620px;
+            }
+
+            .steps3-half ul::after {
+                height: 700px;
+            }
+
+            .steps2 ul::after {
+                height: 320px;
+            }
+        }
+
+        @media only screen and (max-width: 625px) {
+            .steps3 ul::after {
+                height: 100vh;
+            }
+
+            .steps3-half ul::after {
+                height: 100vh;
+            }
+
+            .steps2 ul::after {
+                height: 50vh;
+            }
+        }
     </style>
 
 </head>
@@ -279,8 +461,26 @@ if (isset($_SESSION['user'])) {
         <?php include_once 'nav.php'; ?>
         <div id="wrapper-tracker">
 
+            <?php
+            if ($status != 'onbekend' && $status != 'Not EEA') {
+            ?>
 
-            <h1>My Tracker</h1>
+                <div class="tracker-container">
+                    <h1>My Tracker</h1>
+                    <div class="tracker-info">
+                        <?php
+                        if ($status == "Finished" || str_contains($status, "Student not enrolled4") || str_contains($status, "Student no scholarship3") || str_contains($status, "Job Seeker4") || str_contains($status, "No House3") || str_contains($status, "Municipality4")) {
+                            echo "Finished";
+                        } else if (str_contains($status, "Student not enrolled") || str_contains($status, "Student no scholarship") || str_contains($status, "Job Seeker") || str_contains($status, "No House")) {
+                            echo "Stap $currentStep/$totalSteps";
+                        }
+                        ?>
+                    </div>
+                </div>
+
+            <?php
+            }
+            ?>
             <div id="tracker-content">
 
                 <?php if ($status == 'onbekend') { ?>
@@ -318,7 +518,7 @@ if (isset($_SESSION['user'])) {
                             </div>
                         </div>
                     </section>
-                <?php } else if ($status == "Finished") { ?>
+                <?php } else if ($status == "Finished" || str_contains($status, "Student not enrolled4") || str_contains($status, "Student no scholarship3") || str_contains($status, "Student-municipality2") || str_contains($status, "No House3") || str_contains($status, "Municipality4")) { ?>
                     <section id="simulation-section-tracker">
                         <div id="simulation-content">
                             <div id="content">
@@ -334,42 +534,478 @@ if (isset($_SESSION['user'])) {
                             </div>
                         </div>
                     </section>
-                <?php } else if (str_contains($status, "Student not enrolled")) { ?>
-                    <div class="container">
+                <?php } else if (str_contains($status, "Student not enrolled")) {
+                    $progress = new Progress();
+                    $progress->setNaam('studietoelage');
+                    $progress2 = new Progress();
+                    $progress2->setNaam('gemeente');
+                    $status = $progress->getStatusFromName($progress->getNaam());
+                    $status2 = $progress2->getStatusFromName($progress2->getNaam());
+                ?>
+                    <div class="container steps3">
                         <ul>
                             <li>
                                 <h3 class="heading">Study Flanders</h3>
-                                <p>Ontdek hoe je je kunt inschrijven bij een school in België met behulp van Study Flanders. Deze website biedt waardevolle ondersteuning en begeleiding bij het inschrijvingsproces. Neem een kijkje op de Study Flanders-website voor meer informatie over hoe je je kunt aanmelden voor onderwijs in België. Zodra je klaar bent met deze stap, ga je verder naar de volgende stap in My Tracker.</p>
+                                <p>Find out how to register at a school in Belgium using Study Flanders. This website provides valuable support and guidance through the registration process. Take a look at the Study Flanders website for more information on how to apply for education in Belgium. Once you're done with this step, move on to the next step in My Tracker.</p>
                                 <div class="button-wrapper">
-                                    <button type="button" onclick="goToStep2()" id="step1">Next Step</button>
+                                    <?php
+                                    if ($currentStep == 1) { ?>
+                                        <button type="button" onclick="goToStep2()" id="step1">Next Step</button>
+                                    <?php } ?>
                                     <a href="https://www.studyinflanders.be/">Study Flanders</a>
                                 </div>
                                 <span class="circle completed" data-number="1"></span>
                             </li>
-                            <li class="hide-step2">
-                                <div class="step2-gone">
+                            <li <?php
+                                if ($currentStep == 1) {
+                                    echo 'class="hide-step2"';
+                                } else {
+                                    echo 'class=""';
+                                }
+                                ?>>
+                                <div <?php
+                                        if ($currentStep == 1) {
+                                            echo 'class="step2-gone"';
+                                        } else {
+                                            echo 'class=""';
+                                        }
+                                        ?>>
                                     <h3 class="heading">Scholarship</h3>
                                     <p>Unlock opportunities for scholarships to support your education journey in Belgium. Explore various scholarship options and learn how they can assist you in achieving your academic goals. Find more information on available scholarships on our website. Once you've explored your scholarship options, proceed to the next step in My Tracker. </p>
-                                    <div class="button-wrapper">
-                                        <button type="button" onclick="goToStep3()" id="step2">Next Step</button>
-                                        <a href="scholarship.php">Scholarship</a>
-                                    </div>
-                                </div>
-                                <span class="circle" data-number="2"></span>
+                                    <?php
+                                    if ($status[0]['status'] == 0) {
+                                    ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="20" max="100"> 20% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <label for="file">Process is ongoing</label>
+                                        <?php } else { ?>
+                                            <div class="progress-container">
+                                                <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                            </div>
+                                            <div class="button-wrapper">
+                                                <button type="button" onclick="goToStep3()" id="step2">Next Step</button>
+                                            <?php } ?>
+                                            <a href="scholarship.php">Scholarship</a>
+                                            </div>
+                                        </div>
+                                        <span <?php
+                                                if ($currentStep >= 2) {
+                                                    echo 'class="circle completed"';
+                                                } else {
+                                                    echo 'class="circle"';
+                                                }
+                                                ?> data-number="2"></span>
                             </li>
-                            <li class="hide-step3">
-                                <div class="step3-gone">
+                            <li <?php
+                                if ($currentStep <= 2) {
+                                    echo 'class="hide-step3"';
+                                } else {
+                                    echo 'class=""';
+                                }
+                                ?>>
+                                <div <?php
+                                        if ($currentStep <= 2) {
+                                            echo 'class="step3-gone"';
+                                        } else {
+                                            echo 'class=""';
+                                        }
+                                        ?>>
                                     <h3 class="heading">Registration Municipality</h3>
                                     <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
                                     <div class="button-wrapper">
+                                        <button type="button" onclick="goToStep4()" id="step3">Finish</button>
                                         <a href="registration-municipality.php">Registration Municipality</a>
+                                        <?php if ($status2[0]['status'] == 1) { ?>
+                                            <div class="qr-code">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
+                                            </div>
+                                        <?php } ?>
+
                                     </div>
+
                                 </div>
-                                <span class="circle" data-number="3"></span>
+
+                                <span <?php
+                                        if ($currentStep == 3) {
+                                            echo 'class="circle completed"';
+                                        } else {
+                                            echo 'class="circle"';
+                                        }
+                                        ?> data-number="3"></span>
                             </li>
                         </ul>
                     </div>
 
+                <?php } else if (str_contains($status, "Student no scholarship")) {
+                    $progress = new Progress();
+                    $progress->setNaam('studietoelage');
+                    $progress2 = new Progress();
+                    $progress2->setNaam('gemeente');
+                    $status = $progress->getStatusFromName($progress->getNaam());
+                    $status2 = $progress2->getStatusFromName($progress2->getNaam());
+                ?>
+                    <div class="container steps2">
+                        <ul>
+                            <li>
+                                <h3 class="heading">Scholarship</h3>
+                                <p>Unlock opportunities for scholarships to support your education journey in Belgium. Explore various scholarship options and learn how they can assist you in achieving your academic goals. Find more information on available scholarships on our website. Once you've explored your scholarship options, proceed to the next step in My Tracker. </p>
+                                <?php
+                                if ($status[0]['status'] == 0) {
+                                ?>
+                                    <div class="progress-container">
+                                        <progress id="file" value="20" max="100"> 20% </progress>
+                                    </div>
+                                    <div class="button-wrapper">
+                                        <label for="file">Process is ongoing</label>
+                                    <?php } else { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <button type="button" onclick="goToStep2()" id="step1">Next Step</button>
+                                        <?php } ?>
+                                        <a href="scholarship.php">Scholarship</a>
+                                        </div>
+                                        <span class="circle completed" data-number="1"></span>
+                            </li>
+                            <li <?php
+                                if ($currentStep <= 1) {
+                                    echo 'class="hide-step2"';
+                                } else {
+                                    echo 'class=""';
+                                }
+                                ?>>
+                                <div <?php
+                                        if ($currentStep <= 1) {
+                                            echo 'class="step2-gone"';
+                                        } else {
+                                            echo 'class=""';
+                                        }
+                                        ?>>
+                                    <h3 class="heading">Registration Municipality</h3>
+                                    <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
+                                    <div class="button-wrapper">
+                                        <button type="button" onclick="goToStep3()" id="step2">Finish</button>
+                                        <a href="registration-municipality.php">Registration Municipality</a>
+                                        <?php if ($status2[0]['status'] == 1) { ?>
+                                            <div class="qr-code">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
+                                            </div>
+                                        <?php } ?>
+
+                                    </div>
+
+                                </div>
+
+                                <span <?php
+                                        if ($currentStep == 2) {
+                                            echo 'class="circle completed"';
+                                        } else {
+                                            echo 'class="circle"';
+                                        }
+                                        ?> data-number="2"></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                <?php } else if (str_contains($status, "Student-municipality")) { ?>
+                    <section id="simulation-section-tracker" class="Student-municipality">
+                        <div id="simulation-content">
+                            <div id="content">
+                                <div id="content-details">
+                                    <h2>Registration Municipality</h2>
+                                    <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
+                                    <div class="qr-code">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
+                                    </div>
+                                    <a href="registration-municipality.php">
+                                        Registration Municipality
+                                    </a>
+                                    <div class="button-wrapper">
+                                        <button type="button" onclick="goToStep2()" id="step2">Finish</button>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                <?php } else if (str_contains($status, "Job Seeker")) {
+                    $progress = new Progress();
+                    $progress->setNaam('huisvesting');
+                    $progress2 = new Progress();
+                    $progress2->setNaam('gemeente');
+                    $status = $progress->getStatusFromName($progress->getNaam());
+                    $status2 = $progress2->getStatusFromName($progress2->getNaam());
+                ?>
+                    <div class="container steps3">
+                        <ul>
+                            <li>
+                                <h3 class="heading">Settling in Belgium</h3>
+                                <p>Find comprehensive assistance on settling in Belgium at our website. Explore valuable resources tailored to your needs, covering accommodation, healthcare, legal requirements, and more. Prepare yourself for a seamless transition into Belgian society with our support. Visit the website now to access the help you need.</p>
+                                <div class="button-wrapper">
+                                    <?php
+                                    if ($currentStep == 1) { ?>
+                                        <button type="button" onclick="goToStep2()" id="step1">Next Step</button>
+                                    <?php } ?>
+                                    <a href="https://settlinginbelgium.be/en/work-and-retirement/looking-for-work-in-belgium">Settling in Belgium</a>
+                                </div>
+                                <span class="circle completed" data-number="1"></span>
+                            </li>
+                            <li <?php
+                                if ($currentStep == 1) {
+                                    echo 'class="hide-step2"';
+                                } else {
+                                    echo 'class=""';
+                                }
+                                ?>>
+                                <div <?php
+                                        if ($currentStep == 1) {
+                                            echo 'class="step2-gone"';
+                                        } else {
+                                            echo 'class=""';
+                                        }
+                                        ?>>
+                                    <h3 class="heading">Accommodation</h3>
+                                    <p>Discover housing options to support your relocation to Belgium. Explore various accommodation choices, including apartments, shared housing, and student residences, to find the best fit for your needs. Learn how to secure housing and understand your rental rights and responsibilities. For more detailed information and assistance, visit our website. Once you've found suitable accommodation, proceed to the next step in My Tracker.</p>
+                                    <?php
+                                    if ($status[0]['status'] == 0) {
+                                    ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="20" max="100"> 20% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <label for="file">Process is ongoing</label>
+                                        <?php } else { ?>
+                                            <div class="progress-container">
+                                                <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                            </div>
+                                            <div class="button-wrapper">
+                                                <button type="button" onclick="goToStep3()" id="step2">Next Step</button>
+                                            <?php } ?>
+                                            <a href="accommodation.php">Accommodation</a>
+                                            </div>
+                                        </div>
+                                        <span <?php
+                                                if ($currentStep >= 2) {
+                                                    echo 'class="circle completed"';
+                                                } else {
+                                                    echo 'class="circle"';
+                                                }
+                                                ?> data-number="2"></span>
+                            </li>
+                            <li <?php
+                                if ($currentStep <= 2) {
+                                    echo 'class="hide-step3"';
+                                } else {
+                                    echo 'class=""';
+                                }
+                                ?>>
+                                <div <?php
+                                        if ($currentStep <= 2) {
+                                            echo 'class="step3-gone"';
+                                        } else {
+                                            echo 'class=""';
+                                        }
+                                        ?>>
+                                    <h3 class="heading">Registration Municipality</h3>
+                                    <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
+                                    <div class="button-wrapper">
+                                        <button type="button" onclick="goToStep4()" id="step3">Finish</button>
+                                        <a href="registration-municipality.php">Registration Municipality</a>
+                                        <?php if ($status2[0]['status'] == 1) { ?>
+                                            <div class="qr-code">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
+                                            </div>
+                                        <?php } ?>
+
+                                    </div>
+
+                                </div>
+
+                                <span <?php
+                                        if ($currentStep == 3) {
+                                            echo 'class="circle completed"';
+                                        } else {
+                                            echo 'class="circle"';
+                                        }
+                                        ?> data-number="3"></span>
+                            </li>
+                        </ul>
+                    </div>
+                <?php } else if (str_contains($status, "No House")) {
+                    $progress = new Progress();
+                    $progress->setNaam('huisvesting');
+                    $progress2 = new Progress();
+                    $progress2->setNaam('gemeente');
+                    $status = $progress->getStatusFromName($progress->getNaam());
+                    $status2 = $progress2->getStatusFromName($progress2->getNaam());
+                ?>
+                    <div class="container steps2">
+                        <ul>
+                            <li>
+                                <h3 class="heading">Accommodation</h3>
+                                <p>Discover housing options to support your relocation to Belgium. Explore various accommodation choices, including apartments, shared housing, and student residences, to find the best fit for your needs. Learn how to secure housing and understand your rental rights and responsibilities. For more detailed information and assistance, visit our website. Once you've found suitable accommodation, proceed to the next step in My Tracker.</p>
+                                <?php
+                                if ($status[0]['status'] == 0) {
+                                ?>
+                                    <div class="progress-container">
+                                        <progress id="file" value="20" max="100"> 20% </progress>
+                                    </div>
+                                    <div class="button-wrapper">
+                                        <label for="file">Process is ongoing</label>
+                                    <?php } else { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <button type="button" onclick="goToStep2()" id="step2">Next Step</button>
+                                        <?php } ?>
+                                        <a href="accommodation.php">Accommodation</a>
+                                        </div>
+                                        <span class="circle completed" data-number="1"></span>
+                            </li>
+                            <li <?php
+                                if ($currentStep <= 1) {
+                                    echo 'class="hide-step2"';
+                                } else {
+                                    echo 'class=""';
+                                }
+                                ?>>
+                                <div <?php
+                                        if ($currentStep <= 1) {
+                                            echo 'class="step2-gone"';
+                                        } else {
+                                            echo 'class=""';
+                                        }
+                                        ?>>
+                                    <h3 class="heading">Registration Municipality</h3>
+                                    <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
+                                    <div class="button-wrapper">
+                                        <button type="button" onclick="goToStep3()" id="step3">Finish</button>
+                                        <a href="registration-municipality.php">Registration Municipality</a>
+                                        <?php if ($status2[0]['status'] == 1) { ?>
+                                            <div class="qr-code">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
+                                            </div>
+                                        <?php } ?>
+
+                                    </div>
+
+                                </div>
+
+                                <span <?php
+                                        if ($currentStep == 2) {
+                                            echo 'class="circle completed"';
+                                        } else {
+                                            echo 'class="circle"';
+                                        }
+                                        ?> data-number="2"></span>
+
+                            </li>
+                        </ul>
+                    </div>
+                <?php } else if (str_contains($status, "Municipality")) {
+                    $progress = new Progress();
+                    $progress->setNaam('sociaalZekerheid');
+                    $progress2 = new Progress();
+                    $progress2->setNaam('gemeente');
+                    $status = $progress->getStatusFromName($progress->getNaam());
+                    $status2 = $progress2->getStatusFromName($progress2->getNaam());
+                ?>
+                    <div class="container steps3-half">
+                        <ul>
+                            <li>
+                                <h3 class="heading">Registration Municipality</h3>
+                                <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
+                                <div class="button-wrapper">
+                                    <?php
+                                    if ($currentStep == 1) { ?>
+                                        <button type="button" onclick="goToStep2()" id="step1">Next Step</button>
+                                    <?php } ?>
+                                    <a href="registration-municipality.php">Registration Municipality</a>
+                                    <?php if ($status2[0]['status'] == 1) { ?>
+                                        <div class="qr-code">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                                <span class="circle completed" data-number="1"></span>
+                            </li>
+                            <li <?php
+                                if ($currentStep == 1) {
+                                    echo 'class="hide-step2"';
+                                } else {
+                                    echo 'class=""';
+                                }
+                                ?>>
+                                <div <?php
+                                        if ($currentStep == 1) {
+                                            echo 'class="step2-gone"';
+                                        } else {
+                                            echo 'class=""';
+                                        }
+                                        ?>>
+                                    <h3 class="heading">Social Security</h3>
+                                    <p>Ensure smooth integration into Belgium by understanding the Social Security system. Familiarize yourself with the necessary steps to secure social benefits and insurance coverage, making your immigration process more manageable. Explore detailed information about Social Security on our website. Once you're informed, move on to the next step in My Tracker.</p>
+                                    <?php
+                                    if ($status[0]['status'] == 0) {
+                                    ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="20" max="100"> 20% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <label for="file">Process is ongoing</label>
+                                        <?php } else { ?>
+                                            <div class="progress-container">
+                                                <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                            </div>
+                                            <div class="button-wrapper">
+                                                <button type="button" onclick="goToStep3()" id="step2">Next Step</button>
+                                            <?php } ?>
+                                            <a href="social-security.php">Social Security</a>
+                                            </div>
+                                        </div>
+                                        <span <?php
+                                                if ($currentStep >= 2) {
+                                                    echo 'class="circle completed"';
+                                                } else {
+                                                    echo 'class="circle"';
+                                                }
+                                                ?> data-number="2"></span>
+                            </li>
+                            <li <?php
+                                if ($currentStep <= 2) {
+                                    echo 'class="hide-step3"';
+                                } else {
+                                    echo 'class=""';
+                                }
+                                ?>>
+                                <div <?php
+                                        if ($currentStep <= 2) {
+                                            echo 'class="step3-gone"';
+                                        } else {
+                                            echo 'class=""';
+                                        }
+                                        ?>>
+                                    <h3 class="heading">Civic Integration </h3>
+                                    <p>Facilitate your integration into Belgium by embarking on the integration journey. Follow a structured program designed to welcome migrants and help them adapt to Belgian society. Learn more about the integration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
+                                    <div class="button-wrapper">
+                                        <button type="button" onclick="goToStep4()" id="step3">Finish</button>
+                                        <a href="civic-integration.php">Civic Integration</a>
+                                    </div>
+
+                                </div>
+
+                                <span <?php
+                                        if ($currentStep == 3) {
+                                            echo 'class="circle completed"';
+                                        } else {
+                                            echo 'class="circle"';
+                                        }
+                                        ?> data-number="3"></span>
+                            </li>
+                        </ul>
+                    </div>
                 <?php } ?>
             </div>
         </div>
@@ -964,30 +1600,28 @@ if (isset($_SESSION['user'])) {
 
 
     function goToStep2() {
-        step1Button.style.display = 'none'; // Verberg de knop van stap 1
-        step2gone.style.visibility = 'visible'; // Toon de tweede stap
-        step2.style.backgroundColor = '#fff'; // Toon de tweede stap
-        step2.style.boxShadow = '1px 1px 15px rgba(0, 0, 0, 0.218)'; // Toon de tweede stap
-        document.querySelector('.circle[data-number="2"]').classList.add('completed');
+        nextStepStatus("1");
+        location.reload();
     }
 
     function goToStep3() {
-        step2Button.style.display = 'none'; // Verberg de knop van stap 2
-        step3gone.style.visibility = 'visible'; // Toon de derde stap
-        step3.style.backgroundColor = '#fff'; // Toon de derde stap
-        step3.style.boxShadow = '1px 1px 15px rgba(0, 0, 0, 0.218)'; // Toon de derde stap
-        document.querySelector('.circle[data-number="3"]').classList.add('completed');
-        updateStatus("Finished");
+        nextStepStatus("2");
+        location.reload();
     }
 
-    function updateStatus(newStatus) {
-        status = newStatus;
+    function goToStep4() {
+        nextStepStatus("3");
+        location.reload();
+    }
+
+    function nextStepStatus(currentStepnr) {
+        currentStep = currentStepnr;
         // Stuur de status naar de server via AJAX
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "update_status.php");
+        xhr.open("POST", "next_step_status.php");
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhr.send(JSON.stringify({
-            status: status
+            currentStep: currentStep
         }));
     }
 </script>

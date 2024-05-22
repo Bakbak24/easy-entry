@@ -1,168 +1,157 @@
 .step-plan h1 {
-    font-size: var(--headline-size);
-    font-family: var(--headline-font);
-    font-weight: 700;
-    color: var(--blue-color);
-    text-align: center;
+  font-size: var(--headline-size);
+  font-family: var(--headline-font);
+  font-weight: 700;
+  color: var(--blue-color);
+  text-align: center;
 }
 
 .steps {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
 }
 
-
 .steps-left {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-right: 2px solid var(--blue-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-right: 2px solid var(--blue-color);
+}
 
-    button {
-        border: 1px solid var(--blue-color);
-        background-color: var(--smoke-color);
-        color: var(--blue-color);
-        padding: var(--button-padding);
-        border-radius: var(--button-border-radius);
-        font-size: var(--body-size);
-        font-family: var(--body-font);
-        font-weight: 600;
-        margin-top: 10px;
-        width: fit-content;
-    }
+.steps-left button {
+  border: 1px solid var(--blue-color);
+  background-color: var(--smoke-color);
+  color: var(--blue-color);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  font-size: var(--body-size);
+  font-family: var(--body-font);
+  font-weight: 600;
+  margin-top: 10px;
+  width: fit-content;
+}
 
-    p {
-        font-size: var(--subheadline-size-s);
-        font-family: var(--subheadline-font);
-        font-weight: 400;
-        margin-top: 0px;
-        width: 95%;
-    }
+.steps-left p {
+  font-size: var(--subheadline-size-s);
+  font-family: var(--subheadline-font);
+  font-weight: 400;
+  margin-top: 0px;
+  width: 95%;
+}
 
+.steps-left .step {
+  display: flex;
+  flex-direction: column;
+}
 
+.steps-left .step .step-image {
+  width: 95%;
+  height: 179px;
+  border-radius: var(--input-border-radius);
+  margin-bottom: 20px;
+}
 
-    .step {
-        display: flex;
-        flex-direction: column;
-
-        .step-image {
-            width: 95%;
-            height: 179px;
-            border-radius: var(--input-border-radius);
-            margin-bottom: 20px;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: var(--input-border-radius);
-            }
-        }
-    }
-
+.steps-left .step .step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--input-border-radius);
 }
 
 .steps-left h2 {
-    font-size: var(--subheadline-size);
-    font-family: var(--subheadline-font);
-    font-weight: var(--subheadline-weight);
+  font-size: var(--subheadline-size);
+  font-family: var(--subheadline-font);
+  font-weight: var(--subheadline-weight);
 }
 
 .steps-right {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 24px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 24px;
+}
 
-    p {
-        display: none;
-    }
+.steps-right p {
+  display: none;
+}
 
+.steps-right div {
+  gap: 12px;
+}
 
-    div {
-        gap: 12px;
+.steps-right div ul {
+  display: none;
+}
 
-        ul{
-            display: none;
-        }
+.steps-right div .step-image {
+  width: 111px;
+  height: 111px;
+}
 
-        .step-image {
-            width: 111px;
-            height: 111px;
+.steps-right div .step-image img {
+  width: 111px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--input-border-radius);
+}
 
-            img {
-                width: 111px;
-                height: 100%;
-                object-fit: cover;
-                border-radius: var(--input-border-radius);
-            }
+.steps-right button {
+  border: 1px solid var(--blue-color);
+  background-color: var(--smoke-color);
+  color: var(--blue-color);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  font-size: var(--body-size);
+  font-family: var(--body-font);
+  font-weight: 600;
+  margin-top: 10px;
+  width: fit-content;
+}
 
-        }
-
-    }
-
-    button {
-        border: 1px solid var(--blue-color);
-        background-color: var(--smoke-color);
-        color: var(--blue-color);
-        padding: var(--button-padding);
-        border-radius: var(--button-border-radius);
-        font-size: var(--body-size);
-        font-family: var(--body-font);
-        font-weight: 600;
-        margin-top: 10px;
-        width: fit-content;
-    }
-
-
-    h2 {
-        font-size: var(--subheadline-size-s);
-        font-family: var(--subheadline-font);
-        font-weight: 400;
-        margin-top: 12px;
-        width: 95%;
-    }
-
+.steps-right h2 {
+  font-size: var(--subheadline-size-s);
+  font-family: var(--subheadline-font);
+  font-weight: 400;
+  margin-top: 12px;
+  width: 95%;
 }
 
 .step-tw,
 .step-th,
 .step-fo,
 .step-fi {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
 }
 
-
-
 @media only screen and (max-width: 820px) {
-    .steps {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-    }
+  .steps {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
 
-    .steps-left {
-        width: 85%;
-        border: none;
-        border-bottom: 2px solid var(--blue-color);
-    }
+  .steps-left {
+    width: 85%;
+    border: none;
+    border-bottom: 2px solid var(--blue-color);
+  }
 
-    .steps-right {
-        width: 92%;
-        height: 420px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
+  .steps-right {
+    width: 92%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
