@@ -23,6 +23,7 @@ endforeach;
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/registration.scss" />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="js/switching-steps.js" defer></script>
 </head>
 
@@ -32,12 +33,14 @@ endforeach;
     </header>
     <main>
         <div class="theme-info">
-            <h1>Civic Integration</h1>
+            <h1>Civic Integration<i class="fa-solid fa-circle-question"></i></h1>
+            <div class="popups-question-mark">
             <p>
                 Are you new to Flanders or Brussels or have you been here for a while and need assistance settling in? We're here to support you.
                 Whether you're seeking employment, pursuing studies, or simply looking for leisure activities, we can help. Have questions about your rights and responsibilities? Want to learn Dutch or connect with new people? Let's find the answers together.
                 To get started on your integration journey, you can learn more and schedule appointments through the official government website. Visit [website link] for appointments and additional information.
             </p>
+            
         </div>
         <div class="step-plan">
             <h1>Step-By-Step Plan</h1>

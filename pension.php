@@ -17,6 +17,16 @@ endforeach;
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Entry</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/registration.scss" />
+    <link rel="icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="js/switching-steps.js" defer></script>
+=======
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Easy Entry</title>
@@ -24,6 +34,7 @@ endforeach;
   <link rel="stylesheet" href="css/registration.scss" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <script src="js/switching-steps.js" defer></script>
+>>>>>>> edbebea465b41340712606f082887d1d28082645
 </head>
 
 <body>
@@ -33,6 +44,27 @@ endforeach;
       <?php include_once 'nav.php'; ?>
     </header>
     <main>
+<<<<<<< HEAD
+        <div class="theme-info">
+            <h1>Pension<i class="fa-solid fa-circle-question"></i></h1>
+            <p>
+                Planning for retirement is a crucial step towards securing financial stability and peace of mind in your later years. Pension schemes play a central role in providing income during retirement, offering a safety net for individuals as they transition out of the workforce. In this section, we delve into the intricacies of pensions, covering topics such as retirement age, pension schemes, contribution requirements, and effective retirement planning strategies. </p>
+        </div>
+        <div class="step-plan">
+            <h1>Step-By-Step Plan</h1>
+            <div class="steps">
+        <div class="steps-left">
+          <div id="step1" class="step">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
+            </div>
+            <div class="step-info">
+              <button><?php echo $current_theme["step1"]["button"]; ?></button>
+              <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
+              <p>
+              <?php echo $current_theme["step1"]["description"]; ?>
+            </p>
+=======
       <div class="theme-info">
         <h1>Pension</h1>
         <p>
@@ -54,6 +86,7 @@ endforeach;
                   <?php echo $current_theme["step1"]["description"]; ?>
                 </p>
               </div>
+>>>>>>> edbebea465b41340712606f082887d1d28082645
             </div>
           </div>
           <div class="steps-right">

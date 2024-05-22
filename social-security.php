@@ -17,6 +17,16 @@ endforeach;
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Entry</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/registration.scss" />
+    <link rel="icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="js/switching-steps.js" defer></script>
+=======
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Easy Entry</title>
@@ -24,6 +34,7 @@ endforeach;
   <link rel="stylesheet" href="css/registration.scss" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <script src="js/switching-steps.js" defer></script>
+>>>>>>> edbebea465b41340712606f082887d1d28082645
 </head>
 
 <body>
@@ -33,11 +44,63 @@ endforeach;
       <?php include_once 'nav.php'; ?>
     </header>
     <main>
+<<<<<<< HEAD
+        <div class="theme-info">
+            <h1>Social Security<i class="fa-solid fa-circle-question"></i></h1>
+            <p>
+                Social security is a system that provides financial support to individuals who are unable to work due to illness, disability, or unemployment. In Belgium, social security is funded through contributions from employees, employers, and the government. The system provides benefits such as sickness pay, disability benefits, and unemployment benefits to eligible individuals. If you are unable to work due to illness, disability, or unemployment, you may be eligible for social security benefits. Contact your local social security office for more information on how to apply for benefits.
+            </p>
+        </div>
+        <div class="step-plan">
+      <h1>Step-By-Step Plan</h1>
+      <div class="steps">
+        <div class="steps-left">
+          <div id="step1" class="step">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
+            </div>
+            <div class="step-info">
+              <button><?php echo $current_theme["step1"]["button"]; ?></button>
+              <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
+              <p>
+                <?php echo $current_theme["step1"]["description"]; ?>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="steps-right">
+          <div class="step-tw step" id="step2">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step2"]["image"]; ?>" alt="Step 2" />
+            </div>
+            <div class="step-info">
+              <button><?php echo $current_theme["step2"]["button"]; ?></button>
+              <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
+              <p>
+                <?php echo $current_theme["step2"]["description"]; ?>
+              </p>
+            </div>
+          </div>
+          <div class="step-th step" id="step3">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step3"]["image"]; ?>" alt="Step 3" />
+            </div>
+            <div class="step-info">
+              <button><?php echo $current_theme["step3"]["button"]; ?></button>
+              <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
+              <p>
+                <?php echo $current_theme["step3"]["description"]; ?>
+              </p>
+            </div>
+          </div>
+        </div>
+=======
       <div class="theme-info">
         <h1>Social Security</h1>
         <p>
           Social security is a system that provides financial support to individuals who are unable to work due to illness, disability, or unemployment. In Belgium, social security is funded through contributions from employees, employers, and the government. The system provides benefits such as sickness pay, disability benefits, and unemployment benefits to eligible individuals. If you are unable to work due to illness, disability, or unemployment, you may be eligible for social security benefits. Contact your local social security office for more information on how to apply for benefits.
         </p>
+>>>>>>> edbebea465b41340712606f082887d1d28082645
       </div>
       <div class="step-plan">
         <h1>Step-By-Step Plan</h1>

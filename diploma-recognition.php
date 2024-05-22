@@ -23,10 +23,91 @@ endforeach;
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/registration.scss" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
 </head>
 
 <body>
+<<<<<<< HEAD
+  <header>
+    <?php include_once 'nav.php'; ?>
+  </header>
+  <main>
+    <div class="theme-info">
+      <h1>Diploma Recognition<i class="fa-solid fa-circle-question"></i></h1>
+      <p>
+        Looking to work in Flanders or Brussels with a foreign diploma? You may need to have your diploma recognized for equivalence. Here, we provide essential information about diploma recognition, including eligibility criteria, the recognition process, associated costs, exceptions, frequently asked questions, and how to get in touch for further assistance. Explore the requirements and steps involved to ensure your foreign diploma is recognized for employment opportunities in Flanders or Brussels.
+    </div>
+    <div class="step-plan">
+      <h1>Step-By-Step Plan</h1>
+      <div class="steps">
+        <div class="steps-left">
+          <div id="step1" class="step">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
+            </div>
+            <div class="step-info">
+              <button><?php echo $current_theme["step1"]["button"]; ?></button>
+              <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
+              <p>
+                <?php echo $current_theme["step1"]["description"]; ?>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="steps-right">
+          <div class="step-tw step" id="step2">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step2"]["image"]; ?>" alt="Step 2" />
+            </div>
+            <div class="step-info">
+              <button><?php echo $current_theme["step2"]["button"]; ?></button>
+              <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
+              <p>
+                <?php echo $current_theme["step2"]["description"]; ?>
+              </p>
+            </div>
+          </div>
+          <div class="step-th step" id="step3">
+            <div class="step-image">
+              <img src="<?php echo $current_theme["step3"]["image"]; ?>" alt="Step 3" />
+            </div>
+            <div class="step-info">
+              <button><?php echo $current_theme["step3"]["button"]; ?></button>
+              <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
+              <p>
+                <?php echo $current_theme["step3"]["description"]; ?>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe id="yt-frame" src="https://www.youtube.com/embed/HjbdBrIbJTs" frameborder="2" allowfullscreen></iframe>
+    <section id="contact-section">
+      <div id="contact-details">
+        <h2>Did you miss anything?</h2>
+        <p>Please let us know! Your feedback is invaluable and helps us make RefugeeHelp even better. Please use this
+          form to share suggestions about our website. Please note that this form is for suggestions related to the
+          website only and not for personal questions or requests. We unfortunately cannot respond to each suggestion
+          individually, but we greatly appreciate all your input.</p>
+      </div>
+      <div id="contact-form">
+        <form id="ctct-form">
+          <label for="text">Reason</label>
+          <input type="text" name="name" id="name" placeholder="Your type suggestion" />
+          <label for="message">Can you explain more about this</label>
+          <textarea name="message" id="message" placeholder="Your explanation" maxlength="264"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div id="footer-content">
+      <div id="about-us">
+        <h2>About Us</h2>
+=======
   <div class="gtranslate_wrapper">
 
     <header>
@@ -35,6 +116,7 @@ endforeach;
     <main>
       <div class="theme-info">
         <h1>Diploma Recognition</h1>
+>>>>>>> edbebea465b41340712606f082887d1d28082645
         <p>
           Looking to work in Flanders or Brussels with a foreign diploma? You may need to have your diploma recognized for equivalence. Here, we provide essential information about diploma recognition, including eligibility criteria, the recognition process, associated costs, exceptions, frequently asked questions, and how to get in touch for further assistance. Explore the requirements and steps involved to ensure your foreign diploma is recognized for employment opportunities in Flanders or Brussels.
       </div>
