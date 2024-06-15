@@ -25,25 +25,18 @@ endforeach;
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Easy Entry</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/registration.scss" />
-  <link rel="icon" type="image/x-icon" href="./images/icon.png">
-  <script src="js/switching-steps.js" defer></script>
+  <script src="js/bubble.js"></script>
 </head>
 
 <body>
   <div class="gtranslate_wrapper">
-
     <header>
       <?php include_once 'nav.php'; ?>
     </header>
     <main>
       <div class="theme-info">
         <h1>Tax Declaration<i class="fa-solid fa-circle-question"></i></h1>
-        <p>
+        <p class="info-bubble">
           Tax declaration is a vital procedure in Belgium, where individuals and businesses disclose income and expenses for tax assessment. It's essential for complying with tax laws and regulations, minimizing the risk of penalties and legal complications. Seeking assistance from tax authorities or professionals can streamline the process and optimize potential benefits, ensuring accurate and efficient tax reporting.
         </p>
       </div>

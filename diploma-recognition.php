@@ -25,6 +25,7 @@ endforeach;
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
+  <script src="js/bubble.js"></script>
 </head>
 
 <body>
@@ -35,8 +36,8 @@ endforeach;
     </header>
     <main>
       <div class="theme-info">
-        <h1>Diploma Recognition</h1>
-        <p>
+        <h1>Diploma Recognition<i class="fa-solid fa-circle-question"></i></h1>
+        <p class="info-bubble">
           Looking to work in Flanders or Brussels with a foreign diploma? You may need to have your diploma recognized for equivalence. Here, we provide essential information about diploma recognition, including eligibility criteria, the recognition process, associated costs, exceptions, frequently asked questions, and how to get in touch for further assistance. Explore the requirements and steps involved to ensure your foreign diploma is recognized for employment opportunities in Flanders or Brussels.
       </div>
       <div class="step-plan">

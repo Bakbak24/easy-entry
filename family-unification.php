@@ -25,6 +25,7 @@ endforeach;
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
+  <script src="js/bubble.js"></script>
 </head>
 
 <body>
@@ -35,8 +36,8 @@ endforeach;
     </header>
     <main>
       <div class="theme-info">
-        <h1>Family Unification</h1>
-        <p>
+        <h1>Family Unification<i class="fa-solid fa-circle-question"></i></h1>
+        <p class="info-bubble">
           Simplify the Family Unification Process
           Bringing your family together in Belgium is a significant milestone, and we're here to support you every step of the way.
           Our team understands the importance of family, and we're committed to helping you navigate the family unification process smoothly and efficiently. From gathering the necessary documents to scheduling appointments, we'll provide you with personalized guidance and assistance.

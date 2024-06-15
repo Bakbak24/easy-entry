@@ -24,6 +24,7 @@ if (!empty($_POST)) {
     <title>Easy Entry</title>
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/bubble.js"></script>
 </head>
 
 <body>
@@ -31,8 +32,8 @@ if (!empty($_POST)) {
         <?php include_once 'nav.php'; ?>
         <div id="content-simulator">
             <div class="theme-info" id="simulator-info">
-                <h1>Start your immigration process with our simulator</h1>
-                <p>
+                <h1>Start your immigration process with our simulator<i class="fa-solid fa-circle-question"></i></h1>
+                <p class="info-bubble">
                     <strong>
                         This simulator serves as the first step in the process and helps us to follow and guide your immigration progress together with you. Please note that the results of the simulation are informational and do not constitute legal evidence. Ultimate decisions are made by immigration experts who take your individual situation into account.
                     </strong>

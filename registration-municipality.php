@@ -24,6 +24,7 @@ endforeach;
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
+  <script src="js/bubble.js"></script>
 </head>
 
 <body>
@@ -34,8 +35,8 @@ endforeach;
     </header>
     <main>
       <div class="theme-info">
-        <h1>Registration Municipality</h1>
-        <p>Discover how easy it is to register at the municipality and take the first steps towards your new life in
+        <h1>Registration Municipality<i class="fa-solid fa-circle-question"></i></h1>
+        <p class="info-bubble">Discover how easy it is to register at the municipality and take the first steps towards your new life in
           Belgium. Together we will work to make your integration go smoothly so that you can quickly and smoothly begin
           your new adventure in our country.</p>
       </div>

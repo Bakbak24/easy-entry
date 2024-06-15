@@ -17,7 +17,7 @@ endforeach;
 <html lang="en">
 
 <head>
-  <<<<<<< HEAD <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Easy Entry</title>
   <link rel="stylesheet" href="css/style.css" />
@@ -25,15 +25,7 @@ endforeach;
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
-  =======
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Easy Entry</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/registration.scss" />
-  <link rel="icon" type="image/x-icon" href="./images/icon.png">
-  <script src="js/switching-steps.js" defer></script>
-  >>>>>>> edbebea465b41340712606f082887d1d28082645
+  <script src="js/bubble.js"></script>
 </head>
 
 <body>
@@ -43,8 +35,8 @@ endforeach;
     </header>
     <main>
       <div class="theme-info">
-        <h1>Child Support</h1>
-        <p>
+        <h1>Child Support<i class="fa-solid fa-circle-question"></i></h1>
+        <p class="info-bubble">
           Child support is a crusial component of ensuring the well-being of children whose parents are separated or divorced. In Belgium, child support is governed by specific laws and regulations designed to protect the rights and interests of children. This system ensures that both parents contribute financially to the upbringing of their children, covering essential needs such as food, clothing, education, and healthcare. Understanding how child support works and navigating the legal process can be complex, but it's crucial for ensuring the best possible outcomes for children. This page provides valuable information and resources to help parents understand their rights and obligations regarding child support in Belgium. </p>
       </div>
       <div class="step-plan">

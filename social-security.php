@@ -25,6 +25,7 @@ endforeach;
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
+  <script src="js/bubble.js"></script>
 </head>
 
 <body>
@@ -35,8 +36,8 @@ endforeach;
     </header>
     <main>
       <div class="theme-info">
-        <h1>Social Security</h1>
-        <p>
+        <h1>Social Security<i class="fa-solid fa-circle-question"></i></h1>
+        <p class="info-bubble">
           Social security is a system that provides financial support to individuals who are unable to work due to illness, disability, or unemployment. In Belgium, social security is funded through contributions from employees, employers, and the government. The system provides benefits such as sickness pay, disability benefits, and unemployment benefits to eligible individuals. If you are unable to work due to illness, disability, or unemployment, you may be eligible for social security benefits. Contact your local social security office for more information on how to apply for benefits.
         </p>
       </div>
