@@ -28,36 +28,6 @@ endforeach;
 </head>
 
 <body>
-<<<<<<< HEAD
-  <header>
-    <?php include_once 'nav.php'; ?>
-  </header>
-  <main>
-    <div class="theme-info">
-      <h1>Family Unification<i class="fa-solid fa-circle-question"></i></h1>
-      <p>
-        Simplify the Family Unification Process
-        Bringing your family together in Belgium is a significant milestone, and we're here to support you every step of the way.
-        Our team understands the importance of family, and we're committed to helping you navigate the family unification process smoothly and efficiently. From gathering the necessary documents to scheduling appointments, we'll provide you with personalized guidance and assistance.
-        Let us help you reunite with your loved ones and create new memories together in Belgium. Contact us today to learn more about our family unification services.
-        Your family's journey to unity starts here.
-      </p>
-    </div>
-    <div class="step-plan">
-      <h1>Step-By-Step Plan</h1>
-      <div class="steps">
-        <div class="steps-left">
-          <div id="step1" class="step">
-            <div class="step-image">
-              <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
-            </div>
-            <div class="step-info">
-              <button><?php echo $current_theme["step1"]["button"]; ?></button>
-              <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
-              <p>
-                <?php echo $current_theme["step1"]["description"]; ?>
-              </p>
-=======
   <div class="gtranslate_wrapper">
 
     <header>
@@ -89,7 +59,6 @@ endforeach;
                   <?php echo $current_theme["step1"]["description"]; ?>
                 </p>
               </div>
->>>>>>> edbebea465b41340712606f082887d1d28082645
             </div>
           </div>
           <div class="steps-right">

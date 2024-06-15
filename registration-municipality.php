@@ -27,61 +27,6 @@ endforeach;
 </head>
 
 <body>
-<<<<<<< HEAD
-  <header>
-    <?php include_once 'nav.php'; ?>
-  </header>
-  <main>
-    <div class="theme-info">
-      <h1>Registration Municipality<i class="fa-solid fa-circle-question"></i></h1>
-      <p>Discover how easy it is to register at the municipality and take the first steps towards your new life in
-        Belgium. Together we will work to make your integration go smoothly so that you can quickly and smoothly begin
-        your new adventure in our country.</p>
-    </div>
-    <div class="step-plan">
-      <h1>Step-By-Step Plan</h1>
-      <div class="steps">
-        <div class="steps-left">
-          <div id="step1" class="step">
-            <div class="step-image">
-              <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
-            </div>
-            <div class="step-info">
-              <button><?php echo $current_theme["step1"]["button"]; ?></button>
-              <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
-              <p>
-                <?php echo $current_theme["step1"]["description"]; ?>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="steps-right">
-          <div class="step-tw step" id="step2">
-            <div class="step-image">
-              <img src="<?php echo $current_theme["step2"]["image"]; ?>" alt="Step 2" />
-            </div>
-            <div class="step-info">
-              <button><?php echo $current_theme["step2"]["button"]; ?></button>
-              <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
-              <p>
-                <?php echo $current_theme["step2"]["description"]; ?>
-              </p>
-            </div>
-          </div>
-          <div class="step-th step" id="step3">
-            <div class="step-image">
-              <img src="<?php echo $current_theme["step3"]["image"]; ?>" alt="Step 3" />
-            </div>
-            <div class="step-info">
-              <button><?php echo $current_theme["step3"]["button"]; ?></button>
-              <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
-              <p>
-                <?php echo $current_theme["step3"]["description"]; ?>
-              </p>
-            </div>
-          </div>
-        </div>
-=======
   <div class="gtranslate_wrapper">
 
     <header>
@@ -93,7 +38,6 @@ endforeach;
         <p>Discover how easy it is to register at the municipality and take the first steps towards your new life in
           Belgium. Together we will work to make your integration go smoothly so that you can quickly and smoothly begin
           your new adventure in our country.</p>
->>>>>>> edbebea465b41340712606f082887d1d28082645
       </div>
       <div class="step-plan">
         <h1>Step-By-Step Plan</h1>
