@@ -11,13 +11,13 @@ $themes = [
       "button" => "Step 2",
       "title" => "Make an appointment at the municipality",
       "description" => "You need to make an appointment at the municipality to register your address. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
-      "image" => "images/registration-step-2.png"
+      "image" => "images/registration-steps-2.png"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Within 2 weeks, the neighborhood agent visits",
       "description" => "After you have registered your address at the municipality, a neighborhood agent will visit you within 2 weeks. The neighborhood agent will check your address and ask you some questions about your living situation. This is a standard procedure and is done to ensure that you are living at the address you have registered.",
-      "image" => "images/registration-step-3.png"
+      "image" => "images/registration-steps-3.png"
     ],
   ],
   "accommodation.php" => [
