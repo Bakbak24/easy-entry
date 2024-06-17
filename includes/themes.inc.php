@@ -97,13 +97,13 @@ $themes = [
       For Dutch language courses in Flanders, find more information on our learning Dutch page.
       
       For Dutch language courses in Brussels, please visit the Dutch Language House - Huis van het Nederlands.",
-      "image" => "images/civic-integration-step-2.png"
+      "image" => "images/civic-integration-step-2.jpeg"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Pathway to employment",
       "description" => "Are you currently seeking employment and aged between 18 and 65? Discover how we can assist you in your job search journey. By connecting with us, we'll guide you towards valuable resources, such as the Public Employment Service of Flanders - VDAB or Actiris in Brussels, where dedicated professionals are ready to support you in finding suitable job opportunities tailored to your skills and preferences. Let's work together to kickstart your career!",
-      "image" => "images/civic-integration-step-3.png"
+      "image" => "images/civic-integration-step-3.jpg"
     ],
     "step4" => [
       "button" => "Step 4",
@@ -112,7 +112,7 @@ $themes = [
 
       Seeking inspiration? Visit www.ikdoemee.be to explore available activities and get started on your journey towards personal and social enrichment.
       ",
-      "image" => "images/civic-integration-step-4.png"
+      "image" => "images/civic-integration-step-4.jpg"
     ],
     "step5" => [
       "button" => "Step 5",
