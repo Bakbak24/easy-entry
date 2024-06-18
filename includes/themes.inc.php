@@ -5,13 +5,15 @@ $themes = [
       "button" => "Step 1",
       "title" => "Prepare your documents",
       "description" => "Make sure you have all the necessary documents ready for your immigration. Here you will find information on what documents are needed and where to obtain them. Check your municipality's website for specific requirements. Good preparation will make your immigration process smoother.",
-      "image" => "images/registration-step-1.png"
+      "image" => "images/registration-step-1.png",
+      "link" => "your-municipality-website.com"
     ],
     "step2" => [
       "button" => "Step 2",
       "title" => "Make an appointment at the municipality",
       "description" => "You need to make an appointment at the municipality to register your address. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
-      "image" => "images/registration-steps-2.png"
+      "image" => "images/registration-steps-2.png",
+      "link" => "your-municipality-website.com"
     ],
     "step3" => [
       "button" => "Step 3",
@@ -25,7 +27,8 @@ $themes = [
       "button" => "Step 1",
       "title" => "Find a place to live",
       "description" => "You need to find a place to live before you can register your address at the municipality. You can rent or buy a house or apartment. Make sure you have all the necessary documents ready for.",
-      "image" => "images/accommodation-step-1.png"
+      "image" => "images/accommodation-step-1.png",
+      "link" => "immoweb.be"
     ],
     "step2" => [
       "button" => "Step 2",
@@ -97,21 +100,22 @@ $themes = [
       For Dutch language courses in Flanders, find more information on our learning Dutch page.
       
       For Dutch language courses in Brussels, please visit the Dutch Language House - Huis van het Nederlands.",
-      "image" => "images/civic-integration-step-2.jpeg"
+      "image" => "images/civic-integration-step-2.jpeg",
+      "link" => "huisnederlandsbrussel.be"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Pathway to employment",
       "description" => "Are you currently seeking employment and aged between 18 and 65? Discover how we can assist you in your job search journey. By connecting with us, we'll guide you towards valuable resources, such as the Public Employment Service of Flanders - VDAB or Actiris in Brussels, where dedicated professionals are ready to support you in finding suitable job opportunities tailored to your skills and preferences. Let's work together to kickstart your career!",
-      "image" => "images/civic-integration-step-3.jpg"
+      "image" => "images/civic-integration-step-3.jpg",
+      "link" => "vdab.be"
     ],
     "step4" => [
       "button" => "Step 4",
       "title" => "Participation programme",
       "description" => "Looking to expand your social network and engage in meaningful activities? Choose from a variety of initiatives offered through our program, each designed to enrich your experience and contribute positively to your community. Whether it's participating in a buddy project, gaining work experience through a placement, volunteering, or exploring alternative options, you'll find opportunities to connect and grow.
 
-      Seeking inspiration? Visit www.ikdoemee.be to explore available activities and get started on your journey towards personal and social enrichment.
-      ",
+      Seeking inspiration? Visit www.ikdoemee.be to explore available activities and get started on your journey towards personal and social enrichment.",
       "image" => "images/civic-integration-step-4.jpg"
     ],
     "step5" => [
@@ -133,13 +137,15 @@ $themes = [
       "button" => "Step 2",
       "title" => "Complete your tax return",
       "description" => "Fill out your tax return accurately and thoroughly. This includes reporting all sources of income, deductions, credits, and other relevant financial information. You can do this online via the MyMinfin website, where you'll find step-by-step guidance and assistance.",
-      "image" => "images/tax-declaration-step-2.png"
+      "image" => "images/tax-declaration-step-2.png",
+      "link" => "myminfin.be"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Submit your tax return",
       "description" => "Once you've completed your tax return, submit it through the MyMinfin website or by mail, depending on your preference and the available options. Be sure to review your submission for accuracy before finalizing it. After submission, you'll receive a confirmation and further instructions.",
-      "image" => "images/family-unification-step-2.png"
+      "image" => "images/family-unification-step-2.png",
+      "link" => "myminfin.be"
     ],
   ],
   "child-support.php" => [
@@ -160,6 +166,7 @@ $themes = [
       "title" => "Apply for child benefits",
       "description" => "Once you understand your rights and entitlements, you can apply for child benefits through a recognized child benefit fund such as KidsLife. They simplify the application process into three easy steps and ensure that you receive the maximum entitlement you are eligible for.",
       "image" => "images/child-support-step-3.png",
+      "link" => "kidslife.be"
     ],
   ],
   "pension.php" => [
@@ -185,7 +192,8 @@ $themes = [
       "button" => "Step 3",
       "title" => "Access Personalized Pension Information",
       "description" => "For precise calculations and personalized pension information, visit Mypension.be. This online portal provides comprehensive details about both statutory and supplementary pensions.",
-      "image" => "images/pension-step-3.png"
+      "image" => "images/pension-step-3.png",
+      "link" => "mypension.be"
     ],
   ],
   "diploma-recognition.php" => [
@@ -199,13 +207,15 @@ $themes = [
       "button" => "Step 2",
       "title" => "Find out about application requirements",
       "description" => "Before proceeding with your recognition application, familiarize yourself with the associated costs and required documentation. For most cases, recognition applications are submitted to NARIC-Vlaanderen. However, some regulated professions may require direct application to relevant authorities. Be sure to review the list of regulated professions and competent authorities for further guidance.",
-      "image" => "images/diploma-recognition-step-2.png"
+      "image" => "images/diploma-recognition-step-2.png",
+      "link" => "naric.be"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Choose recognition procedure",
       "description" => "Select the recognition procedure that best suits your situation. NARIC-Vlaanderen offers two procedures: level recognition or specific recognition. Understand the differences between these procedures before proceeding. After selecting, submit your application and track its progress.",
       "image" => "images/diploma-recognition-step-3.png",
+      "link" => "naric.be"
     ],
   ],
   "scholarship.php" => [
@@ -269,3 +279,4 @@ $themes = [
     ],
   ],
 ];
+?>

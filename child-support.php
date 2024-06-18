@@ -79,6 +79,7 @@ endforeach;
                 <p>
                   <?php echo $current_theme["step3"]["description"]; ?>
                 </p>
+                <button onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';">Visit Site</button>
               </div>
             </div>
           </div>
