@@ -80,10 +80,6 @@ if (!empty($_POST)) {
                     <div class="register-form-label">
                         <button>Sign Up</button>
                     </div>
-                    <hr class="hr-text" data-content="Or Sign Up with google">
-                    <div class="register-form-label">
-                        <button id="signup-google"> <img src="./images/google.svg" alt=""> Sign Up with Google</button>
-                    </div>
                 </form>
             </div>
         </div>

@@ -49,10 +49,6 @@ if (!empty($_POST)) {
                     <div class="register-form-label">
                         <button>Login</button>
                     </div>
-                    <hr class="hr-text" data-content="Or log in with google">
-                    <div class="register-form-label">
-                        <button id="signup-google"> <img src="./images/google.svg" alt=""> Login with Google</button>
-                    </div>
                 </form>
             </div>
         </div>
