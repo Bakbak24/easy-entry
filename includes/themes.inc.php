@@ -228,5 +228,44 @@ $themes = [
       "image" => "images/family-unification-step-3.png",
     ],
   ],
-
+  "health-insurance.php" => [
+    "step1" => [
+      "button" => "Step 1",
+      "title" => "Register for health insurance",
+      "description" => "Learn how to register for the mandatory health insurance in Belgium. Understand the requirements, necessary documents, and steps involved in the registration process.",
+      "image" => "images/health-insurance-step-1.png"
+    ],
+    "step2" => [
+      "button" => "Step 2",
+      "title" => "Choose a health insurance fund",
+      "description" => "Explore different health insurance funds (mutualités/mutualiteiten) available in Belgium. Compare their services and benefits to choose the one that best suits your needs.",
+      "image" => "images/health-insurance-step-2.png"
+    ],
+    "step3" => [
+      "button" => "Step 3",
+      "title" => "Understand your coverage",
+      "description" => "Get detailed information about the health services covered by your insurance, including doctor visits, hospital stays, and medications. Learn about reimbursement procedures and additional insurance options.",
+      "image" => "images/health-insurance-step-3.png"
+    ],
+  ],
+  "find-gp.php" => [
+    "step1" => [
+      "button" => "Step 1",
+      "title" => "Search for a GP",
+      "description" => "Learn how to find a general practitioner (GP) in your area. Understand the process of registering with a GP and what to consider when choosing one.",
+      "image" => "images/find-gp-step-1.png"
+    ],
+    "step2" => [
+      "button" => "Step 2",
+      "title" => "Register with your GP",
+      "description" => "Find out how to register with a GP and what documents you need. Understand the benefits of having a registered GP and how it affects your healthcare.",
+      "image" => "images/find-gp-step-2.png"
+    ],
+    "step3" => [
+      "button" => "Step 3",
+      "title" => "Visit your GP",
+      "description" => "Know what to expect during your first visit to your GP. Learn about appointment scheduling, consultation fees, and how to get referrals to specialists if needed.",
+      "image" => "images/find-gp-step-3.png"
+    ],
+  ],
 ];

@@ -1,3 +1,17 @@
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+
+include_once(__DIR__ . "/includes/themes.inc.php");
+$current_theme = null;
+
+foreach ($themes as $theme_key => $theme) :
+  if ($current_page === $theme_key) :
+    $current_theme = $theme;
+    break;
+  endif;
+endforeach;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,117 +20,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Easy Entry</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://kit.fontawesome.com/8ead13f8af.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/registration.scss" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
-  <script src="js/theme.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script src="js/switching-steps.js" defer></script>
+  <script src="js/bubble.js"></script>
 </head>
 
 <body>
   <div class="gtranslate_wrapper">
+
     <header>
       <?php include_once 'nav.php'; ?>
-      <div id="welcoming-content">
-        <div id="content">
-          <h1>Welcome in Belgium</h1>
-        </div>
-      </div>
     </header>
     <main>
-      <section id="simulation-section">
-        <div id="simulation-content">
-          <div id="content">
-            <div id="content-image"></div>
-            <div id="content-details">
-              <h2>Start your immigration process</h2>
-              <a href="simulator.php">
-                <button type="button" id="simulation-btn">Start here</button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <br />
-      <h1>Theme's</h1>
-      <div id="sub-themes">
-        <h2 class="theme-categorie-h2" id="sta"><i class="fa fa-home" aria-hidden="true" style="color:var(--white-color);"></i>Stay</h2>
-        <h2 class="theme-categorie-h2" id="mon"><i class="fa fa-eur" aria-hidden="true" style="color:var(--blue-color);"></i>Money</h2>
-        <h2 class="theme-categorie-h2" id="edu"><i class="fa-solid fa-graduation-cap" aria-hidden="true" style="color:var(--blue-color);"></i>Education</h2>
-        <h2 class="theme-categorie-h2" id="hea"><i class="fa fa-heart" aria-hidden="true" style="color:var(--blue-color);"></i>Health</h2>
+      <div class="theme-info">
+        <h1>Find a GP<i class="fa-solid fa-circle-question"></i></h1>
+        <p class="info-bubble">
+            This page will help you find a General Practitioner (GP) in Belgium. A GP is a doctor who provides medical care for acute and chronic illnesses and provides preventive care and health education to patients. GPs are the first point of contact for patients seeking medical care and can refer patients to specialists when needed.
+        </p>
+        <!-- TODO -->
       </div>
-      <section id="themes-section">
-        <div id="stay" class="themes" data-theme="stay">
-          <div class="all-themes">
-            <div class="theme-content" data-page="registration-municipality.php" data-theme="stay">
-              <h3>
-                Registration <br />
-                Municipality
-              </h3>
-              <img src="images/Registration Municipality.svg" alt="Registration" class="theme-content-icons"/>
-            </div>
-            <div class="theme-content" data-page="accommodation.php" data-theme="stay">
-              <h3>Accommodation</h3>
-              <img src="images/Accommodation.svg" alt="Accommodation" class="theme-content-icons"/>
-            </div>
-            <div class="theme-content" data-page="family-unification.php" data-theme="stay">
-              <h3>Family Unification</h3>
-              <img src="images/Family Unification.svg" alt="Family Unification" class="theme-content-icons"/>
-            </div>
-            <div class="theme-content" data-page="social-security.php" data-theme="stay">
-              <h3>Social Security</h3>
-              <img src="images/Social Security.svg" alt="Social Security" class="theme-content-icons"/>
-            </div>
-            <div class="theme-content" data-page="civic-integration.php" data-theme="stay">
-              <h3>Civic Integration</h3>
-              <img src="images/Civic Integration.svg" alt="Civic Integration" class="theme-content-icons"/>
+      <div class="step-plan">
+        <h1>Step-By-Step Plan</h1>
+        <div class="steps">
+          <div class="steps-left">
+            <div id="step1" class="step">
+              <div class="step-image">
+                <img src="<?php echo $current_theme["step1"]["image"]; ?>" alt="Step 1" />
+              </div>
+              <div class="step-info">
+                <button><?php echo $current_theme["step1"]["button"]; ?></button>
+                <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
+                <p>
+                  <?php echo $current_theme["step1"]["description"]; ?>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="money" class="themes" data-theme="money">
-          <div class="all-themes" data-theme="money">
-            <div class="theme-content" data-page="tax-declaration.php" data-theme="money">
-              <h3>Tax Declarations</h3>
-              <img src="images/Tax Declarations.svg" alt="Tax Declarations" class="theme-content-icons"/>
+          <div class="steps-right">
+            <div class="step-tw step" id="step2">
+              <div class="step-image">
+                <img src="<?php echo $current_theme["step2"]["image"]; ?>" alt="Step 2" />
+              </div>
+              <div class="step-info">
+                <button><?php echo $current_theme["step2"]["button"]; ?></button>
+                <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
+                <p>
+                  <?php echo $current_theme["step2"]["description"]; ?>
+                </p>
+              </div>
             </div>
-            <div class="theme-content" data-page="child-support.php" data-theme="money">
-              <h3>Child Support</h3>
-              <img src="images/Child Support.svg" alt="Child Support" class="theme-content-icons"/>
+            <div class="step-th step" id="step3">
+              <div class="step-image">
+                <img src="<?php echo $current_theme["step3"]["image"]; ?>" alt="Step 3" />
+              </div>
+              <div class="step-info">
+                <button><?php echo $current_theme["step3"]["button"]; ?></button>
+                <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
+                <p>
+                  <?php echo $current_theme["step3"]["description"]; ?>
+                </p>
+              </div>
             </div>
-            <div class="theme-content" data-page="pension.php" data-theme="money">
-              <h3>Pension</h3>
-              <img src="images/Pension.svg" alt="Pension" class="theme-content-icons"/>
-            </div>
+
           </div>
         </div>
-        <div id="education" class="themes" data-theme="education">
-          <div class="all-themes" data-theme="education">
-            <div class="theme-content" data-page="diploma-recognition.php" data-theme="education">
-              <h3>Diploma Recognition</h3>
-              <img src="images/Diploma Recognition.svg" alt="Diploma Recognition" class="theme-content-icons"/>
-            </div>
-            <div class="theme-content" data-page="scholarship.php" data-theme="education">
-              <h3>Scholarship</h3>
-              <img src="images/Scholarship.svg" alt="Scholarship" class="theme-content-icons"/>
-            </div>
-          </div>
-        </div>
-        <div id="health" class="themes" data-theme="health">
-          <div class="all-themes" data-theme="health">
-            <div class="theme-content" data-page="health-insurance.php" data-theme="health">
-              <h3>Health Insurance</h3>
-              <img src="images/health-insurance.svg" alt="Health Insurance" class="theme-content-icons"/>
-            </div>
-            <div class="theme-content" data-page="find-gp.php" data-theme="health">
-              <h3>Find a GP</h3>
-              <img src="images/find-gp.svg" alt="Find a GP" class="theme-content-icons"/>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <footer>
-      <script>
-
-      </script>
       <div id="footer-content">
         <div id="about-us">
           <h2>About Us</h2>
@@ -156,9 +127,6 @@
     </footer>
   </div>
 </body>
-
-
-
 <script>
   window.gtranslateSettings = {
     default_language: "en",
@@ -696,7 +664,6 @@
     }
   })();
 </script>
-<script src="js/switching-subs.js"></script>
 <script src="javascript/script.js">
 </script>
 
