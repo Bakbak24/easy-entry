@@ -67,9 +67,9 @@ endforeach;
                             <button><?php echo $current_theme["step2"]["button"]; ?></button>
                             <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
                             <p>
-                                <?php echo $current_theme["step2"]["description"]; ?>
+                                <?php echo $current_theme["step2"]["description"]; ?><br><br>
+                                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step2"]["link"]; ?>';" value="Visit Site">
                             </p>
-                            <button onclick="window.location.href='https://<?php echo $current_theme["step2"]["link"]; ?>';">Visit Site</button>
                         </div>
                     </div>
                     <div class="step-th step" id="step3">
@@ -80,9 +80,9 @@ endforeach;
                             <button><?php echo $current_theme["step3"]["button"]; ?></button>
                             <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
                             <p>
-                                <?php echo $current_theme["step3"]["description"]; ?>
+                                <?php echo $current_theme["step3"]["description"]; ?><br><br>
+                                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';" value="Visit Site">
                             </p>
-                            <button onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';">Visit Site</button>
                         </div>
                     </div>
                     <div class="step-fo step" id="step4">

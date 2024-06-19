@@ -35,6 +35,18 @@
   width: fit-content;
 }
 
+.visit-btn {
+  border: 1px solid var(--blue-color);
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  font-size: var(--body-size);
+  font-family: var(--body-font);
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .steps-left p {
   font-size: var(--subheadline-size-s);
   font-family: var(--subheadline-font);

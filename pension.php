@@ -79,8 +79,9 @@ endforeach;
                 <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
                 <p>
                   <?php echo $current_theme["step3"]["description"]; ?>
+                  <br><br>
+                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';" value="Visit Site">
                 </p>
-                <button onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';">Visit Site</button>
               </div>
             </div>
 
