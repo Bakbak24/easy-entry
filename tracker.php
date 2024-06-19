@@ -214,12 +214,12 @@ if (str_contains($status, "1")) {
         }
 
         .container ul li .heading {
-            font-size: 17px;
+            font-size: var(--subheadline-size-s);
             color: var(--dark-color);
         }
 
         .container ul li p {
-            font-size: 13px;
+            font-size: var(--body-size);
             font-family: var(--body-font);
             color: var(--dark-color);
             line-height: 18px;
@@ -516,8 +516,12 @@ if (str_contains($status, "1")) {
                             //echo "Stap $currentStep/$totalSteps";
                         ?>
                             <div class="circular-bar">
-                                <div class="percent">1/3</div>
+                                <div class="percent"><?= $currentStep ?>/<?= $totalSteps ?></div>
                             </div>
+                            <script>
+                                let totalSteps = <?= $totalSteps ?>;
+                                let currentStep = <?= $currentStep ?>;
+                            </script>
                         <?php
                         }
                         ?>
@@ -616,33 +620,41 @@ if (str_contains($status, "1")) {
                                             echo 'class=""';
                                         }
                                         ?>>
-                                    <h3 class="heading">Scholarship</h3>
-                                    <p>Unlock opportunities for scholarships to support your education journey in Belgium. Explore various scholarship options and learn how they can assist you in achieving your academic goals. Find more information on available scholarships on our website. Once you've explored your scholarship options, proceed to the next step in My Tracker. </p>
-                                    <?php
-                                    if ($status[0]['status'] == 0) {
-                                    ?>
+                                    <h3 class="heading">Registration Municipality</h3>
+                                    <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
+                                    <?php if ($status2[0]['status'] == 2) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <button type="button" onclick="goToStep3()" id="step2">Next Step</button>
+                                            <label for="file">Retrieve your ID</label>
+                                        </div>
+                                    <?php } else if ($status2[0]['status'] == 0) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="5" max="100"> 5% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <label for="file">Process not started</label>
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                        </div>
+                                    <?php } else { ?>
                                         <div class="progress-container">
                                             <progress id="file" value="20" max="100"> 20% </progress>
                                         </div>
                                         <div class="button-wrapper">
                                             <label for="file">Process is ongoing</label>
-                                        <?php } else { ?>
-                                            <div class="progress-container">
-                                                <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <button type="button" onclick="goToStep3()" id="step2">Next Step</button>
-                                            <?php } ?>
-                                            <a href="scholarship.php">Scholarship</a>
-                                            </div>
+                                            <a href="registration-municipality.php">Registration Municipality</a>
                                         </div>
-                                        <span <?php
-                                                if ($currentStep >= 2) {
-                                                    echo 'class="circle completed"';
-                                                } else {
-                                                    echo 'class="circle"';
-                                                }
-                                                ?> data-number="2"></span>
+                                    <?php } ?>
+
+                                    <span <?php
+                                            if ($currentStep >= 2) {
+                                                echo 'class="circle completed"';
+                                            } else {
+                                                echo 'class="circle"';
+                                            }
+                                            ?> data-number="2"></span>
                             </li>
                             <li <?php
                                 if ($currentStep <= 2) {
@@ -658,43 +670,35 @@ if (str_contains($status, "1")) {
                                             echo 'class=""';
                                         }
                                         ?>>
-                                    <h3 class="heading">Registration Municipality</h3>
-                                    <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
-                                    <?php if ($status2[0]['status'] == 2) { ?>
-                                        <div class="progress-container">
-                                            <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
-                                        </div>
-                                        <div class="button-wrapper">
-                                            <button type="button" onclick="goToStep4()" id="step3">Finish</button>
-                                            <label for="file">Retrieve your ID</label>
-                                        </div>
-                                    <?php } else if ($status2[0]['status'] == 0) { ?>
-                                        <div class="progress-container">
-                                            <progress id="file" value="5" max="100"> 5% </progress>
-                                        </div>
-                                        <div class="button-wrapper">
-                                            <a href="registration-municipality.php">Registration Municipality</a>
-                                            <label for="file">Process not started</label>
-                                        </div>
-                                    <?php } else { ?>
+                                    <h3 class="heading">Scholarship</h3>
+                                    <p>Unlock opportunities for scholarships to support your education journey in Belgium. Explore various scholarship options and learn how they can assist you in achieving your academic goals. Find more information on available scholarships on our website. Once you've explored your scholarship options, proceed to the next step in My Tracker. </p>
+
+                                    <?php
+                                    if ($status[0]['status'] == 0) {
+                                    ?>
                                         <div class="progress-container">
                                             <progress id="file" value="20" max="100"> 20% </progress>
                                         </div>
                                         <div class="button-wrapper">
-                                            <a href="registration-municipality.php">Registration Municipality</a>
                                             <label for="file">Process is ongoing</label>
+                                        <?php } else { ?>
+                                            <div class="progress-container">
+                                                <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                            </div>
+                                            <div class="button-wrapper">
+                                                <button type="button" onclick="goToStep4()" id="step2">Finish</button>
+                                            <?php } ?>
+                                            <a href="scholarship.php">Scholarship</a>
+                                            </div>
                                         </div>
-                                    <?php } ?>
 
-                                </div>
-
-                                <span <?php
-                                        if ($currentStep == 3) {
-                                            echo 'class="circle completed"';
-                                        } else {
-                                            echo 'class="circle"';
-                                        }
-                                        ?> data-number="3"></span>
+                                        <span <?php
+                                                if ($currentStep == 3) {
+                                                    echo 'class="circle completed"';
+                                                } else {
+                                                    echo 'class="circle"';
+                                                }
+                                                ?> data-number="3"></span>
                             </li>
                         </ul>
                     </div>
@@ -1744,23 +1748,26 @@ if (str_contains($status, "1")) {
     var step2 = document.querySelector('.hide-step2'); // Selecteer de tweede stap
     var step3 = document.querySelector('.hide-step3'); // Selecteer de derde stap
 
-    let CircularBar = document.querySelector(".circular-bar");
-    let PercentValue = document.querySelector(".percent");
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let CircularBar = document.querySelector(".circular-bar");
+        let PercentValue = document.querySelector(".percent");
 
-    let InitialValue = 0;
-    let finaleValue = 30;
-    let speed = 10;
+        let InitialValue = 0;
+        let finaleValue = (currentStep / totalSteps) * 100;
+        let speed = 10;
 
-    let timer = setInterval(() => {
-        InitialValue += 1;
+        let timer = setInterval(() => {
+            InitialValue += 1;
 
-        CircularBar.style.background = `conic-gradient(#4CAF50 ${InitialValue/100 * 360}deg, #fff 0deg)`;
-        PercentValue.innerHTML = "1/3";
+            CircularBar.style.background = `conic-gradient(#4CAF50 ${InitialValue * 3.6}deg, #fff 0deg)`;
+            PercentValue.innerHTML = `${currentStep}/${totalSteps}`;
 
-        if (InitialValue >= finaleValue) {
-            clearInterval(timer);
-        }
-    }, speed)
+            if (InitialValue >= finaleValue) {
+                clearInterval(timer);
+            }
+        }, speed);
+    });
+
 
 
 
