@@ -156,8 +156,9 @@ $themes = [
     "step1" => [
       "button" => "Step 1",
       "title" => "Understanding Your Pension Rights",
-      "description" => "Learn about the statutory pensions within the social security system, covering retirement and survivor benefits. These form the 1st pillar and address two social risks: old age and widowhood. The current statutory retirement age in Belgium is 65 years for both men and women, effective since 2009. However, under the government of Michel I, it was decided to gradually increase the retirement age to 66 by 2025 and 67 by 2030. Your pension can start at the earliest on the 1st day of the month following the month in which you reach the retirement age.",
-      "image" => "images/pension-step-1.png"
+      "description" => "Learn about the statutory pensions within the social security system, covering retirement and survivor benefits. These form the 1st pillar and address two social risks: old age and widowhood.<br><br> The current statutory retirement age in Belgium is 65 years for both men and women, effective since 2009. However, under the government of Michel I, it was decided to gradually increase the retirement age to 66 by 2025 and 67 by 2030. Your pension can start at the earliest on the 1st day of the month following the month in which you reach the retirement age.",
+      "image" => "images/pension-step-1.png",
+      "link" => "www.socialsecurity.be/citizen/nl/pensioenen"
     ],
     "step2" => [
       "button" => "Step 2",
@@ -195,29 +196,30 @@ $themes = [
     ],
     "step3" => [
       "button" => "Step 3",
-      "title" => "Choose recognition procedure",
-      "description" => "Select the recognition procedure that best suits your situation. NARIC-Vlaanderen offers two procedures: level recognition or specific recognition. Understand the differences between these procedures before proceeding. After selecting, submit your application and track its progress.",
+      "title" => "Choose Recognition Procedure",
+      "description" => "Select the recognition procedure that best suits your situation. NARIC-Vlaanderen offers two procedures: level recognition or specific recognition. Level recognition is generally for academic purposes, while specific recognition is for professional purposes. After selecting, submit your application and track its progress. For more details on each procedure, visit NARIC's website.",
       "image" => "images/diploma-recognition-step-3.png",
-      "link" => "naric.be"
+      "link" => "naricvlaanderen.be"
     ],
+
   ],
   "scholarship.php" => [
     "step1" => [
       "button" => "Step 1",
       "title" => "Check eligibility and requirements",
-      "description" => "Before applying for a study grant, ensure you meet the specific requirements for your region. In Flanders, students must attend either full-time or part-time education at a recognized institution and maintain sufficient attendance. It's important to note that certain types of education, such as Second Chance Education, private education, and equivalent studies outside of Flanders, may not be eligible for study grants. Additionally, students attending school in another country or in the French or German-speaking communities within Belgium may have different application processes.",
+      "description" => "Before applying for a study grant, ensure you meet the specific requirements for your region. In Flanders, students must attend either full-time or part-time education at a recognized institution and maintain sufficient attendance. <br><br>It's important to note that certain types of education, such as Second Chance Education, private education, and equivalent studies outside of Flanders, may not be eligible for study grants. Additionally, students attending school in another country or in the French or German-speaking communities within Belgium may have different application processes.",
       "image" => "images/scholarship-step-1.png"
     ],
     "step2" => [
       "button" => "Step 2",
       "title" => "Submit your application",
-      "description" => "Once you've confirmed your eligibility, proceed to submit your application for a study grant. The application process may differ between Flanders and Wallonia. In Flanders, you can apply online or by mail, while in Wallonia, applications can typically be submitted electronically or via registered mail. Be sure to adhere to the specific instructions provided for your region.",
+      "description" => "Once you've confirmed your eligibility, proceed to submit your application for a study grant. The application process may differ between Flanders and Wallonia. <br><br>In Flanders, you can apply online or by mail, while in Wallonia, applications can typically be submitted electronically or via registered mail. Be sure to adhere to the specific instructions provided for your region.",
       "image" => "images/family-unification-step-2.png"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Await decision and follow up",
-      "description" => "After submitting your application, await the decision on your study grant. Decisions are typically based on various criteria, including financial, educational, and procedural requirements. It's important to monitor the status of your application and any communication from the authorities regarding the outcome. Keep in mind that the amount of the study grant may vary depending on individual circumstances and current legislation.",
+      "description" => "After submitting your application, await the decision on your study grant. Decisions are typically based on various criteria, including financial, educational, and procedural requirements. <br><br>It's important to monitor the status of your application and any communication from the authorities regarding the outcome. Keep in mind that the amount of the study grant may vary depending on individual circumstances and current legislation.",
       "image" => "images/family-unification-step-3.png",
     ],
   ],

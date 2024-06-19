@@ -52,7 +52,8 @@ endforeach;
                 <button><?php echo $current_theme["step1"]["button"]; ?></button>
                 <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
                 <p>
-                  <?php echo $current_theme["step1"]["description"]; ?>
+                  <?php echo $current_theme["step1"]["description"]; ?><br><br>
+                  <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step1"]["link"]; ?>';" value="Visit Site">
                 </p>
               </div>
             </div>
@@ -88,24 +89,6 @@ endforeach;
           </div>
         </div>
       </div>
-      <section id="contact-section">
-        <div id="contact-details">
-          <h2>Did you miss anything?</h2>
-          <p>Please let us know! Your feedback is invaluable and helps us make RefugeeHelp even better. Please use this
-            form to share suggestions about our website. Please note that this form is for suggestions related to the
-            website only and not for personal questions or requests. We unfortunately cannot respond to each suggestion
-            individually, but we greatly appreciate all your input.</p>
-        </div>
-        <div id="contact-form">
-          <form id="ctct-form">
-            <label for="text">Reason</label>
-            <input type="text" name="name" id="name" placeholder="Your type suggestion" />
-            <label for="message">Can you explain more about this</label>
-            <textarea name="message" id="message" placeholder="Your explanation" maxlength="264"></textarea>
-            <button type="submit">Send</button>
-          </form>
-        </div>
-      </section>
     </main>
     <footer>
       <div id="footer-content">
