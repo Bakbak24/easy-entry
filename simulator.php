@@ -182,6 +182,7 @@ if (!empty($_POST)) {
                         </div>
                     </div>
 
+
                     <div id="StudyFinish" style="display: none;" class="simulator-message">
                         <div class="circle"><img src="images/checked.svg" alt=""></div>
                         <div id="question">
@@ -282,7 +283,7 @@ if (!empty($_POST)) {
                         <div id="question">
                             <div id="content">
                                 <div id="multiple-radio">
-                                    <label for="financial">Have you already arranged social security in Belgium?</label><br>
+                                    <label for="financial">Have you already arranged health insurrance in Belgium?</label><br>
                                     <label>
                                         <input type="radio" id="yesSocialeZekerheid" name="socialeZekerheid" value="yesSocialeZekerheid" onclick="showSociaalFinish()">
                                         Yes
@@ -300,9 +301,9 @@ if (!empty($_POST)) {
                         <div class="circle"><img src="images/checked.svg" alt=""></div>
                         <div id="question">
                             <div id="content">
-                                <h2>Register with a social security</h2>
-                                <a href="registration-municipality.php">
-                                    <button type="button" id="sim-btn">Social Security</button>
+                                <h2>Register with a Health Insurance</h2>
+                                <a href="health-insurance.php">
+                                    <button type="button" id="sim-btn">Health Insurance</button>
                                 </a>
                             </div>
                         </div>
@@ -968,6 +969,7 @@ if (!empty($_POST)) {
     var noSociaal = document.getElementById("noSociaal");
     var jobSearch = document.getElementById("jobSearch");
     var Accommodation = document.getElementById("Accommodation");
+    var badge = document.querySelector(".badge");
 
     var status = "ok";
 
@@ -980,6 +982,11 @@ if (!empty($_POST)) {
         xhr.send(JSON.stringify({
             status: status
         }));
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        badge.style.display = "block";
     }
 
 
@@ -1259,6 +1266,7 @@ if (!empty($_POST)) {
 
     function showNoSociaal() {
         if (noSocialeZekerheid.checked) {
+            updateStatus("No Social Security1");
             noSociaal.style.display = "flex";
             gemeenteM.style.display = "none";
             sociaalFinish.style.display = "none";
