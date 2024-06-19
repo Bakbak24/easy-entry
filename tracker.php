@@ -62,6 +62,42 @@ if (str_contains($status, "1")) {
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
     <link rel="stylesheet" href="css/style.css">
     <style>
+        #wrapper-tracker h1 {
+            font-family: var(--headline-font);
+            margin-top: 0px;
+        }
+
+        .circular-bar {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+        }
+
+        .circular-bar::before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+        }
+
+        .percent {
+            z-index: 10;
+            font-size: 1em;
+            font-weight: bold;
+            font-family: var(--subheadline-font);
+            color: var(--dark-color);
+        }
+
         .container {
             width: 70%;
             height: auto;
@@ -72,10 +108,12 @@ if (str_contains($status, "1")) {
 
         .container h1 {
             margin: 0px;
+            font-family: var(--headline-font);
         }
 
         .container h3 {
             margin: 0px 0px 5px 0px;
+            font-family: var(--subheadline-font);
         }
 
         .container ul {
@@ -182,6 +220,7 @@ if (str_contains($status, "1")) {
 
         .container ul li p {
             font-size: 13px;
+            font-family: var(--body-font);
             color: var(--dark-color);
             line-height: 18px;
             margin: 6px 0 10px 0;
@@ -288,9 +327,9 @@ if (str_contains($status, "1")) {
         .tracker-container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             padding: 10px;
-            margin: 20px 0;
+            margin: 53px 0;
         }
 
         .tracker-info {
@@ -474,7 +513,12 @@ if (str_contains($status, "1")) {
 
                         <?php
                         } else if (str_contains($status, "Student not enrolled") || str_contains($status, "Student no scholarship") || str_contains($status, "Job Seeker") || str_contains($status, "No House") || str_contains($status, "Municipality")) {
-                            echo "Stap $currentStep/$totalSteps";
+                            //echo "Stap $currentStep/$totalSteps";
+                        ?>
+                            <div class="circular-bar">
+                                <div class="percent">1/3</div>
+                            </div>
+                        <?php
                         }
                         ?>
                     </div>
@@ -1699,6 +1743,24 @@ if (str_contains($status, "1")) {
     var step3gone = document.querySelector('.step3-gone'); // Selecteer de derde stap
     var step2 = document.querySelector('.hide-step2'); // Selecteer de tweede stap
     var step3 = document.querySelector('.hide-step3'); // Selecteer de derde stap
+
+    let CircularBar = document.querySelector(".circular-bar");
+    let PercentValue = document.querySelector(".percent");
+
+    let InitialValue = 0;
+    let finaleValue = 30;
+    let speed = 10;
+
+    let timer = setInterval(() => {
+        InitialValue += 1;
+
+        CircularBar.style.background = `conic-gradient(#4CAF50 ${InitialValue/100 * 360}deg, #fff 0deg)`;
+        PercentValue.innerHTML = "1/3";
+
+        if (InitialValue >= finaleValue) {
+            clearInterval(timer);
+        }
+    }, speed)
 
 
 
