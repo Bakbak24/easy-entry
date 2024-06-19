@@ -364,6 +364,7 @@ if (!empty($_POST)) {
                         <li><a href="#stay">Stay</a></li>
                         <li><a href="#money">Money</a></li>
                         <li><a href="#education">Education</a></li>
+                        <li><a href="#health">Health</a></li>
                     </ul>
                 </div>
                 <div id="contact-us">

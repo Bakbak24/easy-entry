@@ -1234,16 +1234,21 @@ footer p {
   width: 100%;
   height: 619px;
   margin-top: 53px;
+  margin-bottom: 53px;
 }
 
 #yt-frame-cv {
   margin-top: 53px;
+  margin-bottom: 0px;
 }
 
 @media only screen and (max-width: 800px) {
   #yt-frame,
   #yt-frame-cv {
     height: 400px;
+  }
+  #yt-frame-cv {
+    margin-top: 73px;
   }
 }
 
