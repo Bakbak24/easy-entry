@@ -20,7 +20,7 @@ endforeach;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Easy Entry</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/registration.scss" />
+  <link rel="stylesheet" href="css/registration.css" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
@@ -37,9 +37,7 @@ endforeach;
       <div class="theme-info">
         <h1>Find a GP<i class="fa-solid fa-circle-question"></i></h1>
         <p class="info-bubble">
-            This page will help you find a General Practitioner (GP) in Belgium. A GP is a doctor who provides medical care for acute and chronic illnesses and provides preventive care and health education to patients. GPs are the first point of contact for patients seeking medical care and can refer patients to specialists when needed.
-        </p>
-        <!-- TODO -->
+        This page will help you find a General Practitioner (GP) in Belgium. Follow these steps carefully to ensure you have access to medical care. A GP provides care for acute and chronic illnesses, preventive care, and health education. They are the first point of contact for medical care and can refer patients to specialists when needed.        </p>
       </div>
       <div class="step-plan">
         <h1>Step-By-Step Plan</h1>
