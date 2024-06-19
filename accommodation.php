@@ -37,9 +37,7 @@ endforeach;
       <div class="theme-info">
         <h1>Accommodation<i class="fa-solid fa-circle-question"></i></h1>
         <p class="info-bubble">
-          Finding a place to live in Belgium is an important step in settling into your new life. Let us help you find the perfect accommodation tailored to your needs.
-          Our team provides personalized assistance to make your search for housing easy and stress-free. Whether you prefer a cozy apartment or a spacious house, we've got you covered.
-          Contact us today and start your journey to finding your new home in Belgium.
+          Finding a place to live in Belgium is an important step in settling into your new life. Make sure to follow all the steps carefully.
         </p>
       </div>
       <div class="step-plan">
@@ -54,9 +52,9 @@ endforeach;
                 <button><?php echo $current_theme["step1"]["button"]; ?></button>
                 <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
                 <p>
-                  <?php echo $current_theme["step1"]["description"]; ?>
+                  <?php echo $current_theme["step1"]["description"]; ?><br><br>
+                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step1"]["link"]; ?>';" value="Visit Site">
                 </p>
-                <button onclick="window.location.href='https://<?php echo $current_theme["step1"]["link"]; ?>';">Visit Site</button>
               </div>
             </div>
           </div>

@@ -36,9 +36,7 @@ endforeach;
         <div class="theme-info">
             <h1>Civic Integration<i class="fa-solid fa-circle-question"></i></h1>
             <p class="info-bubble">
-                Are you new to Flanders or Brussels or have you been here for a while and need assistance settling in? We're here to support you.
-                Whether you're seeking employment, pursuing studies, or simply looking for leisure activities, we can help. Have questions about your rights and responsibilities? Want to learn Dutch or connect with new people? Let's find the answers together.
-                To get started on your integration journey, you can learn more and schedule appointments through the official government website. Visit [website link] for appointments and additional information.
+                Are you new to Flanders or Brussels or have you been here for a while? Follow these steps carefully to ensure a smooth integration process. Whether you're looking for employment, learning Dutch, or seeking to understand your rights and responsibilities, this guide will help you navigate each step.
             </p>
         </div>
         <div class="step-plan">
@@ -67,9 +65,9 @@ endforeach;
                             <button><?php echo $current_theme["step2"]["button"]; ?></button>
                             <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
                             <p>
-                                <?php echo $current_theme["step2"]["description"]; ?>
+                                <?php echo $current_theme["step2"]["description"]; ?><br><br>
+                                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step2"]["link"]; ?>';" value="Visit Site">
                             </p>
-                            <button onclick="window.location.href='https://<?php echo $current_theme["step2"]["link"]; ?>';">Visit Site</button>
                         </div>
                     </div>
                     <div class="step-th step" id="step3">
@@ -80,9 +78,9 @@ endforeach;
                             <button><?php echo $current_theme["step3"]["button"]; ?></button>
                             <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
                             <p>
-                                <?php echo $current_theme["step3"]["description"]; ?>
+                                <?php echo $current_theme["step3"]["description"]; ?><br><br>
+                                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';" value="Visit Site">
                             </p>
-                            <button onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';">Visit Site</button>
                         </div>
                     </div>
                     <div class="step-fo step" id="step4">
@@ -94,6 +92,8 @@ endforeach;
                             <h2><?php echo $current_theme["step4"]["title"]; ?></h2>
                             <p>
                                 <?php echo $current_theme["step4"]["description"]; ?>
+                                <br><br>
+                                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step4"]["link"]; ?>';" value="Visit Site">
                             </p>
                         </div>
                     </div>
@@ -106,6 +106,8 @@ endforeach;
                             <h2><?php echo $current_theme["step5"]["title"]; ?></h2>
                             <p>
                                 <?php echo $current_theme["step5"]["description"]; ?>
+                                <br><br>
+                                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step5"]["link"]; ?>';" value="Visit Site">
                             </p>
                         </div>
                     </div>

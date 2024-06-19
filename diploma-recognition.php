@@ -38,8 +38,7 @@ endforeach;
       <div class="theme-info">
         <h1>Diploma Recognition<i class="fa-solid fa-circle-question"></i></h1>
         <p class="info-bubble">
-          Looking to work in Flanders or Brussels with a foreign diploma? You may need to have your diploma recognized for equivalence. Here, we provide essential information about diploma recognition, including eligibility criteria, the recognition process, associated costs, exceptions, frequently asked questions, and how to get in touch for further assistance. Explore the requirements and steps involved to ensure your foreign diploma is recognized for employment opportunities in Flanders or Brussels.
-      </div>
+        Looking to work in Flanders or Brussels with a foreign diploma? Follow the necessary steps to have your diploma recognized for equivalence. Learn about eligibility criteria, the recognition process, associated costs.      </div>
       <div class="step-plan">
         <h1>Step-By-Step Plan</h1>
         <div class="steps">
@@ -68,7 +67,6 @@ endforeach;
                 <p>
                   <?php echo $current_theme["step2"]["description"]; ?>
                 </p>
-                <button onclick="window.location.href='https://<?php echo $current_theme["step2"]["link"]; ?>';">Visit Site</button>
               </div>
             </div>
             <div class="step-th step" id="step3">
@@ -80,8 +78,9 @@ endforeach;
                 <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
                 <p>
                   <?php echo $current_theme["step3"]["description"]; ?>
+                  <br><br>
+                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';" value="Visit Site">
                 </p>
-                <button onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';">Visit Site</button>
               </div>
             </div>
           </div>

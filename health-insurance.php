@@ -57,7 +57,8 @@ endforeach;
                 <button><?php echo $current_theme["step1"]["button"]; ?></button>
                 <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
                 <p>
-                  <?php echo $current_theme["step1"]["description"]; ?>
+                  <?php echo $current_theme["step1"]["description"]; ?><br><br>
+                  <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step1"]["link"]; ?>';" value="Visit Site">
                 </p>
               </div>
             </div>
@@ -75,19 +76,6 @@ endforeach;
                 </p>
               </div>
             </div>
-            <div class="step-th step" id="step3">
-              <div class="step-image">
-                <img src="<?php echo $current_theme["step3"]["image"]; ?>" alt="Step 3" />
-              </div>
-              <div class="step-info">
-                <button><?php echo $current_theme["step3"]["button"]; ?></button>
-                <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
-                <p>
-                  <?php echo $current_theme["step3"]["description"]; ?>
-                </p>
-              </div>
-            </div>
-
           </div>
         </div>
     </main>

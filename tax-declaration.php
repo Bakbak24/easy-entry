@@ -37,8 +37,7 @@ endforeach;
       <div class="theme-info">
         <h1>Tax Declaration<i class="fa-solid fa-circle-question"></i></h1>
         <p class="info-bubble">
-          Tax declaration is a vital procedure in Belgium, where individuals and businesses disclose income and expenses for tax assessment. It's essential for complying with tax laws and regulations, minimizing the risk of penalties and legal complications. Seeking assistance from tax authorities or professionals can streamline the process and optimize potential benefits, ensuring accurate and efficient tax reporting.
-        </p>
+        Tax declaration is a vital procedure in Belgium, where individuals and businesses disclose income and expenses for tax assessment. Follow the necessary steps carefully to comply with tax laws and regulations, minimize the risk of penalties, and ensure accurate tax reporting.        </p>
       </div>
       <div class="step-plan">
         <h1>Step-By-Step Plan</h1>
@@ -67,8 +66,9 @@ endforeach;
                 <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
                 <p>
                   <?php echo $current_theme["step2"]["description"]; ?>
+                  <br><br>
+                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step2"]["link"]; ?>';" value="Visit Site">
                 </p>
-                <button onclick="window.location.href='https://<?php echo $current_theme["step2"]["link"]; ?>';">Visit Site</button>
               </div>
             </div>
             <div class="step-th step" id="step3">
@@ -80,8 +80,9 @@ endforeach;
                 <h2><?php echo $current_theme["step3"]["title"]; ?></h2>
                 <p>
                   <?php echo $current_theme["step3"]["description"]; ?>
+                  <br><br>
+                <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';" value="Visit Site">
                 </p>
-                <button onclick="window.location.href='https://<?php echo $current_theme["step3"]["link"]; ?>';">Visit Site</button>
               </div>
             </div>
           </div>

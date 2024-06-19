@@ -4,14 +4,14 @@ $themes = [
     "step1" => [
       "button" => "Step 1",
       "title" => "Prepare your documents",
-      "description" => "Make sure you have all the necessary documents ready for your immigration. Here you will find information on what documents are needed and where to obtain them. Check your municipality's website for specific requirements. Good preparation will make your immigration process smoother.",
+      "description" => "Make sure you have all the necessary documents ready for your immigration. For EU nationals, usually, an identity card or passport suffices. Because of the 'free movement of persons' within the European Union, the residence regulations for EU citizens are much more flexible than for nationals of other countries. Check your municipality's website for specific requirements. Good preparation will make your immigration process smoother.",
       "image" => "images/registration-step-1.png",
       "link" => "your-municipality-website.com"
     ],
     "step2" => [
       "button" => "Step 2",
       "title" => "Make an appointment at the municipality",
-      "description" => "You need to make an appointment at the municipality to register your address. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
+      "description" => "You must report to the municipality within eight days of your arrival if you plan to stay for longer than three months.Than you need to make an appointment at the municipality to register your address. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
       "image" => "images/registration-steps-2.png",
       "link" => "your-municipality-website.com"
     ],
@@ -22,13 +22,14 @@ $themes = [
       "image" => "images/registration-steps-3.png"
     ],
   ],
+
   "accommodation.php" => [
     "step1" => [
       "button" => "Step 1",
       "title" => "Find a place to live",
-      "description" => "You need to find a place to live before you can register your address at the municipality. You can rent or buy a house or apartment. Make sure you have all the necessary documents ready for.",
+      "description" => "You need to find a place to live before you can register your address at the municipality. You can rent or buy a house or apartment. Make sure you have all the necessary documents ready, such as your identity card or passport, proof of income (like pay slips or a work contract), and possibly a reference from a previous landlord.",
       "image" => "images/accommodation-step-1.png",
-      "link" => "immoweb.be"
+      "link" => "https://www.immoweb.be"
     ],
     "step2" => [
       "button" => "Step 2",
@@ -39,57 +40,38 @@ $themes = [
     "step3" => [
       "button" => "Step 3",
       "title" => "Register your address at the municipality",
-      "description" => "You need to register your address at the municipality within 5 days of moving in. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
+      "description" => "You need to register your address at the municipality within 8 days of moving in. Make an appointment online or by phone and ensure you have all necessary documents ready, including your identity card or passport, rental agreement or proof of homeownership, and proof of health insurance.",
       "image" => "images/accommodation-step-3.png"
     ],
   ],
-  "family-unification.php" => [
-    "step1" => [
-      "button" => "Step 1",
-      "title" => "Confirm eligibility",
-      "description" => "Ensure you meet the eligibility criteria for family unification. Prove your relationship with the family member you wish to join and fulfill any other requirements set by immigration authorities.",
-      "image" => "images/family-unification-step-1.png"
-    ],
-    "step2" => [
-      "button" => "Step 2",
-      "title" => "Gather documents",
-      "description" => "Collect all necessary documents to support your family unification application. This includes proof of relationship, financial stability, accommodation arrangements, and other relevant paperwork.",
-      "image" => "images/registration-step-1.png"
-    ],
-    "step3" => [
-      "button" => "Step 3",
-      "title" => "Submit application",
-      "description" => "Submit your family unification application to the appropriate immigration authority. Follow their guidelines for submission and ensure all required documents are included.",
-      "image" => "images/family-unification-step-2.png"
-    ],
-  ],
+
   "social-security.php" => [
     "step1" => [
       "button" => "Step 1",
       "title" => "Gather your documents",
-      "description" => "Collect all the necessary documents required for your social security registration. Ensure you have all the required identification and supporting paperwork. Refer to the social security office's website for specific document requirements.",
+      "description" => "Collect all the necessary documents required for your social security registration. Typically, you will need your identity card or passport, proof of residence, proof of employment or self-employment, and possibly other documents depending on your situation. Refer to the social security office's website for specific document requirements.",
       "image" => "images/registration-step-1.png"
     ],
     "step2" => [
       "button" => "Step 2",
       "title" => "Schedule an appointment with the social security office",
-      "description" => "You must schedule an appointment with the social security office to register. This can typically be done online or by phone. Make sure to have all your documents ready for your appointment.",
+      "description" => "You must schedule an appointment with the social security office to register. This can typically be done online or by phone. Ensure you have all your documents ready for your appointment. You may also need to fill out some forms beforehand, which can be found on the social security office's website.",
       "image" => "images/social-security-step2.png"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Complete the registration process",
-      "description" => "Once you've attended your appointment, you'll complete the registration process with the social security office. They may verify your information and may ask you some questions. Afterward, you'll receive your social security number.",
+      "description" => "Once you've attended your appointment, you'll complete the registration process with the social security office. They will verify your information and may ask you some questions. Afterward, you'll receive your social security number, which you will need for accessing various public services.",
       "image" => "images/social-security-step3.png"
     ],
   ],
+
   "civic-integration.php" => [
     "step1" => [
       "button" => "Step 1",
       "title" => "Social orientation",
       "description" => "During this comprehensive course, you'll delve into essential subjects such as employment, housing, education, healthcare, and more. Gain insights into cultural values, societal norms, and your rights and responsibilities, all designed to facilitate your integration journey.
-
-        These courses are accessible in diverse languages and formats, offering flexibility with online and offline sessions scheduled throughout the day, evening, and weekends. Upon completing the course, you'll demonstrate your knowledge through a concluding test, marking a significant milestone in your integration process.",
+        <br><br>These courses are accessible in diverse languages and formats, offering flexibility with online and offline sessions scheduled throughout the day, evening, and weekends. Upon completing the course, you'll demonstrate your knowledge through a concluding test, marking a significant milestone in your integration process.",
       "image" => "images/civic-integration-step-1.png"
     ],
     "step2" => [
@@ -97,11 +79,11 @@ $themes = [
       "title" => "Learning Dutch",
       "description" => "Ready to embark on the journey of learning Dutch in Flanders or Brussels? Mastering the Dutch language opens doors to employment opportunities, educational advancement, and seamless integration into society. Whether you're a newcomer or seeking to improve your existing Dutch skills, finding the right language course is essential.
 
-      For Dutch language courses in Flanders, find more information on our learning Dutch page.
+      <br><br>For Dutch language courses in Flanders, find more information on our learning Dutch page.
       
       For Dutch language courses in Brussels, please visit the Dutch Language House - Huis van het Nederlands.",
       "image" => "images/civic-integration-step-2.jpeg",
-      "link" => "huisnederlandsbrussel.be"
+      "link" => "www.vdab.be/vindeenopleiding/opleidingen/nederlands?gad_source=1&gclid=CjwKCAjwg8qzBhAoEiwAWagLrEe4g9y63mLLf9Y-9pxpzTzs5slxlC-TZp1hbTZeskrFm7lfkuInmhoCFBkQAvD_BwE"
     ],
     "step3" => [
       "button" => "Step 3",
@@ -113,17 +95,18 @@ $themes = [
     "step4" => [
       "button" => "Step 4",
       "title" => "Participation programme",
-      "description" => "Looking to expand your social network and engage in meaningful activities? Choose from a variety of initiatives offered through our program, each designed to enrich your experience and contribute positively to your community. Whether it's participating in a buddy project, gaining work experience through a placement, volunteering, or exploring alternative options, you'll find opportunities to connect and grow.
-
+      "description" => "Looking to expand your social network and engage in meaningful activities? Choose from a variety of initiatives offered through our program, each designed to enrich your experience and contribute positively to your community. <br><br>Whether it's participating in a buddy project, gaining work experience through a placement, volunteering, or exploring alternative options, you'll find opportunities to connect and grow.
       Seeking inspiration? Visit www.ikdoemee.be to explore available activities and get started on your journey towards personal and social enrichment.",
-      "image" => "images/civic-integration-step-4.jpg"
+      "image" => "images/civic-integration-step-4.jpg",
+      "link" => "ikdoemee.be"
     ],
     "step5" => [
       "button" => "Step 5",
       "title" => "Explore Integration Online",
       "description" => "Explore further information and resources on integration and civic integration courses by visiting the website of AGENTSCHAP INTEGRATIE & INBURGERING. 
-      Here, you can find comprehensive details about the integration process, including courses, support services, and contact information. Delve deeper into the available programs and services to ensure a smooth transition and successful integration into Belgian society. Reach out for assistance or inquiries in English directly through the website.",
-      "image" => "images/civic-integration-step-5.png"
+      Here, you can find comprehensive details about the integration process, including courses, support services, and contact information.<br><br> Delve deeper into the available programs and services to ensure a smooth transition and successful integration into Belgian society. Reach out for assistance or inquiries in English directly through the website.",
+      "image" => "images/civic-integration-step-5.png",
+      "link" => "www.integratie-inburgering.be"
     ],
   ],
   "tax-declaration.php" => [
@@ -173,8 +156,9 @@ $themes = [
     "step1" => [
       "button" => "Step 1",
       "title" => "Understanding Your Pension Rights",
-      "description" => "Learn about the statutory pensions within the social security system, covering retirement and survivor benefits. These form the 1st pillar and address two social risks: old age and widowhood. The current statutory retirement age in Belgium is 65 years for both men and women, effective since 2009. However, under the government of Michel I, it was decided to gradually increase the retirement age to 66 by 2025 and 67 by 2030. Your pension can start at the earliest on the 1st day of the month following the month in which you reach the retirement age.",
-      "image" => "images/pension-step-1.png"
+      "description" => "Learn about the statutory pensions within the social security system, covering retirement and survivor benefits. These form the 1st pillar and address two social risks: old age and widowhood.<br><br> The current statutory retirement age in Belgium is 65 years for both men and women, effective since 2009. However, under the government of Michel I, it was decided to gradually increase the retirement age to 66 by 2025 and 67 by 2030. Your pension can start at the earliest on the 1st day of the month following the month in which you reach the retirement age.",
+      "image" => "images/pension-step-1.png",
+      "link" => "www.socialsecurity.be/citizen/nl/pensioenen"
     ],
     "step2" => [
       "button" => "Step 2",
@@ -212,71 +196,69 @@ $themes = [
     ],
     "step3" => [
       "button" => "Step 3",
-      "title" => "Choose recognition procedure",
-      "description" => "Select the recognition procedure that best suits your situation. NARIC-Vlaanderen offers two procedures: level recognition or specific recognition. Understand the differences between these procedures before proceeding. After selecting, submit your application and track its progress.",
+      "title" => "Choose Recognition Procedure",
+      "description" => "Select the recognition procedure that best suits your situation. NARIC-Vlaanderen offers two procedures: level recognition or specific recognition. Level recognition is generally for academic purposes, while specific recognition is for professional purposes. After selecting, submit your application and track its progress. For more details on each procedure, visit NARIC's website.",
       "image" => "images/diploma-recognition-step-3.png",
-      "link" => "naric.be"
+      "link" => "naricvlaanderen.be"
     ],
+
   ],
   "scholarship.php" => [
     "step1" => [
       "button" => "Step 1",
       "title" => "Check eligibility and requirements",
-      "description" => "Before applying for a study grant, ensure you meet the specific requirements for your region. In Flanders, students must attend either full-time or part-time education at a recognized institution and maintain sufficient attendance. It's important to note that certain types of education, such as Second Chance Education, private education, and equivalent studies outside of Flanders, may not be eligible for study grants. Additionally, students attending school in another country or in the French or German-speaking communities within Belgium may have different application processes.",
+      "description" => "Before applying for a study grant, ensure you meet the specific requirements for your region. In Flanders, students must attend either full-time or part-time education at a recognized institution and maintain sufficient attendance. <br><br>It's important to note that certain types of education, such as Second Chance Education, private education, and equivalent studies outside of Flanders, may not be eligible for study grants. Additionally, students attending school in another country or in the French or German-speaking communities within Belgium may have different application processes.",
       "image" => "images/scholarship-step-1.png"
     ],
     "step2" => [
       "button" => "Step 2",
       "title" => "Submit your application",
-      "description" => "Once you've confirmed your eligibility, proceed to submit your application for a study grant. The application process may differ between Flanders and Wallonia. In Flanders, you can apply online or by mail, while in Wallonia, applications can typically be submitted electronically or via registered mail. Be sure to adhere to the specific instructions provided for your region.",
+      "description" => "Once you've confirmed your eligibility, proceed to submit your application for a study grant. The application process may differ between Flanders and Wallonia. <br><br>In Flanders, you can apply online or by mail, while in Wallonia, applications can typically be submitted electronically or via registered mail. Be sure to adhere to the specific instructions provided for your region.",
       "image" => "images/family-unification-step-2.png"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Await decision and follow up",
-      "description" => "After submitting your application, await the decision on your study grant. Decisions are typically based on various criteria, including financial, educational, and procedural requirements. It's important to monitor the status of your application and any communication from the authorities regarding the outcome. Keep in mind that the amount of the study grant may vary depending on individual circumstances and current legislation.",
+      "description" => "After submitting your application, await the decision on your study grant. Decisions are typically based on various criteria, including financial, educational, and procedural requirements. <br><br>It's important to monitor the status of your application and any communication from the authorities regarding the outcome. Keep in mind that the amount of the study grant may vary depending on individual circumstances and current legislation.",
       "image" => "images/family-unification-step-3.png",
     ],
   ],
   "health-insurance.php" => [
     "step1" => [
       "button" => "Step 1",
-      "title" => "Register for health insurance",
-      "description" => "Learn how to register for the mandatory health insurance in Belgium. Understand the requirements, necessary documents, and steps involved in the registration process.",
-      "image" => "images/health-insurance-step-1.png"
+      "title" => "Choose a Health Insurance Fund",
+      "description" => "Explore the different health insurance funds (mutualités/mutualiteiten) available in Belgium. Compare their services and benefits to choose the one that best suits your needs. Some well-known mutualities include CM, Solidaris, and Partena.",
+      "image" => "images/health-insurance-step-2.webp",
+      "link" => "www.spaargids.be/sparen/ziekenfondsen-vergelijken.html?gad_source=1&gclid=CjwKCAjwg8qzBhAoEiwAWagLrNY81VSzcxy50z_pbfq2BiwEV3L6kGkFiHukPENQi0Iw4bIs8d3z4RoCSJ8QAvD_BwE"
     ],
     "step2" => [
       "button" => "Step 2",
-      "title" => "Choose a health insurance fund",
-      "description" => "Explore different health insurance funds (mutualités/mutualiteiten) available in Belgium. Compare their services and benefits to choose the one that best suits your needs.",
-      "image" => "images/health-insurance-step-2.png"
-    ],
-    "step3" => [
-      "button" => "Step 3",
-      "title" => "Understand your coverage",
-      "description" => "Get detailed information about the health services covered by your insurance, including doctor visits, hospital stays, and medications. Learn about reimbursement procedures and additional insurance options.",
-      "image" => "images/health-insurance-step-3.png"
+      "title" => "Understand Your Coverage",
+      "description" => "Get detailed information about the health services covered by your insurance, including doctor visits, hospital stays, and medications. Learn about reimbursement procedures and additional insurance options for extra coverage.",
+      "image" => "images/health-insurance-step-1.jpg"
     ],
   ],
   "find-gp.php" => [
     "step1" => [
       "button" => "Step 1",
-      "title" => "Search for a GP",
-      "description" => "Learn how to find a general practitioner (GP) in your area. Understand the process of registering with a GP and what to consider when choosing one.",
-      "image" => "images/find-gp-step-1.png"
+      "title" => "Register with the Municipality",
+      "description" => "Register with the municipality where you reside to obtain a residence permit and a national registration number. This is the first step to access healthcare in Belgium. You need an official address for this registration. Ensure you bring an identification document and a rental contract or proof of property ownership.",
+      "image" => "images/find-gp-step-1.jpeg"
     ],
     "step2" => [
       "button" => "Step 2",
-      "title" => "Register with your GP",
-      "description" => "Find out how to register with a GP and what documents you need. Understand the benefits of having a registered GP and how it affects your healthcare.",
-      "image" => "images/find-gp-step-2.png"
+      "title" => "Register for Belgian Health Insurance",
+      "description" => "Choose a health insurance fund (mutuality) such as CM, Solidaris, or Partena. Register with your national registration number and official address to access medical reimbursements and care. This ensures that your medical costs are covered and you have access to a wide range of health services. You can choose a mutuality and register via their website or by visiting their office.",
+      "image" => "images/health-insurance-step-2.webp",
+      "link" => "www.mutualiteiten-vergelijken.be/ziekenfonds-kiezen/#bob-form"
     ],
     "step3" => [
       "button" => "Step 3",
-      "title" => "Visit your GP",
-      "description" => "Know what to expect during your first visit to your GP. Learn about appointment scheduling, consultation fees, and how to get referrals to specialists if needed.",
-      "image" => "images/find-gp-step-3.png"
+      "title" => "Find a GP and Register",
+      "description" => "Use websites such as <b>ikzoekeenhuisarts.be, doctena.be, or doctoranytime.be</b> to find a GP accepting new patients. Call or book an appointment online. Make sure to bring your ID card and health insurance card to your first visit. During this visit, you can discuss your medical history and register with the GP. <br><br>This ensures you have a regular medical contact for all your health needs.",
+      "image" => "images/find-gp-step-3.png",
+      "link" => "ikzoekeenhuisarts.be"
     ],
   ],
+
 ];
-?>
