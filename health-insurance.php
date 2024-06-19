@@ -20,7 +20,7 @@ endforeach;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Easy Entry</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/registration.scss" />
+  <link rel="stylesheet" href="css/registration.css" />
   <link rel="icon" type="image/x-icon" href="./images/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="js/switching-steps.js" defer></script>
@@ -29,7 +29,6 @@ endforeach;
 
 <body>
   <div class="gtranslate_wrapper">
-
     <header>
       <?php include_once 'nav.php'; ?>
     </header>
@@ -37,12 +36,7 @@ endforeach;
       <div class="theme-info">
         <h1>Health Insurance<i class="fa-solid fa-circle-question"></i></h1>
         <p class="info-bubble">
-            Health insurance is a type of insurance coverage that pays for medical and surgical expenses incurred by the
-            insured. Health insurance can reimburse the insured for expenses incurred from illness or injury, or pay the
-            care provider directly. It's often included in employer benefit packages as a means of enticing quality
-            employees. The cost of health insurance premiums is deductible to the payer, and the benefits received are
-            tax-free.
-            <!-- TODO -->
+        Health insurance is essential for covering medical and surgical expenses. To ensure you are properly insured in Belgium, follow these steps carefully. Choose a health insurance fund that suits your needs, understand the coverage provided, and learn about the reimbursement procedures.
         </p>
       </div>
       <div class="step-plan">

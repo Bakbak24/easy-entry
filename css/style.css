@@ -29,9 +29,7 @@
   --body-font: "Open Sans";
   --body-weight: "400";
 }
-#appView .powrMark {
-  display: none !important;
-}
+
 body {
   background-color: var(--smoke-color);
   font-family: Arial, sans-serif;
@@ -140,12 +138,12 @@ a {
 
 #side-menu {
   position: absolute;
-  background-color: var(--smoke-color);
+  background-color: var(--white-color);
   width: 100%;
   padding: 15px 20px;
   box-sizing: border-box;
   justify-content: space-between;
-  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.05);
 }
 
 #side-menu.show-nav {
@@ -606,6 +604,15 @@ main {
     max-width: 110px;
     width: 100%;
     height: 110px;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .theme-content-icons {
+    width: 50px;
+    height: 50px;
   }
 
   .theme-content h3 {
