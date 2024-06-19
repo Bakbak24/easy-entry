@@ -57,10 +57,6 @@
               <h3>Accommodation</h3>
               <img src="images/Accommodation.svg" alt="Accommodation" class="theme-content-icons"/>
             </div>
-            <div class="theme-content" data-page="family-unification.php" data-theme="stay">
-              <h3>Family Unification</h3>
-              <img src="images/Family Unification.svg" alt="Family Unification" class="theme-content-icons"/>
-            </div>
             <div class="theme-content" data-page="social-security.php" data-theme="stay">
               <h3>Social Security</h3>
               <img src="images/Social Security.svg" alt="Social Security" class="theme-content-icons"/>

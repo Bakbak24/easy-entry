@@ -4,14 +4,14 @@ $themes = [
     "step1" => [
       "button" => "Step 1",
       "title" => "Prepare your documents",
-      "description" => "Make sure you have all the necessary documents ready for your immigration. Here you will find information on what documents are needed and where to obtain them. Check your municipality's website for specific requirements. Good preparation will make your immigration process smoother.",
+      "description" => "Make sure you have all the necessary documents ready for your immigration. For EU nationals, usually, an identity card or passport suffices. Because of the 'free movement of persons' within the European Union, the residence regulations for EU citizens are much more flexible than for nationals of other countries. Check your municipality's website for specific requirements. Good preparation will make your immigration process smoother.",
       "image" => "images/registration-step-1.png",
       "link" => "your-municipality-website.com"
     ],
     "step2" => [
       "button" => "Step 2",
       "title" => "Make an appointment at the municipality",
-      "description" => "You need to make an appointment at the municipality to register your address. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
+      "description" => "You must report to the municipality within eight days of your arrival if you plan to stay for longer than three months.Than you need to make an appointment at the municipality to register your address. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
       "image" => "images/registration-steps-2.png",
       "link" => "your-municipality-website.com"
     ],
@@ -22,13 +22,14 @@ $themes = [
       "image" => "images/registration-steps-3.png"
     ],
   ],
+
   "accommodation.php" => [
     "step1" => [
       "button" => "Step 1",
       "title" => "Find a place to live",
-      "description" => "You need to find a place to live before you can register your address at the municipality. You can rent or buy a house or apartment. Make sure you have all the necessary documents ready for.",
+      "description" => "You need to find a place to live before you can register your address at the municipality. You can rent or buy a house or apartment. Make sure you have all the necessary documents ready, such as your identity card or passport, proof of income (like pay slips or a work contract), and possibly a reference from a previous landlord.",
       "image" => "images/accommodation-step-1.png",
-      "link" => "immoweb.be"
+      "link" => "https://www.immoweb.be"
     ],
     "step2" => [
       "button" => "Step 2",
@@ -39,57 +40,38 @@ $themes = [
     "step3" => [
       "button" => "Step 3",
       "title" => "Register your address at the municipality",
-      "description" => "You need to register your address at the municipality within 5 days of moving in. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
+      "description" => "You need to register your address at the municipality within 8 days of moving in. Make an appointment online or by phone and ensure you have all necessary documents ready, including your identity card or passport, rental agreement or proof of homeownership, and proof of health insurance.",
       "image" => "images/accommodation-step-3.png"
     ],
   ],
-  "family-unification.php" => [
-    "step1" => [
-      "button" => "Step 1",
-      "title" => "Confirm eligibility",
-      "description" => "Ensure you meet the eligibility criteria for family unification. Prove your relationship with the family member you wish to join and fulfill any other requirements set by immigration authorities.",
-      "image" => "images/family-unification-step-1.png"
-    ],
-    "step2" => [
-      "button" => "Step 2",
-      "title" => "Gather documents",
-      "description" => "Collect all necessary documents to support your family unification application. This includes proof of relationship, financial stability, accommodation arrangements, and other relevant paperwork.",
-      "image" => "images/registration-step-1.png"
-    ],
-    "step3" => [
-      "button" => "Step 3",
-      "title" => "Submit application",
-      "description" => "Submit your family unification application to the appropriate immigration authority. Follow their guidelines for submission and ensure all required documents are included.",
-      "image" => "images/family-unification-step-2.png"
-    ],
-  ],
+
   "social-security.php" => [
     "step1" => [
       "button" => "Step 1",
       "title" => "Gather your documents",
-      "description" => "Collect all the necessary documents required for your social security registration. Ensure you have all the required identification and supporting paperwork. Refer to the social security office's website for specific document requirements.",
+      "description" => "Collect all the necessary documents required for your social security registration. Typically, you will need your identity card or passport, proof of residence, proof of employment or self-employment, and possibly other documents depending on your situation. Refer to the social security office's website for specific document requirements.",
       "image" => "images/registration-step-1.png"
     ],
     "step2" => [
       "button" => "Step 2",
       "title" => "Schedule an appointment with the social security office",
-      "description" => "You must schedule an appointment with the social security office to register. This can typically be done online or by phone. Make sure to have all your documents ready for your appointment.",
+      "description" => "You must schedule an appointment with the social security office to register. This can typically be done online or by phone. Ensure you have all your documents ready for your appointment. You may also need to fill out some forms beforehand, which can be found on the social security office's website.",
       "image" => "images/social-security-step2.png"
     ],
     "step3" => [
       "button" => "Step 3",
       "title" => "Complete the registration process",
-      "description" => "Once you've attended your appointment, you'll complete the registration process with the social security office. They may verify your information and may ask you some questions. Afterward, you'll receive your social security number.",
+      "description" => "Once you've attended your appointment, you'll complete the registration process with the social security office. They will verify your information and may ask you some questions. Afterward, you'll receive your social security number, which you will need for accessing various public services.",
       "image" => "images/social-security-step3.png"
     ],
   ],
+
   "civic-integration.php" => [
     "step1" => [
       "button" => "Step 1",
       "title" => "Social orientation",
       "description" => "During this comprehensive course, you'll delve into essential subjects such as employment, housing, education, healthcare, and more. Gain insights into cultural values, societal norms, and your rights and responsibilities, all designed to facilitate your integration journey.
-
-        These courses are accessible in diverse languages and formats, offering flexibility with online and offline sessions scheduled throughout the day, evening, and weekends. Upon completing the course, you'll demonstrate your knowledge through a concluding test, marking a significant milestone in your integration process.",
+        <br><br>These courses are accessible in diverse languages and formats, offering flexibility with online and offline sessions scheduled throughout the day, evening, and weekends. Upon completing the course, you'll demonstrate your knowledge through a concluding test, marking a significant milestone in your integration process.",
       "image" => "images/civic-integration-step-1.png"
     ],
     "step2" => [
@@ -97,11 +79,11 @@ $themes = [
       "title" => "Learning Dutch",
       "description" => "Ready to embark on the journey of learning Dutch in Flanders or Brussels? Mastering the Dutch language opens doors to employment opportunities, educational advancement, and seamless integration into society. Whether you're a newcomer or seeking to improve your existing Dutch skills, finding the right language course is essential.
 
-      For Dutch language courses in Flanders, find more information on our learning Dutch page.
+      <br><br>For Dutch language courses in Flanders, find more information on our learning Dutch page.
       
       For Dutch language courses in Brussels, please visit the Dutch Language House - Huis van het Nederlands.",
       "image" => "images/civic-integration-step-2.jpeg",
-      "link" => "huisnederlandsbrussel.be"
+      "link" => "www.vdab.be/vindeenopleiding/opleidingen/nederlands?gad_source=1&gclid=CjwKCAjwg8qzBhAoEiwAWagLrEe4g9y63mLLf9Y-9pxpzTzs5slxlC-TZp1hbTZeskrFm7lfkuInmhoCFBkQAvD_BwE"
     ],
     "step3" => [
       "button" => "Step 3",
@@ -113,17 +95,18 @@ $themes = [
     "step4" => [
       "button" => "Step 4",
       "title" => "Participation programme",
-      "description" => "Looking to expand your social network and engage in meaningful activities? Choose from a variety of initiatives offered through our program, each designed to enrich your experience and contribute positively to your community. Whether it's participating in a buddy project, gaining work experience through a placement, volunteering, or exploring alternative options, you'll find opportunities to connect and grow.
-
+      "description" => "Looking to expand your social network and engage in meaningful activities? Choose from a variety of initiatives offered through our program, each designed to enrich your experience and contribute positively to your community. <br><br>Whether it's participating in a buddy project, gaining work experience through a placement, volunteering, or exploring alternative options, you'll find opportunities to connect and grow.
       Seeking inspiration? Visit www.ikdoemee.be to explore available activities and get started on your journey towards personal and social enrichment.",
-      "image" => "images/civic-integration-step-4.jpg"
+      "image" => "images/civic-integration-step-4.jpg",
+      "link" => "ikdoemee.be"
     ],
     "step5" => [
       "button" => "Step 5",
       "title" => "Explore Integration Online",
       "description" => "Explore further information and resources on integration and civic integration courses by visiting the website of AGENTSCHAP INTEGRATIE & INBURGERING. 
-      Here, you can find comprehensive details about the integration process, including courses, support services, and contact information. Delve deeper into the available programs and services to ensure a smooth transition and successful integration into Belgian society. Reach out for assistance or inquiries in English directly through the website.",
-      "image" => "images/civic-integration-step-5.png"
+      Here, you can find comprehensive details about the integration process, including courses, support services, and contact information.<br><br> Delve deeper into the available programs and services to ensure a smooth transition and successful integration into Belgian society. Reach out for assistance or inquiries in English directly through the website.",
+      "image" => "images/civic-integration-step-5.png",
+      "link" => "www.integratie-inburgering.be"
     ],
   ],
   "tax-declaration.php" => [
