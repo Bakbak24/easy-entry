@@ -138,12 +138,12 @@ a {
 
 #side-menu {
   position: absolute;
-  background-color: var(--smoke-color);
+  background-color: var(--white-color);
   width: 100%;
   padding: 15px 20px;
   box-sizing: border-box;
   justify-content: space-between;
-  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.05);
 }
 
 #side-menu.show-nav {
