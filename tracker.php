@@ -37,7 +37,7 @@ if ($status == 'onbekend') {
     $totalSteps = 3;
 } else if (str_contains($status, "Student no scholarship") || str_contains($status, "No House") || str_contains($status, "Municipality")) {
     $totalSteps = 2;
-} else if (str_contains($status, "Student-municipality")) {
+} else if (str_contains($status, "Student-municipality") || str_contains($status, "No Social Security")) {
     $totalSteps = 1;
 }
 
@@ -520,7 +520,7 @@ if (str_contains($status, "1")) {
                             </div>
                         </div>
                     </section>
-                <?php } else if ($status == "Finished" || str_contains($status, "Student not enrolled4") || str_contains($status, "Student no scholarship3") || str_contains($status, "Student-municipality2") || str_contains($status, "No House3") || str_contains($status, "Municipality3")) { ?>
+                <?php } else if ($status == "Finished" || str_contains($status, "Student not enrolled4") || str_contains($status, "Student no scholarship3") || str_contains($status, "Student-municipality2") || str_contains($status, "No House3") || str_contains($status, "Municipality3") || str_contains($status, "No Social Security2")) { ?>
                     <section id="simulation-section-tracker">
                         <div id="simulation-content">
                             <div id="content">
@@ -1058,7 +1058,7 @@ if (str_contains($status, "1")) {
                                             <div class="button-wrapper">
                                                 <button type="button" onclick="goToStep3()" id="step2">Finish</button>
                                             <?php } ?>
-                                            <a href="social-security.php">Social Security</a>
+                                            <a href="health-insurance.php">Health Insurance</a>
                                             </div>
                                         </div>
                                         <span <?php
@@ -1071,6 +1071,45 @@ if (str_contains($status, "1")) {
                             </li>
                         </ul>
                     </div>
+                <?php } else if (str_contains($status, "No Social Security")) {
+                    $progress = new Progress();
+                    $progress->setNaam('Ziekenfonds');
+                    $status = $progress->getStatusFromName($progress->getNaam());
+                ?>
+                    <section id="simulation-section-tracker" class="Student-municipality">
+                        <div id="simulation-content">
+                            <div id="content">
+                                <div id="content-details">
+                                    <h2>Health Insurance</h2>
+                                    <p>Ensure smooth integration into Belgium by understanding the Health Insurance system. Familiarize yourself with the necessary steps to secure medical coverage and benefits, making your immigration process more manageable. Explore detailed information about Health Insurance on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
+                                    <?php if ($status[0]['status'] == 2) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                        </div>
+                                        <label for="file" style="color:black;">You Are Registered</label>
+                                        <div class="button-wrapper">
+                                            <button type="button" onclick="goToStep2()" id="step2">Finish</button>
+                                        </div>
+                                    <?php } else if ($status[0]['status'] == 0) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="5" max="100"> 5% </progress>
+                                        </div>
+                                        <label for="file" style="color:black;">Process not started</label>
+                                        <div class="button-wrapper">
+                                            <a href="health-insurance.php">Health Insurance</a>
+                                        </div>
+                                    <?php } else { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="20" max="100"> 20% </progress>
+                                        </div>
+                                        <label for="file" style="color:black;">Process is ongoing</label>
+                                        <div class="button-wrapper">
+                                            <a href="health-insurance.php">Health Insurance</a>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                    </section>
                 <?php } ?>
             </div>
         </div>
