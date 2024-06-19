@@ -29,9 +29,7 @@
   --body-font: "Open Sans";
   --body-weight: "400";
 }
-#appView .powrMark {
-  display: none !important;
-}
+
 body {
   background-color: var(--smoke-color);
   font-family: Arial, sans-serif;
@@ -606,6 +604,15 @@ main {
     max-width: 110px;
     width: 100%;
     height: 110px;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .theme-content-icons {
+    width: 50px;
+    height: 50px;
   }
 
   .theme-content h3 {
