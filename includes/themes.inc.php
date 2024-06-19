@@ -241,42 +241,39 @@ $themes = [
   "health-insurance.php" => [
     "step1" => [
       "button" => "Step 1",
-      "title" => "Register for health insurance",
-      "description" => "Learn how to register for the mandatory health insurance in Belgium. Understand the requirements, necessary documents, and steps involved in the registration process.",
-      "image" => "images/health-insurance-step-1.png"
+      "title" => "Choose a Health Insurance Fund",
+      "description" => "Explore the different health insurance funds (mutualités/mutualiteiten) available in Belgium. Compare their services and benefits to choose the one that best suits your needs. Some well-known mutualities include CM, Solidaris, and Partena.",
+      "image" => "images/health-insurance-step-2.webp",
+      "link" => "www.spaargids.be/sparen/ziekenfondsen-vergelijken.html?gad_source=1&gclid=CjwKCAjwg8qzBhAoEiwAWagLrNY81VSzcxy50z_pbfq2BiwEV3L6kGkFiHukPENQi0Iw4bIs8d3z4RoCSJ8QAvD_BwE"
     ],
     "step2" => [
       "button" => "Step 2",
-      "title" => "Choose a health insurance fund",
-      "description" => "Explore different health insurance funds (mutualités/mutualiteiten) available in Belgium. Compare their services and benefits to choose the one that best suits your needs.",
-      "image" => "images/health-insurance-step-2.png"
-    ],
-    "step3" => [
-      "button" => "Step 3",
-      "title" => "Understand your coverage",
-      "description" => "Get detailed information about the health services covered by your insurance, including doctor visits, hospital stays, and medications. Learn about reimbursement procedures and additional insurance options.",
-      "image" => "images/health-insurance-step-3.png"
+      "title" => "Understand Your Coverage",
+      "description" => "Get detailed information about the health services covered by your insurance, including doctor visits, hospital stays, and medications. Learn about reimbursement procedures and additional insurance options for extra coverage.",
+      "image" => "images/health-insurance-step-1.jpg"
     ],
   ],
   "find-gp.php" => [
     "step1" => [
       "button" => "Step 1",
-      "title" => "Search for a GP",
-      "description" => "Learn how to find a general practitioner (GP) in your area. Understand the process of registering with a GP and what to consider when choosing one.",
-      "image" => "images/find-gp-step-1.png"
+      "title" => "Register with the Municipality",
+      "description" => "Register with the municipality where you reside to obtain a residence permit and a national registration number. This is the first step to access healthcare in Belgium. You need an official address for this registration. Ensure you bring an identification document and a rental contract or proof of property ownership.",
+      "image" => "images/find-gp-step-1.jpeg"
     ],
     "step2" => [
       "button" => "Step 2",
-      "title" => "Register with your GP",
-      "description" => "Find out how to register with a GP and what documents you need. Understand the benefits of having a registered GP and how it affects your healthcare.",
-      "image" => "images/find-gp-step-2.png"
+      "title" => "Register for Belgian Health Insurance",
+      "description" => "Choose a health insurance fund (mutuality) such as CM, Solidaris, or Partena. Register with your national registration number and official address to access medical reimbursements and care. This ensures that your medical costs are covered and you have access to a wide range of health services. You can choose a mutuality and register via their website or by visiting their office.",
+      "image" => "images/health-insurance-step-2.webp",
+      "link" => "www.mutualiteiten-vergelijken.be/ziekenfonds-kiezen/#bob-form"
     ],
     "step3" => [
       "button" => "Step 3",
-      "title" => "Visit your GP",
-      "description" => "Know what to expect during your first visit to your GP. Learn about appointment scheduling, consultation fees, and how to get referrals to specialists if needed.",
-      "image" => "images/find-gp-step-3.png"
+      "title" => "Find a GP and Register",
+      "description" => "Use websites such as <b>ikzoekeenhuisarts.be, doctena.be, or doctoranytime.be</b> to find a GP accepting new patients. Call or book an appointment online. Make sure to bring your ID card and health insurance card to your first visit. During this visit, you can discuss your medical history and register with the GP. <br><br>This ensures you have a regular medical contact for all your health needs.",
+      "image" => "images/find-gp-step-3.png",
+      "link" => "ikzoekeenhuisarts.be"
     ],
   ],
+
 ];
-?>
