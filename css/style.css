@@ -648,7 +648,7 @@ footer p {
   margin-right: 4%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
 }
 
@@ -704,6 +704,7 @@ footer p {
 
 #newsletter {
   width: 21%;
+  display: none;
 }
 
 #email {
@@ -751,9 +752,16 @@ footer p {
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 1304px) {
+@media only screen and (max-width: 900px) {
   #footer-content {
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #themes ul {
+    align-items: center;
   }
 
   #newsletter {
