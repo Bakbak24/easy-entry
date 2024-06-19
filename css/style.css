@@ -29,7 +29,9 @@
   --body-font: "Open Sans";
   --body-weight: "400";
 }
-
+#appView .powrMark {
+  display: none !important;
+}
 body {
   background-color: var(--smoke-color);
   font-family: Arial, sans-serif;
