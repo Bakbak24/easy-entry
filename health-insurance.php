@@ -35,11 +35,14 @@ endforeach;
     </header>
     <main>
       <div class="theme-info">
-        <h1>Accommodation<i class="fa-solid fa-circle-question"></i></h1>
+        <h1>Health Insurance<i class="fa-solid fa-circle-question"></i></h1>
         <p class="info-bubble">
-          Finding a place to live in Belgium is an important step in settling into your new life. Let us help you find the perfect accommodation tailored to your needs.
-          Our team provides personalized assistance to make your search for housing easy and stress-free. Whether you prefer a cozy apartment or a spacious house, we've got you covered.
-          Contact us today and start your journey to finding your new home in Belgium.
+            Health insurance is a type of insurance coverage that pays for medical and surgical expenses incurred by the
+            insured. Health insurance can reimburse the insured for expenses incurred from illness or injury, or pay the
+            care provider directly. It's often included in employer benefit packages as a means of enticing quality
+            employees. The cost of health insurance premiums is deductible to the payer, and the benefits received are
+            tax-free.
+            <!-- TODO -->
         </p>
       </div>
       <div class="step-plan">
@@ -56,7 +59,6 @@ endforeach;
                 <p>
                   <?php echo $current_theme["step1"]["description"]; ?>
                 </p>
-                <button onclick="window.location.href='https://<?php echo $current_theme["step1"]["link"]; ?>';">Visit Site</button>
               </div>
             </div>
           </div>
@@ -85,6 +87,7 @@ endforeach;
                 </p>
               </div>
             </div>
+
           </div>
         </div>
     </main>

@@ -451,7 +451,8 @@ main {
 
 #money,
 #education,
-#stay {
+#stay,
+#health {
   width: 100%;
 }
 
@@ -469,7 +470,8 @@ main {
 
 #sta,
 #edu,
-#mon {
+#mon,
+#hea {
   background-color: var(--white-color);
   color: var(--dark-color);
   padding: var(--button-padding);
@@ -484,7 +486,8 @@ main {
 @media only screen and (max-width: 488px) {
   #sta,
   #edu,
-  #mon {
+  #mon,
+  #hea{
     padding: 10px 25px;
   }
 
@@ -531,6 +534,18 @@ main {
   padding: 20px;
   padding-top: 0;
   cursor: pointer;
+}
+
+.theme-content-icons {
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+}
+
+.theme-content-icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .theme-content h3 {

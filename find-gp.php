@@ -35,12 +35,11 @@ endforeach;
     </header>
     <main>
       <div class="theme-info">
-        <h1>Accommodation<i class="fa-solid fa-circle-question"></i></h1>
+        <h1>Find a GP<i class="fa-solid fa-circle-question"></i></h1>
         <p class="info-bubble">
-          Finding a place to live in Belgium is an important step in settling into your new life. Let us help you find the perfect accommodation tailored to your needs.
-          Our team provides personalized assistance to make your search for housing easy and stress-free. Whether you prefer a cozy apartment or a spacious house, we've got you covered.
-          Contact us today and start your journey to finding your new home in Belgium.
+            This page will help you find a General Practitioner (GP) in Belgium. A GP is a doctor who provides medical care for acute and chronic illnesses and provides preventive care and health education to patients. GPs are the first point of contact for patients seeking medical care and can refer patients to specialists when needed.
         </p>
+        <!-- TODO -->
       </div>
       <div class="step-plan">
         <h1>Step-By-Step Plan</h1>
@@ -56,7 +55,6 @@ endforeach;
                 <p>
                   <?php echo $current_theme["step1"]["description"]; ?>
                 </p>
-                <button onclick="window.location.href='https://<?php echo $current_theme["step1"]["link"]; ?>';">Visit Site</button>
               </div>
             </div>
           </div>
@@ -85,6 +83,7 @@ endforeach;
                 </p>
               </div>
             </div>
+
           </div>
         </div>
     </main>
