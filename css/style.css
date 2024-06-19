@@ -15,6 +15,10 @@
   --button-padding: 8px 16px;
   --button-border-radius: 35px;
   --input-border-radius: 8px;
+  --color-dark: #1f1a38;
+  --color-dark-glare: #989ea9;
+  --color-success: #76f7bf;
+  --color-success-dark: #2d7a59;
   /* Bold */
   --headline-font: "Montserrat";
   --headline-weight: "700";

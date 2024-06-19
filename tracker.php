@@ -33,9 +33,9 @@ if ($status == 'onbekend') {
     $totalSteps = 0;
 } else if ($status == "Finished") {
     $totalSteps = 0;
-} else if (str_contains($status, "Student not enrolled") || str_contains($status, "Job Seeker") || str_contains($status, "Municipality")) {
+} else if (str_contains($status, "Student not enrolled") || str_contains($status, "Job Seeker")) {
     $totalSteps = 3;
-} else if (str_contains($status, "Student no scholarship") || str_contains($status, "No House")) {
+} else if (str_contains($status, "Student no scholarship") || str_contains($status, "No House") || str_contains($status, "Municipality")) {
     $totalSteps = 2;
 } else if (str_contains($status, "Student-municipality")) {
     $totalSteps = 1;
@@ -469,9 +469,11 @@ if (str_contains($status, "1")) {
                     <h1>My Tracker</h1>
                     <div class="tracker-info">
                         <?php
-                        if ($status == "Finished" || str_contains($status, "Student not enrolled4") || str_contains($status, "Student no scholarship3") || str_contains($status, "Job Seeker4") || str_contains($status, "No House3") || str_contains($status, "Municipality4")) {
-                            echo "Finished";
-                        } else if (str_contains($status, "Student not enrolled") || str_contains($status, "Student no scholarship") || str_contains($status, "Job Seeker") || str_contains($status, "No House")) {
+                        if ($status == "Finished" || str_contains($status, "Student not enrolled4") || str_contains($status, "Student no scholarship3") || str_contains($status, "Job Seeker4") || str_contains($status, "No House3") || str_contains($status, "Municipality3")) {
+                        ?>
+
+                        <?php
+                        } else if (str_contains($status, "Student not enrolled") || str_contains($status, "Student no scholarship") || str_contains($status, "Job Seeker") || str_contains($status, "No House") || str_contains($status, "Municipality")) {
                             echo "Stap $currentStep/$totalSteps";
                         }
                         ?>
@@ -518,7 +520,7 @@ if (str_contains($status, "1")) {
                             </div>
                         </div>
                     </section>
-                <?php } else if ($status == "Finished" || str_contains($status, "Student not enrolled4") || str_contains($status, "Student no scholarship3") || str_contains($status, "Student-municipality2") || str_contains($status, "No House3") || str_contains($status, "Municipality4")) { ?>
+                <?php } else if ($status == "Finished" || str_contains($status, "Student not enrolled4") || str_contains($status, "Student no scholarship3") || str_contains($status, "Student-municipality2") || str_contains($status, "No House3") || str_contains($status, "Municipality3")) { ?>
                     <section id="simulation-section-tracker">
                         <div id="simulation-content">
                             <div id="content">
@@ -614,16 +616,31 @@ if (str_contains($status, "1")) {
                                         ?>>
                                     <h3 class="heading">Registration Municipality</h3>
                                     <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
-                                    <div class="button-wrapper">
-                                        <button type="button" onclick="goToStep4()" id="step3">Finish</button>
-                                        <a href="registration-municipality.php">Registration Municipality</a>
-                                        <?php if ($status2[0]['status'] == 1) { ?>
-                                            <div class="qr-code">
-                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
-                                            </div>
-                                        <?php } ?>
-
-                                    </div>
+                                    <?php if ($status2[0]['status'] == 2) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <button type="button" onclick="goToStep4()" id="step3">Finish</button>
+                                            <label for="file">Retrieve your ID</label>
+                                        </div>
+                                    <?php } else if ($status2[0]['status'] == 0) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="5" max="100"> 5% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                            <label for="file">Process not started</label>
+                                        </div>
+                                    <?php } else { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="20" max="100"> 20% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                            <label for="file">Process is ongoing</label>
+                                        </div>
+                                    <?php } ?>
 
                                 </div>
 
@@ -686,17 +703,31 @@ if (str_contains($status, "1")) {
                                         ?>>
                                     <h3 class="heading">Registration Municipality</h3>
                                     <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
-                                    <div class="button-wrapper">
-                                        <button type="button" onclick="goToStep3()" id="step2">Finish</button>
-                                        <a href="registration-municipality.php">Registration Municipality</a>
-                                        <?php if ($status2[0]['status'] == 1) { ?>
-                                            <div class="qr-code">
-                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
-                                            </div>
-                                        <?php } ?>
-
-                                    </div>
-
+                                    <?php if ($status2[0]['status'] == 2) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <label for="file" style="color:black;">Retrieve your ID</label>
+                                            <button type="button" onclick="goToStep3()" id="step2">Finish</button>
+                                        </div>
+                                    <?php } else if ($status2[0]['status'] == 0) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="5" max="100"> 5% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <label for="file" style="color:black;">Process not started</label>
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                        </div>
+                                    <?php } else { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="20" max="100"> 20% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <label for="file" style="color:black;">Process is ongoing</label>
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                        </div>
+                                    <?php } ?>
                                 </div>
 
                                 <span <?php
@@ -710,22 +741,42 @@ if (str_contains($status, "1")) {
                         </ul>
                     </div>
 
-                <?php } else if (str_contains($status, "Student-municipality")) { ?>
+                <?php } else if (str_contains($status, "Student-municipality")) {
+                    $progress = new Progress();
+                    $progress->setNaam('gemeente');
+                    $status = $progress->getStatusFromName($progress->getNaam());
+                ?>
                     <section id="simulation-section-tracker" class="Student-municipality">
                         <div id="simulation-content">
                             <div id="content">
                                 <div id="content-details">
                                     <h2>Registration Municipality</h2>
                                     <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
-                                    <div class="qr-code">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
-                                    </div>
-                                    <a href="registration-municipality.php">
-                                        Registration Municipality
-                                    </a>
-                                    <div class="button-wrapper">
-                                        <button type="button" onclick="goToStep2()" id="step2">Finish</button>
-                                    </div>
+                                    <?php if ($status[0]['status'] == 2) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                        </div>
+                                        <label for="file" style="color:black;">Retrieve your ID</label>
+                                        <div class="button-wrapper">
+                                            <button type="button" onclick="goToStep2()" id="step2">Finish</button>
+                                        </div>
+                                    <?php } else if ($status[0]['status'] == 0) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="5" max="100"> 5% </progress>
+                                        </div>
+                                        <label for="file" style="color:black;">Process not started</label>
+                                        <div class="button-wrapper">
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                        </div>
+                                    <?php } else { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="20" max="100"> 20% </progress>
+                                        </div>
+                                        <label for="file" style="color:black;">Process is ongoing</label>
+                                        <div class="button-wrapper">
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                        </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                     </section>
@@ -766,7 +817,7 @@ if (str_contains($status, "1")) {
                                         }
                                         ?>>
                                     <h3 class="heading">Accommodation</h3>
-                                    <p>Discover housing options to support your relocation to Belgium. Explore various accommodation choices, including apartments, shared housing, and student residences, to find the best fit for your needs. Learn how to secure housing and understand your rental rights and responsibilities. For more detailed information and assistance, visit our website. Once you've found suitable accommodation, proceed to the next step in My Tracker.</p>
+                                    <p>Discover housing options to support your relocation to Belgium. Explore various accommodation choices, including apartments and shared housing, to find the best fit for your needs. Learn how to secure housing and understand your rental rights and responsibilities. For more detailed information and assistance, visit our website. Once you've found suitable accommodation, proceed to the next step in My Tracker.</p>
                                     <?php
                                     if ($status[0]['status'] == 0) {
                                     ?>
@@ -809,18 +860,33 @@ if (str_contains($status, "1")) {
                                         ?>>
                                     <h3 class="heading">Registration Municipality</h3>
                                     <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
-                                    <div class="button-wrapper">
-                                        <button type="button" onclick="goToStep4()" id="step3">Finish</button>
-                                        <a href="registration-municipality.php">Registration Municipality</a>
-                                        <?php if ($status2[0]['status'] == 1) { ?>
-                                            <div class="qr-code">
-                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
-                                            </div>
-                                        <?php } ?>
-
-                                    </div>
-
+                                    <?php if ($status2[0]['status'] == 2) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <button type="button" onclick="goToStep4()" id="step3">Finish</button>
+                                            <label for="file">Retrieve your ID</label>
+                                        </div>
+                                    <?php } else if ($status2[0]['status'] == 0) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="5" max="100"> 5% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                            <label for="file">Process not started</label>
+                                        </div>
+                                    <?php } else { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="20" max="100"> 20% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                            <label for="file">Process is ongoing</label>
+                                        </div>
+                                    <?php } ?>
                                 </div>
+
 
                                 <span <?php
                                         if ($currentStep == 3) {
@@ -844,7 +910,7 @@ if (str_contains($status, "1")) {
                         <ul>
                             <li>
                                 <h3 class="heading">Accommodation</h3>
-                                <p>Discover housing options to support your relocation to Belgium. Explore various accommodation choices, including apartments, shared housing, and student residences, to find the best fit for your needs. Learn how to secure housing and understand your rental rights and responsibilities. For more detailed information and assistance, visit our website. Once you've found suitable accommodation, proceed to the next step in My Tracker.</p>
+                                <p>Discover housing options to support your relocation to Belgium. Explore various accommodation choices, including apartments and shared housing, to find the best fit for your needs. Learn how to secure housing and understand your rental rights and responsibilities. For more detailed information and assistance, visit our website. Once you've found suitable accommodation, proceed to the next step in My Tracker.</p>
                                 <?php
                                 if ($status[0]['status'] == 0) {
                                 ?>
@@ -880,16 +946,31 @@ if (str_contains($status, "1")) {
                                         ?>>
                                     <h3 class="heading">Registration Municipality</h3>
                                     <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
-                                    <div class="button-wrapper">
-                                        <button type="button" onclick="goToStep3()" id="step3">Finish</button>
-                                        <a href="registration-municipality.php">Registration Municipality</a>
-                                        <?php if ($status2[0]['status'] == 1) { ?>
-                                            <div class="qr-code">
-                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
-                                            </div>
-                                        <?php } ?>
-
-                                    </div>
+                                    <?php if ($status2[0]['status'] == 2) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <button type="button" onclick="goToStep3()" id="step3">Finish</button>
+                                            <label for="file">Retrieve your ID</label>
+                                        </div>
+                                    <?php } else if ($status2[0]['status'] == 0) { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="5" max="100"> 5% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                            <label for="file">Process not started</label>
+                                        </div>
+                                    <?php } else { ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="20" max="100"> 20% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <a href="registration-municipality.php">Registration Municipality</a>
+                                            <label for="file">Process is ongoing</label>
+                                        </div>
+                                    <?php } ?>
 
                                 </div>
 
@@ -906,29 +987,44 @@ if (str_contains($status, "1")) {
                     </div>
                 <?php } else if (str_contains($status, "Municipality")) {
                     $progress = new Progress();
-                    $progress->setNaam('sociaalZekerheid');
+                    $progress->setNaam('Ziekenfonds');
                     $progress2 = new Progress();
                     $progress2->setNaam('gemeente');
                     $status = $progress->getStatusFromName($progress->getNaam());
                     $status2 = $progress2->getStatusFromName($progress2->getNaam());
                 ?>
-                    <div class="container steps3-half">
+                    <div class="container steps2">
                         <ul>
                             <li>
                                 <h3 class="heading">Registration Municipality</h3>
                                 <p>Ensure smooth integration into Belgium by registering with your municipality. Follow the required steps to register to make your immigration process easier. Find out more about the registration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
-                                <div class="button-wrapper">
-                                    <?php
-                                    if ($currentStep == 1) { ?>
+                                <?php if ($status2[0]['status'] == 2) { ?>
+                                    <div class="progress-container">
+                                        <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                    </div>
+                                    <div class="button-wrapper">
                                         <button type="button" onclick="goToStep2()" id="step1">Next Step</button>
-                                    <?php } ?>
-                                    <a href="registration-municipality.php">Registration Municipality</a>
-                                    <?php if ($status2[0]['status'] == 1) { ?>
-                                        <div class="qr-code">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Registration Municipality QR Code">
-                                        </div>
-                                    <?php } ?>
-                                </div>
+                                        <label for="file">Retrieve your ID</label>
+                                    </div>
+                                <?php } else if ($status2[0]['status'] == 0) { ?>
+                                    <div class="progress-container">
+                                        <progress id="file" value="5" max="100"> 5% </progress>
+                                    </div>
+                                    <div class="button-wrapper">
+                                        <a href="registration-municipality.php">Registration Municipality</a>
+                                        <label for="file">Process not started</label>
+                                    </div>
+                                <?php } else { ?>
+                                    <div class="progress-container">
+                                        <progress id="file" value="20" max="100"> 20% </progress>
+                                    </div>
+                                    <div class="button-wrapper">
+                                        <a href="registration-municipality.php">Registration Municipality</a>
+                                        <label for="file">Process is ongoing</label>
+                                    </div>
+                                <?php } ?>
+
+
                                 <span class="circle completed" data-number="1"></span>
                             </li>
                             <li <?php
@@ -945,8 +1041,8 @@ if (str_contains($status, "1")) {
                                             echo 'class=""';
                                         }
                                         ?>>
-                                    <h3 class="heading">Social Security</h3>
-                                    <p>Ensure smooth integration into Belgium by understanding the Social Security system. Familiarize yourself with the necessary steps to secure social benefits and insurance coverage, making your immigration process more manageable. Explore detailed information about Social Security on our website. Once you're informed, move on to the next step in My Tracker.</p>
+                                    <h3 class="heading">Health Insurance</h3>
+                                    <p>Ensure smooth integration into Belgium by understanding the Health Insurance system. Familiarize yourself with the necessary steps to secure medical coverage and benefits, making your immigration process more manageable. Explore detailed information about Health Insurance on our website. Once you're signed to a Health Insurance, move on to the next step in My Tracker.</p>
                                     <?php
                                     if ($status[0]['status'] == 0) {
                                     ?>
@@ -960,7 +1056,7 @@ if (str_contains($status, "1")) {
                                                 <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
                                             </div>
                                             <div class="button-wrapper">
-                                                <button type="button" onclick="goToStep3()" id="step2">Next Step</button>
+                                                <button type="button" onclick="goToStep3()" id="step2">Finish</button>
                                             <?php } ?>
                                             <a href="social-security.php">Social Security</a>
                                             </div>
@@ -972,37 +1068,6 @@ if (str_contains($status, "1")) {
                                                     echo 'class="circle"';
                                                 }
                                                 ?> data-number="2"></span>
-                            </li>
-                            <li <?php
-                                if ($currentStep <= 2) {
-                                    echo 'class="hide-step3"';
-                                } else {
-                                    echo 'class=""';
-                                }
-                                ?>>
-                                <div <?php
-                                        if ($currentStep <= 2) {
-                                            echo 'class="step3-gone"';
-                                        } else {
-                                            echo 'class=""';
-                                        }
-                                        ?>>
-                                    <h3 class="heading">Civic Integration </h3>
-                                    <p>Facilitate your integration into Belgium by embarking on the integration journey. Follow a structured program designed to welcome migrants and help them adapt to Belgian society. Learn more about the integration process on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
-                                    <div class="button-wrapper">
-                                        <button type="button" onclick="goToStep4()" id="step3">Finish</button>
-                                        <a href="civic-integration.php">Civic Integration</a>
-                                    </div>
-
-                                </div>
-
-                                <span <?php
-                                        if ($currentStep == 3) {
-                                            echo 'class="circle completed"';
-                                        } else {
-                                            echo 'class="circle"';
-                                        }
-                                        ?> data-number="3"></span>
                             </li>
                         </ul>
                     </div>
