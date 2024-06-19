@@ -1081,7 +1081,7 @@ if (str_contains($status, "1")) {
                             <div id="content">
                                 <div id="content-details">
                                     <h2>Health Insurance</h2>
-                                    <p>Ensure smooth integration into Belgium by understanding the Health Insurance system. Familiarize yourself with the necessary steps to secure medical coverage and benefits, making your immigration process more manageable. Explore detailed information about Health Insurance on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration</p>
+                                    <p>Ensure smooth integration into Belgium by understanding the Health Insurance system. Familiarize yourself with the necessary steps to secure medical coverage and benefits, making your immigration process more manageable. Explore detailed information about Health Insurance on our website. Once you've completed this step, you've reached the final milestone in My Tracker, marking the successful completion of your migration.</p>
                                     <?php if ($status[0]['status'] == 2) { ?>
                                         <div class="progress-container">
                                             <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
