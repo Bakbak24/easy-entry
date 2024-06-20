@@ -599,7 +599,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 402px) {
+@media only screen and (max-width: 420px) {
   .theme-content {
     max-width: 110px;
     width: 100%;

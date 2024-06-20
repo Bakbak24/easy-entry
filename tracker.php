@@ -33,9 +33,9 @@ if ($status == 'onbekend') {
     $totalSteps = 0;
 } else if ($status == "Finished") {
     $totalSteps = 0;
-} else if (str_contains($status, "Student not enrolled") || str_contains($status, "Job Seeker")) {
+} else if (str_contains($status, "Student not enrolled") || str_contains($status, "Job Seeker") || str_contains($status, "No House")) {
     $totalSteps = 3;
-} else if (str_contains($status, "Student no scholarship") || str_contains($status, "No House") || str_contains($status, "Municipality")) {
+} else if (str_contains($status, "Student no scholarship")  || str_contains($status, "Municipality")) {
     $totalSteps = 2;
 } else if (str_contains($status, "Student-municipality") || str_contains($status, "No Social Security")) {
     $totalSteps = 1;
@@ -136,7 +136,7 @@ if (str_contains($status, "1")) {
         }
 
         .steps3 ul::after {
-            height: 480px;
+            height: 580px;
         }
 
         .steps3-half ul::after {
@@ -508,7 +508,7 @@ if (str_contains($status, "1")) {
                     <h1>My Tracker</h1>
                     <div class="tracker-info">
                         <?php
-                        if ($status == "Finished" || str_contains($status, "Student not enrolled4") || str_contains($status, "Student no scholarship3") || str_contains($status, "Job Seeker4") || str_contains($status, "No House3") || str_contains($status, "Municipality3")) {
+                        if ($status == "Finished" || str_contains($status, "Student not enrolled4") || str_contains($status, "Student no scholarship3") || str_contains($status, "Job Seeker4") || str_contains($status, "No House4") || str_contains($status, "Municipality3")) {
                         ?>
 
                         <?php
@@ -647,14 +647,14 @@ if (str_contains($status, "1")) {
                                             <a href="registration-municipality.php">Registration Municipality</a>
                                         </div>
                                     <?php } ?>
-
-                                    <span <?php
-                                            if ($currentStep >= 2) {
-                                                echo 'class="circle completed"';
-                                            } else {
-                                                echo 'class="circle"';
-                                            }
-                                            ?> data-number="2"></span>
+                                </div>
+                                <span <?php
+                                        if ($currentStep == 2) {
+                                            echo 'class="circle completed"';
+                                        } else {
+                                            echo 'class="circle"';
+                                        }
+                                        ?> data-number="2"></span>
                             </li>
                             <li <?php
                                 if ($currentStep <= 2) {
@@ -686,7 +686,7 @@ if (str_contains($status, "1")) {
                                                 <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
                                             </div>
                                             <div class="button-wrapper">
-                                                <button type="button" onclick="goToStep4()" id="step2">Finish</button>
+                                                <button type="button" onclick="goToStep4()" id="step3">Finish</button>
                                             <?php } ?>
                                             <a href="scholarship.php">Scholarship</a>
                                             </div>
@@ -954,7 +954,7 @@ if (str_contains($status, "1")) {
                     $status = $progress->getStatusFromName($progress->getNaam());
                     $status2 = $progress2->getStatusFromName($progress2->getNaam());
                 ?>
-                    <div class="container steps2">
+                    <div class="container steps3">
                         <ul>
                             <li>
                                 <h3 class="heading">Accommodation</h3>
@@ -999,7 +999,7 @@ if (str_contains($status, "1")) {
                                             <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
                                         </div>
                                         <div class="button-wrapper">
-                                            <button type="button" onclick="goToStep3()" id="step3">Finish</button>
+                                            <button type="button" onclick="goToStep3()" id="step3">Next Step</button>
                                             <label for="file">Retrieve your ID</label>
                                         </div>
                                     <?php } else if ($status2[0]['status'] == 0) { ?>
@@ -1030,6 +1030,48 @@ if (str_contains($status, "1")) {
                                         }
                                         ?> data-number="2"></span>
 
+                            </li>
+                            <li <?php
+                                if ($currentStep == 2) {
+                                    echo 'class="hide-step3"';
+                                } else {
+                                    echo 'class=""';
+                                }
+                                ?>>
+                                <div <?php
+                                        if ($currentStep == 2) {
+                                            echo 'class="step3-gone"';
+                                        } else {
+                                            echo 'class=""';
+                                        }
+                                        ?>>
+                                    <h3 class="heading">Health Insurance</h3>
+                                    <p>Ensure smooth integration into Belgium by understanding the Health Insurance system. Familiarize yourself with the necessary steps to secure medical coverage and benefits, making your immigration process more manageable. Explore detailed information about Health Insurance on our website. Once you're signed to a Health Insurance, move on to the next step in My Tracker.</p>
+                                    <?php
+                                    if ($status[0]['status'] == 0) {
+                                    ?>
+                                        <div class="progress-container">
+                                            <progress id="file" value="20" max="100"> 20% </progress>
+                                        </div>
+                                        <div class="button-wrapper">
+                                            <label for="file">Process is ongoing</label>
+                                        <?php } else { ?>
+                                            <div class="progress-container">
+                                                <progress id="file" value="100" max="100" class="green-progress"> 100% </progress>
+                                            </div>
+                                            <div class="button-wrapper">
+                                                <button type="button" onclick="goToStep4()" id="step3">Finish</button>
+                                            <?php } ?>
+                                            <a href="health-insurance.php">Health Insurance</a>
+                                            </div>
+                                        </div>
+                                        <span <?php
+                                                if ($currentStep >= 3) {
+                                                    echo 'class="circle completed"';
+                                                } else {
+                                                    echo 'class="circle"';
+                                                }
+                                                ?> data-number="3"></span>
                             </li>
                         </ul>
                     </div>
