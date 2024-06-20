@@ -12,7 +12,7 @@ $themes = [
       "button" => "Step 2",
       "title" => "Make an appointment at the municipality",
       "description" => "You must report to the municipality within eight days of your arrival if you plan to stay for longer than three months.Than you need to make an appointment at the municipality to register your address. You can do this online or by phone. Make sure you have all the necessary documents ready for your appointment. You will need to bring these documents with you to the appointment.",
-      "image" => "images/registration-steps-2.png",
+      "image" => "images/find-gp-step-1.jpeg",
       "link" => "your-municipality-website.com"
     ],
     "step3" => [
