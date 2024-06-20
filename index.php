@@ -57,10 +57,6 @@
               <h3>Accommodation</h3>
               <img src="images/Accommodation.svg" alt="Accommodation" class="theme-content-icons"/>
             </div>
-            <div class="theme-content" data-page="social-security.php" data-theme="stay">
-              <h3>Social Security</h3>
-              <img src="images/Social Security.svg" alt="Social Security" class="theme-content-icons"/>
-            </div>
             <div class="theme-content" data-page="civic-integration.php" data-theme="stay">
               <h3>Civic Integration</h3>
               <img src="images/Civic Integration.svg" alt="Civic Integration" class="theme-content-icons"/>
