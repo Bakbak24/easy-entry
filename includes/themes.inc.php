@@ -208,13 +208,15 @@ $themes = [
       "button" => "Step 1",
       "title" => "Check eligibility and requirements",
       "description" => "Before applying for a study grant, ensure you meet the specific requirements for your region. In Flanders, students must attend either full-time or part-time education at a recognized institution and maintain sufficient attendance. <br><br>It's important to note that certain types of education, such as Second Chance Education, private education, and equivalent studies outside of Flanders, may not be eligible for study grants. Additionally, students attending school in another country or in the French or German-speaking communities within Belgium may have different application processes.",
-      "image" => "images/scholarship-step-1.png"
+      "image" => "images/scholarship-step-1.png",
+      "link" => "www.studietoelagen.be"
     ],
     "step2" => [
       "button" => "Step 2",
       "title" => "Submit your application",
-      "description" => "Once you've confirmed your eligibility, proceed to submit your application for a study grant. The application process may differ between Flanders and Wallonia. <br><br>In Flanders, you can apply online or by mail, while in Wallonia, applications can typically be submitted electronically or via registered mail. Be sure to adhere to the specific instructions provided for your region.",
-      "image" => "images/family-unification-step-2.png"
+      "description" => "Once you've confirmed your eligibility, proceed to submit your application for a study grant. The application process may differ between Flanders and Wallonia. <br><br>Be sure to adhere to the specific instructions provided for your region. Click on the button below to request for a scholarship.",
+      "image" => "images/family-unification-step-2.png",
+      "link" => "loket-studietoelagen-app.onderwijs-apps.vlaanderen.be/dossier/s/kies-dossier"
     ],
     "step3" => [
       "button" => "Step 3",

@@ -51,6 +51,8 @@ endforeach;
                 <h2><?php echo $current_theme["step1"]["title"]; ?></h2>
                 <p>
                   <?php echo $current_theme["step1"]["description"]; ?>
+                  <br><br>
+                  <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step1"]["link"]; ?>';" value="Visit Site">
                 </p>
               </div>
             </div>
@@ -65,6 +67,8 @@ endforeach;
                 <h2><?php echo $current_theme["step2"]["title"]; ?></h2>
                 <p>
                   <?php echo $current_theme["step2"]["description"]; ?>
+                  <br><br>
+                  <input type="submit" class="visit-btn" onclick="window.location.href='https://<?php echo $current_theme["step2"]["link"]; ?>';" value="Visit Site">
                 </p>
               </div>
             </div>
